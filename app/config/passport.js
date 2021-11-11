@@ -9,7 +9,7 @@ function init(passport) {
         //CHECK IF EMAIL EXISTS
         const user = await User.findOne({ email });
         if (!user) {
-          return done(null, false, { message: "User does not exist" });
+          return done(null, false, { message: "User not exist" });
         }
 
         bcrypt

@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>ASAP</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.5/css/lightslider.min.css">
+    <link rel="stylesheet" href="/css/lightslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+       
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/Mobile-Home.css">
-     <link rel="stylesheet" href="/css/Register.css">
-     <link rel="stylesheet" href="/css/single.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
-    <link rel = "stylesheet" href = "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Register.css">
+    <link rel="stylesheet" href="/css/single-page.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <link rel="stylesheet" href="/css/allModel.css">
+    <link rel="stylesheet" href="/css/history.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">  
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-                
+    <link rel = "stylesheet" href = "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <meta name="description" content="Compare whatever you want!"/>
 </head>
 <body>
@@ -26,22 +28,25 @@
             <a href="/" class="nav-logo"><img src="/img/home/logo.svg" alt=""></a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link-1"><img src="/img/home/search.svg" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link-2"><img src="/img/home/history.svg" alt=""></a>
+                    <a href="#" title="Search here" class="nav-link-1"><img src="/img/home/search.svg" alt=""></a>
                 </li>
                 <% if(user) { %>
-                    
-<li class="nav-item"><form id="logout" action="/logout" method="POST">
-    <a class="nav-link-3" onClick="document.getElementById('logout').submit()" href="#"><img src="/img/home/log-out.svg" alt=""></a>
-</form></li>
-                    <li class="nav-item" >
-                        <a href="#" class="nav-link-5"><%= user.fname %></a>
+                    <li class="nav-item">
+                    <a href="/customer/history" title="Stored history" class="nav-link-2"><img src="/img/home/history.svg" alt=""></a>
                     </li>
+                    <li class="nav-item"><form id="logout" action="/logout" method="POST">
+                        <a class="nav-link-3" onClick="document.getElementById('logout').submit()" href="#"><img src="/img/home/logout.svg" alt=""></a>
+                    </form></li>
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link-4"><%= user.fname %></a>
+                    </li>
+                    
                     <% } else { %>
                         <li class="nav-item">
-                            <a href="/login" class="nav-link-3"><img src="/img/home/account.svg" alt=""></a>
+                        <a href="/login" title="Login to view" class="nav-link-2"><img src="/img/home/history.svg" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/login" title="Login here" class="nav-link-3"><img src="/img/home/account.svg" alt=""></a>
                         </li>
                     <% } %>
             </ul>
@@ -118,10 +123,17 @@
         </div>
         </div>
     </footer>
-<script src="/js/app.js"></script>   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.5/js/lightslider.min.js" defer></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+    <a href="javascript:void(0)" class="scrollup">
+            <i class="fas fa-chevron-up"></i>
+    </a>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/lightslider.js" ></script>
 <script src="/js/Mobile-Home.js"></script>
+
 </body>
 </html>

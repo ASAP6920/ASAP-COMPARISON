@@ -1,0 +1,510 @@
+
+
+
+
+
+<div class="master-container">
+    <div class="title">
+        <h1>Pre-compared mobile models</h1>
+        <a href="/mobile/All-Models"><p>See all models<i class="fa fa-chevron-right"></i></p></a>
+    </div>
+
+    <div class="dropdown-main-container1">
+        <% details.forEach(function(detail) { %>
+        <div class="dropdown-left">
+            <div class="mobile_text">
+                <h1><%=detail.name%></h1>
+            </div>
+        </div>
+        <%})%>
+        <% details1.forEach(function(detail1) { %>
+        <div class="dropdown-left">
+            <div class="mobile_text">
+                <h1><%=detail1.name%></h1>
+            </div>
+        </div>
+        <%})%>
+       
+    </div>
+   
+    <div class="compare-img-container">
+         <%details.forEach(function(detail) { %>
+        <div class="compare-img-left">
+            <img src="/img/<%=detail.image%>" alt="" id="hisOne">
+        </div>
+        <%})%>
+        <%details1.forEach(function(detail1) { %>
+        <div class="compare-img-left">
+            <img src="/img/<%=detail1.image%>" alt="" id="hisTwo">
+        </div>
+        <%})%>
+    </div>
+
+    <div class="color-container">
+        <%details.forEach(function(detail) { %>
+            
+        <div class="color-left">
+            <ul class="shades">
+                <%detail.collections.forEach(function(coll) {%>
+                <li class="color1" style="background-color: <%=coll.color%>;" onclick="(imgSlider6(this.id, '<%=coll.name%>'))" id="/img/<%=coll.image%>"></li>
+                <%})%>
+            </ul>
+            <div class="color-text">
+                <p id="hisOneColor"><%=detail.colorName%></p>
+            </div>  
+        </div>
+        <%})%>
+
+        <%details1.forEach(function(detail1) { %>
+            
+        <div class="color-left">
+            <ul class="shades">
+                <%detail1.collections.forEach(function(coll) {%>
+                <li class="color1" style="background-color: <%=coll.color%>;" onclick="(imgSlider7(this.id, '<%=coll.name%>'))" id="/img/<%=coll.image%>"></li>
+                <%})%>
+            </ul>
+            <div class="color-text">
+                <p id="hisTwoColor"><%=detail1.colorName%></p>
+            </div>  
+        </div>
+        <%})%>
+
+    </div>
+
+    <div class="price-container">
+        <% details.forEach(function(detail) { %>
+        <div class="price-left">
+            <h1>Starting at $<%=detail.startingPrice%></h1>
+            <p><a href="/mobile/<%=detail._id%>">Learn more<i class="fa fa-chevron-right"></i></a></p>
+        </div>
+        <%})%>
+        <% details1.forEach(function(detail1) { %>
+        <div class="price-left">
+            <h1>Starting at $<%=detail1.startingPrice%></h1>
+            <p><a href="/mobile/<%=detail1._id%>">Learn more<i class="fa fa-chevron-right"></i></a></p>
+        </div>
+        <%})%>
+    </div>
+
+
+    <div class="quick-heading">
+        <h1>Quick Look</h1>
+    </div>
+
+    <div class="quick-container">
+        <% details.forEach(function(detail) { %>
+        <div class="quick-left">
+            <div class="quick-1">
+                <div class="quick-txt-head">
+                    <h1><%=detail.displaySize%>″</h1>
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail.display1%></p> 
+                </div>
+            </div>
+            <div class="quick-2">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail.networkImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail.network%></p>
+                </div>
+            </div>
+            <div class="quick-3">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail.chipsetImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail.chipset%></p>
+                </div>
+            </div>
+            <div class="quick-4">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail.batteryImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail.battery%></p>
+                </div>
+            </div>
+            <div class="quick-5">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail.faceImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail.face%></p>
+                </div>
+            </div>
+            <div class="quick-6">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail.fingerImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail.finger%></p>
+                </div>
+            </div>
+            <div class="quick-7">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail.waterImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail.water%></p>
+                </div>
+            </div>
+        </div>
+        <%})%>
+        <% details1.forEach(function(detail1) { %>
+        <div class="quick-left">
+            <div class="quick-1">
+                <div class="quick-txt-head">
+                    <h1><%=detail1.displaySize%>″</h1>
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail1.display1%></p> 
+                </div>
+            </div>
+            <div class="quick-2">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail1.networkImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail1.network%></p>
+                </div>
+            </div>
+            <div class="quick-3">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail1.chipsetImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail1.chipset%></p>
+                </div>
+            </div>
+            <div class="quick-4">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail1.batteryImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail1.battery%></p>
+                </div>
+            </div>
+            <div class="quick-5">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail1.faceImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail1.face%></p>
+                </div>
+            </div>
+            <div class="quick-6">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail1.fingerImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail1.finger%></p>
+                </div>
+            </div>
+            <div class="quick-7">
+                <div class="quick-img">
+                    <img src="/img/home/<%=detail1.waterImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=detail1.water%></p>
+                </div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+
+    <div class="quick-heading">
+        <h1>Memory</h1>
+    </div>
+
+    <div class="memory-container">
+        <% details.forEach(function(detail) { %>
+        <div class="memory-left">
+            <p><%=detail.memory%></p>
+        </div>
+        <% }) %>
+        <% details1.forEach(function(detail1) { %>
+        <div class="memory-left">
+            <p><%=detail1.memory %></p>
+        </div>
+        <% }) %>
+
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Display</h1>
+    </div>
+
+    <div class="display-container">
+        <% details.forEach(function(detail) { %>
+        <div class="display-left">
+            <div class="display-txt-1"><p><%=detail.displaySize%> inches</p></div>
+            <div class="display-txt-2"><p><%=detail.display1%></p></div>
+            <div class="display-txt-3"><p><%=detail.display2%></p></div>
+            <div class="display-txt-4"><p><%=detail.display3%></p></div>
+        </div>
+        <% })%>
+        <% details1.forEach(function(detail1) { %>
+        <div class="display-left">
+            <div class="display-txt-1"><p><%=detail1.displaySize%> inches</p></div>
+            <div class="display-txt-2"><p><%=detail1.display1%></p></div>
+            <div class="display-txt-3"><p><%=detail1.display2%></p></div>
+            <div class="display-txt-4"><p><%=detail1.display3%></p></div>
+        </div>
+        <% })%>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Size and Weight</h1>
+    </div>
+
+    <div class="size-container">
+        <% details.forEach(function(detail) { %>
+        <div class="size-left">
+            <div class="size-left-up">
+                <p class="size-txt-title">Dimensions</p>
+                <p class="size-txt-subtitle"><%=detail.dimension%></p>
+            </div>
+            <div class="size-left-down">
+                    <p class="size-txt-title">Weight</p>
+                    <p class="size-txt-subtitle"><%=detail.weight%></p>
+            </div>
+        </div>
+        <% }) %>
+        <% details1.forEach(function(detail1) { %>
+        <div class="size-left">
+            <div class="size-left-up">
+                <p class="size-txt-title">Dimensions</p>
+                <p class="size-txt-subtitle"><%=detail1.dimension%></p>
+            </div>
+            <div class="size-left-down">
+                    <p class="size-txt-title">Weight</p>
+                    <p class="size-txt-subtitle"><%=detail1.weight%></p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Splash, Water, and Dust Resistant</h1>
+    </div>
+
+    <div class="rating-container">
+        <% details.forEach(function(detail) { %>
+        <div class="rating-left">
+            <p><%=detail.water%></p>
+        </div>
+        <% }) %>
+        <% details1.forEach(function(detail1) { %>
+        <div class="rating-left">
+            <p><%=detail1.water%></p>
+        </div>
+        <% }) %>
+    </div>
+
+
+    <div class="repeat-heading">
+        <h1>Chip</h1>
+    </div>
+
+    <div class="chip-container">
+        <% details.forEach(function(detail) { %>
+        <div class="chip-left">
+            <div class="chip-left-up">
+                <p class="chip-txt-title">OS</p>
+                <p class="chip-txt-subtitle"><%=detail.os%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">CPU</p>
+                    <p class="chip-txt-subtitle"><%=detail.cpu%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">GPU</p>
+                    <p class="chip-txt-subtitle"><%=detail.gpu%></p>
+            </div>
+        </div>
+        <% }) %>
+        <% details1.forEach(function(detail1) { %>
+        <div class="chip-left">
+            <div class="chip-left-up">
+                <p class="chip-txt-title">OS</p>
+                <p class="chip-txt-subtitle"><%=detail1.os%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">CPU</p>
+                    <p class="chip-txt-subtitle"><%=detail1.cpu%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">GPU</p>
+                    <p class="chip-txt-subtitle"><%=detail1.gpu%></p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Camera</h1>
+    </div>
+
+    <div class="camera-container">
+        <% details.forEach(function(detail) { %>
+        <div class="camera-left">
+            <p><%=detail.camera%></p>
+        </div>
+        <% }) %>
+        <% details1.forEach(function(detail1) { %>
+        <div class="camera-left">
+            <p><%=detail1.camera%></p>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Cellular and Wireless</h1>
+    </div>
+
+    <div class="display-container">
+        <% details.forEach(function(detail) { %>
+        <div class="display-left">
+            <div class="display-txt-1"><p><%=detail.network%></p></div>
+            <div class="display-txt-2"><p><%=detail.wifi%></p></div>
+            <div class="display-txt-3"><p><%=detail.bluetooth%></p></div>
+            <div class="display-txt-4"><p><%=detail.nfc%></p></div>
+        </div>
+        <% }) %>
+        <% details1.forEach(function(detail1) { %>
+        <div class="display-left">
+            <div class="display-txt-1"><p><%=detail1.network%></p></div>
+            <div class="display-txt-2"><p><%=detail1.wifi%></p></div>
+            <div class="display-txt-3"><p><%=detail1.bluetooth%></p></div>
+            <div class="display-txt-4"><p><%=detail1.nfc%></p></div>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Secure Authentication</h1>
+    </div>
+
+    <div class="security-container">
+        <% details.forEach(function(detail) { %>
+        <div class="security-left">
+            <div class="security-txt-1"><p><%=detail.face%></p></div>
+            <div class="security-txt-2"><p><%=detail.finger%></p></div>
+        </div>
+        <% })%>
+        <% details1.forEach(function(detail1) { %>
+        <div class="security-left">
+            <div class="security-txt-1"><p><%=detail1.face%></p></div>
+            <div class="security-txt-2"><p><%=detail1.finger%></p></div>
+        </div>
+        <% })%>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Power and Battery</h1>
+    </div>
+
+    <div class="chip-container">
+        <% details.forEach(function(detail) { %>
+        <div class="chip-left">
+            <div class="chip-left-up">
+                <p class="chip-txt-title">Capacity</p>
+                <p class="chip-txt-subtitle"><%=detail.batteryCapacity%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">Charging Type</p>
+                    <p class="chip-txt-subtitle"><%=detail.charging%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">Video playback</p>
+                    <p class="chip-txt-subtitle"><%=detail.battery%></p>
+            </div>
+        </div>
+        <% }) %>
+        <% details1.forEach(function(detail1) { %>
+        <div class="chip-left">
+            <div class="chip-left-up">
+                <p class="chip-txt-title">Capacity</p>
+                <p class="chip-txt-subtitle"><%=detail1.batteryCapacity%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">Charging Type</p>
+                    <p class="chip-txt-subtitle"><%=detail1.charging%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">Video playback</p>
+                    <p class="chip-txt-subtitle"><%=detail1.battery%></p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>SIM Card</h1>
+    </div>
+
+    <div class="camera-container">
+        <% details.forEach(function(detail) { %>
+        <div class="camera-left">
+            <p><%=detail.sim%></p>
+        </div>
+        <% })%>
+        <% details1.forEach(function(detail1) { %>
+        <div class="camera-left">
+            <p><%=detail1.sim%></p>
+        </div>
+        <% })%>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Connector</h1>
+    </div>
+
+    <div class="camera-container">
+        <% details.forEach(function(detail) { %>
+        <div class="camera-left">
+            <p><%=detail.connector%></p>
+        </div>
+        <% })%>
+        <% details1.forEach(function(detail1) { %>
+        <div class="camera-left">
+            <p><%=detail1.connector%></p>
+        </div>
+        <% })%>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Miscellaneous </h1>
+    </div>
+
+    <div class="size-container">
+        <% details.forEach(function(detail) { %>
+        <div class="size-left">
+            <div class="size-left-up">
+                <p class="size-txt-title">Colors</p>
+                <p class="size-txt-subtitle"><%=detail.colors%></p>
+            </div>
+            <div class="size-left-down">
+                    <p class="size-txt-title">Price</p>
+                    <p class="size-txt-subtitle">$<%=detail.startingPrice%></p>
+            </div>
+        </div>
+        <% })%>
+
+        <% details1.forEach(function(detail1) { %>
+        <div class="size-left">
+            <div class="size-left-up">
+                <p class="size-txt-title">Colors</p>
+                <p class="size-txt-subtitle"><%=detail1.colors%></p>
+            </div>
+            <div class="size-left-down">
+                    <p class="size-txt-title">Price</p>
+                    <p class="size-txt-subtitle">$<%=detail1.startingPrice%></p>
+            </div>
+        </div>
+        <% })%>
+
+    </div>
+</div>

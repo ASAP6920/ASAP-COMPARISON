@@ -30,8 +30,8 @@ app.use(
 );
 
 //PASSPORT CONFIG
-const passportSetup = require("./app/config/google");
-passportSetup(passport);
+const passportGoogle = require("./app/config/google");
+passportGoogle(passport);
 const passportInit = require("./app/config/passport");
 passportInit(passport);
 app.use(passport.initialize());

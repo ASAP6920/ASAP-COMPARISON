@@ -1,0 +1,495 @@
+<div class="master-container">
+    <div class="title">
+        <h1>Compare mobile models</h1>
+        <a href="/mobile/All-Models"><p>See all models<i class="fa fa-chevron-right"></i></p></a>
+        
+    </div>
+
+    <div class="dropdown-main-container">
+        <div class="dropdown-left">
+            <select class="dropdown" name="brand" id="brand" onChange="showBrand(this.value);">
+                <%brands.forEach(function(brand)  { if(brand.name==="Apple") { %>
+                <option value="<%= brand.id %>" selected><%= brand.name %></option>
+                <%} })%>
+                <%brands.forEach(function(brand)  { if(brand.name!=="Apple") { %>
+                <option value="<%= brand.id %>"><%= brand.name %></option>
+                <%} })%>
+            </select>
+            <select class="dropdown" onChange="showModel(this.value);" name="model" id="model">
+                <%models.forEach(function(model)  { if(model.brandName==="Apple" && model.name==="iPhone 13 Pro Max") { %>
+                <option value="<%= model.id %>" selected><%= model.name %></option>
+                <%} })%>
+                <%models.forEach(function(model)  { if(model.brandName==="Apple" && model.name!=="iPhone 13 Pro Max") { %>
+                <option value="<%= model.id %>"><%= model.name %></option>
+                <%} })%>
+            </select>
+        </div>
+        <div class="dropdown-right">
+            <select class="dropdown" name="Dropdown" onChange="showBrand1(this.value);" name="brand1" id="brand1">
+                <%brands.forEach(function(brand)  { if(brand.name==="Samsung") { %>
+                <option value="<%= brand.id %>" selected><%= brand.name %></option>
+                <%} })%>
+                <%brands.forEach(function(brand)  { if(brand.name!=="Samsung") { %>
+                <option value="<%= brand.id %>"><%= brand.name %></option>
+                <%} })%>
+            </select>
+             <select class="dropdown" onChange="showModel1(this.value);" name="model1" id="model1">
+                <%models.forEach(function(model)  { if(model.brandName==="Samsung" && model.name==="Samsung Galaxy Z Fold3") { %>
+                <option value="<%= model.id %>" selected><%= model.name %></option>
+                <%} })%>
+                <%models.forEach(function(model)  { if(model.brandName==="Samsung" && model.name!=="Samsung Galaxy Z Fold3") { %>
+                <option value="<%= model.id %>"><%= model.name %></option>
+                <%} })%>
+            </select>
+        </div>
+    </div>
+
+    <div class="compare-img-container">
+        <div class="compare-img-left" id="img">
+            <img src="/img/iPhone13ProMax.png" alt="" id="one">
+        </div>
+        <div class="compare-img-right"  id="img1">
+            <img src="/img/GalaxyZFold3.png" alt="" id="two">
+        </div>
+    </div>
+
+    <div class="color-container">
+        <div class="color-left">
+            <ul class="shades" id="collection">
+                <!-- <li class="color1 active1" style="display: none;"></li> -->
+                <li class="color1" style="background-color: #a7c1d9;" onclick="(imgSlider(this.id, 'Sierra Blue'))" id="/img/iPhone13ProMax.png"></li>
+                <li class="color1" style="background-color: #f1f2ec;" onclick="(imgSlider(this.id, 'Silver'))" id="/img/iPhone13ProMax1.png"></li>
+                <li class="color1" style="background-color: #fae7cf;" onclick="(imgSlider(this.id, 'Gold'))" id="/img/iPhone13ProMax2.png"></li>
+                <li class="color1" style="background-color: #54524f;" onclick="(imgSlider(this.id, 'Graphite'))" id="/img/iPhone13ProMax3.png"></li>
+            </ul>
+            <div class="color-text">
+                <p id="colorName"><span id="oneColor">Sierra Blue</span></p>
+            </div>
+        </div>
+
+        <div class="color-right">
+            <ul class="shades" id="collection1">
+                <!-- <li class="color2 active2" style="display: none;"></li> -->
+                <li class="color2" style="background-color: #2e2926; " onclick="(imgSlider1(this.id, 'Phantom Black'))" id="/img/GalaxyZFold3.png"></li>
+                <li class="color2" style="background-color: #334b46;" onclick="(imgSlider1(this.id, 'Phantom Green'))" id="/img/GalaxyZFold31.png"></li>
+            </ul>
+            <div class="color-text">
+                <p id="colorName1"><span id="twoColor">Phantom Black</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="price-container">
+        <div class="price-left">
+            <h1 id="startingPrice">Starting at $1099</h1>
+            <p id="learnMore"><a href="/mobile/5eee6671a27a66807cf20001">Learn more<i class="fa fa-chevron-right"></i></a></p>
+        </div>
+
+        <div class="price-right">
+            <h1  id="startingPrice1">Starting at $1899</h1>
+            <p id="learnMore1"><a href="/mobile/5eee6671a27a66807cf20016">Learn more<i class="fa fa-chevron-right"></i></a></p>
+        </div>
+    </div>
+
+
+    <div class="quick-heading">
+        <h1>Quick Look</h1>
+    </div>
+
+    <div class="quick-container">
+        <div class="quick-left">
+            <div class="quick-1">
+                <div class="quick-txt-head">
+                    <h1 id="displaySize">6.7″</h1>
+                </div>
+                <div class="quick-txt">
+                    <p id="display1">Super Retina XDR Display with ProMotion</p> 
+                </div>
+            </div>
+            <div class="quick-2">
+                <div class="quick-img" id="networkImg">
+                    <img src="/img/home/5G.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="network"> 5G capable</p>
+                </div>
+            </div>
+            <div class="quick-3">
+                <div class="quick-img" id="chipsetImg">
+                    <img src="/img/home/A15.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="chipset">A15 Bionic chip</p>
+                </div>
+            </div>
+            <div class="quick-4">
+                <div class="quick-img" id="batteryImg">
+                    <img src="/img/home/battery.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="battery">Up to 28 hours video playback</p>
+                </div>
+            </div>
+            <div class="quick-5">
+                <div class="quick-img" id="faceImg">
+                    <img src="/img/home/faceId.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="face">Face ID</p>
+                </div>
+            </div>
+            <div class="quick-6">
+                <div class="quick-img" id="fingerImg">
+                    <img src="/img/home/noTouchId.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="finger"> - </p>
+                </div>
+            </div>
+            <div class="quick-7">
+                <div class="quick-img" id="waterImg">
+                    <img src="/img/home/water.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="water">Water resistant to a depth of 6 meters for up to 30 minutes</p>
+                </div>
+            </div>
+        </div>
+        <div class="quick-right">
+            <div class="quick-1">
+                <div class="quick-txt-head">
+                    <h1 id="displaySize1">7.6″</h1>
+                </div>
+                <div class="quick-txt">
+                    <p id="display11">Foldable Dynamic AMOLED</p>
+                </div>
+            </div>
+            <div class="quick-2">
+                <div class="quick-img"  id="networkImg1">
+                    <img src="/img/home/5G.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p  id="network1">5G capable</p>
+                </div>
+            </div>
+            <div class="quick-3">
+                <div class="quick-img"  id="chipsetImg1">
+                    <img src="/img/home/888.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="chipset1">Snapdragon 888</p>
+                </div>
+            </div>
+            <div class="quick-4">
+                <div class="quick-img" id="batteryImg1">
+                    <img src="/img/home/battery.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="battery1">Up to 11 hours, 25 minutes of video playback</p>
+                </div>
+            </div>
+            <div class="quick-5">
+                <div class="quick-img" id="faceImg1">
+                    <img src="/img/home/faceId.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="face1">Face ID</p>
+                </div>
+            </div>
+            <div class="quick-6">
+                <div class="quick-img" id="fingerImg1">
+                    <img src="/img/home/touchId.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="finger1">Touch ID</p>
+                </div>
+            </div>
+            <div class="quick-7">
+                <div class="quick-img" id="waterImg1">
+                    <img src="/img/home/water.svg" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p id="water1">Water resistant to a depth of 1.5 meters for up to 30 minutes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-heading">
+        <h1>Memory</h1>
+    </div>
+
+    <div class="memory-container">
+        <div class="memory-left">
+            <p id="memory">128GB 6GB RAM
+                256GB 6GB RAM
+                512GB 6GB RAM
+1TB 6GB RAM</p>
+        </div>
+        <div class="memory-right">
+            <p id="memory1">256GB 12GB RAM
+512GB 12GB RAM</p>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Display</h1>
+    </div>
+
+    <div class="display-container">
+        <div class="display-left">
+            <div class="display-txt-1"><p id="againdisplaySize">6.7 inches</p></div>
+            <div class="display-txt-2"><p id="againdisplay">Super Retina XDR Display with ProMotion</p></div>
+            <div class="display-txt-3"><p id="display2">Scratch-resistant ceramic glass, oleophobic coating</p></div>
+            <div class="display-txt-4"><p id="display3">2778x1284-pixel resolution at 458 ppi</p></div>
+        </div>
+        <div class="display-right">
+            <div class="display-txt-1"><p id="againdisplaySize1">7.6 inches</p></div>
+            <div class="display-txt-2"><p id="againdisplay1">Foldable Dynamic AMOLED</p></div>
+            <div class="display-txt-3"><p id="display21">Corning Gorilla Glass Victus</p></div>
+            <div class="display-txt-4"><p id="display31">1768 x 2208-pixel resolution at 374 ppi</p></div>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Size and Weight</h1>
+    </div>
+
+    <div class="size-container">
+        <div class="size-left">
+            <div class="size-left-up">
+                <p class="size-txt-title">Dimensions</p>
+                <p class="size-txt-subtitle" id="dimension">160.8 x 78.1 x 7.7 mm</p>
+            </div>
+            <div class="size-left-down">
+                    <p class="size-txt-title">Weight</p>
+                    <p class="size-txt-subtitle" id="weight">240 grams</p>
+            </div>
+        </div>
+        <div class="size-right">
+            <div class="size-right-up">
+                <p class="size-txt-title">Dimensions</p>
+                    <p class="size-txt-subtitle" id="dimension1">158.2 x 128.1 x 6.4 mm</p>
+            </div>
+            <div class="size-right-down">
+                <p class="size-txt-title">Weight</p>
+                    <p class="size-txt-subtitle" id="weight1">271 grams</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Splash, Water, and Dust Resistant</h1>
+    </div>
+
+    <div class="rating-container">
+        <div class="rating-left" >
+            <p id="againwater">Water resistant to a depth of 6 meters for up to 30 minutes</p>
+        </div>
+        <div class="rating-right">
+           <p id="againwater1">Water resistant to a depth of 1.5 meters for up to 30 minutes</p>
+        </div>
+    </div>
+
+
+    <div class="repeat-heading">
+        <h1>Chip</h1>
+    </div>
+
+    <div class="chip-container">
+        <div class="chip-left">
+            <div class="chip-left-up">
+                <p class="chip-txt-title">OS</p>
+                <p class="chip-txt-subtitle" id="os">iOS 15.1</p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">CPU</p>
+                    <p class="chip-txt-subtitle" id="cpu">Hexa-core</p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">GPU</p>
+                    <p class="chip-txt-subtitle" id="gpu">Apple GPU (5-core graphics)</p>
+            </div>
+        </div>
+        <div class="chip-right">
+            <div class="chip-right-up">
+                <p class="chip-txt-title">OS</p>
+                    <p class="chip-txt-subtitle" id="os1">Android 11, One UI 3.1.1</p>
+            </div>
+            <div class="chip-right-down">
+                <p class="chip-txt-title">CPU</p>
+                    <p class="chip-txt-subtitle" id="cpu1">Octa-core</p>
+            </div>
+            <div class="chip-right-down">
+                <p class="chip-txt-title">GPU</p>
+                    <p class="chip-txt-subtitle" id="gpu1">Adreno 660</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Camera</h1>
+    </div>
+
+    <div class="camera-container">
+        <div class="camera-left">
+            <p id="camera">12MP Camera system</p>
+        </div>
+        <div class="camera-right">
+           <p id="camera1">12MP Camera system</p>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Cellular and Wireless</h1>
+    </div>
+
+    <div class="display-container">
+        <div class="display-left">
+            <div class="display-txt-1"><p id="againnetwork">5G capable</p></div>
+            <div class="display-txt-2"><p id="wifi">Wi-Fi 802.11</p></div>
+            <div class="display-txt-3"><p id="bluetooth">Bluetooth 5.0</p></div>
+            <div class="display-txt-4"><p id="nfc">NFC</p></div>
+        </div>
+        <div class="display-right">
+            <div class="display-txt-1"><p id="againnetwork1">5G capable</p></div>
+            <div class="display-txt-2"><p id="wifi1">Wi-Fi 802.11</p></div>
+            <div class="display-txt-3"><p id="bluetooth1">Bluetooth 5.2</p></div>
+            <div class="display-txt-4"><p id="nfc1">NFC</p></div>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Secure Authentication</h1>
+    </div>
+
+    <div class="security-container">
+        <div class="security-left">
+            <div class="security-txt-1"><p id="againface">Face ID</p></div>
+            <div class="security-txt-2"><p id="againfinger"> - </p></div>
+        </div>
+        <div class="security-right">
+            <div class="security-txt-1"><p id="againface1">Face ID</p></div>
+            <div class="security-txt-2"><p id="againfinger1">Touch ID </p></div>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Power and Battery</h1>
+    </div>
+
+    <div class="chip-container">
+        <div class="chip-left">
+            <div class="chip-left-up">
+                <p class="chip-txt-title">Capacity</p>
+                <p class="chip-txt-subtitle" id="batteryCapacity">4352 mAh</p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">Charging Type</p>
+                    <p class="chip-txt-subtitle" id="charging">Fast charging 27W</p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">Video playback</p>
+                    <p class="chip-txt-subtitle" id="againbattery">Upto 28 hours video playback</p>
+            </div>
+        </div>
+        <div class="chip-right">
+            <div class="chip-right-up">
+                <p class="chip-txt-title">Capacity</p>
+                <p class="chip-txt-subtitle" id="batteryCapacity1">4400 mAh</p>
+            </div>
+            <div class="chip-right-down">
+                <p class="chip-txt-title">Charging Type</p>
+                    <p class="chip-txt-subtitle" id="charging1">Fast charging 25W</p>
+            </div>
+            <div class="chip-right-down">
+                <p class="chip-txt-title">Video playback</p>
+                    <p class="chip-txt-subtitle"  id="againbattery1">Up to 11 hours, 25 minutes of video playback</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>SIM Card</h1>
+    </div>
+
+    <div class="camera-container">
+        <div class="camera-left">
+            <p id="sim">Dual SIM</p>
+        </div>
+        <div class="camera-right">
+           <p  id="sim1">Dual SIM</p>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Connector</h1>
+    </div>
+
+    <div class="camera-container">
+        <div class="camera-left">
+            <p id="connector">Lightning, USB 2.0</p>
+        </div>
+        <div class="camera-right">
+           <p id="connector1">USB Type-C 3.2</p>
+        </div>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Miscellaneous </h1>
+    </div>
+
+    <div class="size-container">
+        <div class="size-left">
+            <div class="size-left-up">
+                <p class="size-txt-title" >Colors</p>
+                <p class="size-txt-subtitle" id="colors">Graphite, Gold, Silver, Sierra Blue</p>
+            </div>
+            <div class="size-left-down">
+                    <p class="size-txt-title">Price</p>
+                    <p class="size-txt-subtitle" id="finalPrice">$1099</p>
+            </div>
+        </div>
+        <div class="size-right">
+            <div class="size-right-up">
+                <p class="size-txt-title">Colors</p>
+                    <p class="size-txt-subtitle" id="colors1">Phantom Black, Phantom Green</p>
+            </div>
+            <div class="size-right-down">
+                <p class="size-txt-title">Price</p>
+                    <p class="size-txt-subtitle" id="finalPrice1">$1899</p>
+            </div>
+        </div>
+    </div>
+    <div class="repeat-heading">
+    </div>
+
+    <div class="save-to-history">
+        <% if(user) { %>
+                  <%if( user.role==='customer' ){%>
+                <form id="historyForm">
+                    <span id="drop_id">
+                        <input type='hidden' name='drop' id='drop' value='5eee6671a27a66807cf20001'> 
+                        <input type='hidden' name='image' id='image' value='iPhone13ProMax.png'> 
+                        <input type='hidden' name='name' id='name' value='iPhone 13 Pro Max'>
+                        <input type='hidden' name='price' id='price' value='1099'>
+                    </span> 
+                    <span  id="drop_id1">
+                        <input type='hidden' name='drop1' id='drop1' value='5eee6671a27a66807cf20016'> 
+                        <input type='hidden' name='image1' id='image1' value='GalaxyZFold3.png'> 
+                        <input type='hidden' name='name1' id='name1' value='Samsung Galaxy Z Fold3'>
+                        <input type='hidden' name='price1' id='price1' value='1899'>
+                    </span> 
+                    <input type="submit" value="Save to history" class="submit">
+                </form>
+                <%} else {%>
+                   <h1>You are admin</h1>
+                <% } %>
+                <%}else{%>
+                        <a href="/login">Login to save</a>
+                <% } %>
+    </div>
+    <div id="success" class="success">
+
+    </div>
+</div>

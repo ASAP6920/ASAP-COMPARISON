@@ -1,0 +1,312 @@
+
+
+
+
+
+<div class="master-container">
+    <div class="title">
+        <h1>Pre-compared mobile models</h1>
+        <a href="/mobile/All-Models"><p>See all models<i class="fa fa-chevron-right"></i></p></a>
+    </div>
+
+    <div class="dropdown-main-container1">
+        <% compares.forEach(function(compare) { %>
+        <div class="dropdown-left">
+            <div class="mobile_text">
+                <h1><%=compare.name%></h1>
+            </div>
+        </div>
+        <%})%>
+       
+    </div>
+   
+    <div class="compare-img-container">
+         <%let i=4; compares.forEach(function(compare) { %>
+        <div class="compare-img-left">
+            <img src="/img/<%=compare.image%>" alt="" id="preOne<%=i%>">
+        </div>
+        <%i++})%>
+    </div>
+
+    <div class="color-container">
+        <%let j=4; compares.forEach(function(compare) { %>
+            
+        <div class="color-left">
+            <ul class="shades">
+                <%compare.collections.forEach(function(coll) {%>
+                <li class="color1" style="background-color: <%=coll.color%>;" onclick="(imgSlider<%=j%>(this.id, '<%=coll.name%>'))" id="/img/<%=coll.image%>"></li>
+                <%})%>
+            </ul>
+            <div class="color-text">
+                <p id="preOneColor<%=j%>"><%=compare.colorName%></p>
+            </div>  
+        </div>
+        <%j++})%>
+    </div>
+
+    <div class="price-container">
+         <% compares.forEach(function(compare) { %>
+        <div class="price-left">
+            <h1>Starting at $<%=compare.startingPrice%></h1>
+            <p><a href="/mobile/<%=compare._id%>">Learn more<i class="fa fa-chevron-right"></i></a></p>
+        </div>
+        <%})%>
+    </div>
+
+
+    <div class="quick-heading">
+        <h1>Quick Look</h1>
+    </div>
+
+    <div class="quick-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="quick-left">
+            <div class="quick-1">
+                <div class="quick-txt-head">
+                    <h1><%=compare.displaySize%>″</h1>
+                </div>
+                <div class="quick-txt">
+                    <p><%=compare.display1%></p> 
+                </div>
+            </div>
+            <div class="quick-2">
+                <div class="quick-img">
+                    <img src="/img/home/<%=compare.networkImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=compare.network%></p>
+                </div>
+            </div>
+            <div class="quick-3">
+                <div class="quick-img">
+                    <img src="/img/home/<%=compare.chipsetImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=compare.chipset%></p>
+                </div>
+            </div>
+            <div class="quick-4">
+                <div class="quick-img">
+                    <img src="/img/home/<%=compare.batteryImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=compare.battery%></p>
+                </div>
+            </div>
+            <div class="quick-5">
+                <div class="quick-img">
+                    <img src="/img/home/<%=compare.faceImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=compare.face%></p>
+                </div>
+            </div>
+            <div class="quick-6">
+                <div class="quick-img">
+                    <img src="/img/home/<%=compare.fingerImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=compare.finger%></p>
+                </div>
+            </div>
+            <div class="quick-7">
+                <div class="quick-img">
+                    <img src="/img/home/<%=compare.waterImg%>" alt="">
+                </div>
+                <div class="quick-txt">
+                    <p><%=compare.water%></p>
+                </div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+
+    <div class="quick-heading">
+        <h1>Memory</h1>
+    </div>
+
+    <div class="memory-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="memory-left">
+            <p><%=compare.memory %></p>
+        </div>
+        <% }) %>
+
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Display</h1>
+    </div>
+
+    <div class="display-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="display-left">
+            <div class="display-txt-1"><p><%=compare.displaySize%> inches</p></div>
+            <div class="display-txt-2"><p><%=compare.display1%></p></div>
+            <div class="display-txt-3"><p><%=compare.display2%></p></div>
+            <div class="display-txt-4"><p><%=compare.display3%></p></div>
+        </div>
+        <% })%>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Size and Weight</h1>
+    </div>
+
+    <div class="size-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="size-left">
+            <div class="size-left-up">
+                <p class="size-txt-title">Dimensions</p>
+                <p class="size-txt-subtitle"><%=compare.dimension%></p>
+            </div>
+            <div class="size-left-down">
+                    <p class="size-txt-title">Weight</p>
+                    <p class="size-txt-subtitle"><%=compare.weight%></p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Splash, Water, and Dust Resistant</h1>
+    </div>
+
+    <div class="rating-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="rating-left">
+            <p><%=compare.water%></p>
+        </div>
+        <% }) %>
+    </div>
+
+
+    <div class="repeat-heading">
+        <h1>Chip</h1>
+    </div>
+
+    <div class="chip-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="chip-left">
+            <div class="chip-left-up">
+                <p class="chip-txt-title">OS</p>
+                <p class="chip-txt-subtitle"><%=compare.os%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">CPU</p>
+                    <p class="chip-txt-subtitle"><%=compare.cpu%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">GPU</p>
+                    <p class="chip-txt-subtitle"><%=compare.gpu%></p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Camera</h1>
+    </div>
+
+    <div class="camera-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="camera-left">
+            <p><%=compare.camera%></p>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Cellular and Wireless</h1>
+    </div>
+
+    <div class="display-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="display-left">
+            <div class="display-txt-1"><p><%=compare.network%></p></div>
+            <div class="display-txt-2"><p><%=compare.wifi%></p></div>
+            <div class="display-txt-3"><p><%=compare.bluetooth%></p></div>
+            <div class="display-txt-4"><p><%=compare.nfc%></p></div>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Secure Authentication</h1>
+    </div>
+
+    <div class="security-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="security-left">
+            <div class="security-txt-1"><p><%=compare.face%></p></div>
+            <div class="security-txt-2"><p><%=compare.finger%></p></div>
+        </div>
+        <% })%>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Power and Battery</h1>
+    </div>
+
+    <div class="chip-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="chip-left">
+            <div class="chip-left-up">
+                <p class="chip-txt-title">Capacity</p>
+                <p class="chip-txt-subtitle"><%=compare.batteryCapacity%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">Charging Type</p>
+                    <p class="chip-txt-subtitle"><%=compare.charging%></p>
+            </div>
+            <div class="chip-left-down">
+                    <p class="chip-txt-title">Video playback</p>
+                    <p class="chip-txt-subtitle"><%=compare.battery%></p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>SIM Card</h1>
+    </div>
+
+    <div class="camera-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="camera-left">
+            <p><%=compare.sim%></p>
+        </div>
+<% })%>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Connector</h1>
+    </div>
+
+    <div class="camera-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="camera-left">
+            <p><%=compare.connector%></p>
+        </div>
+        <% })%>
+    </div>
+
+    <div class="repeat-heading">
+        <h1>Miscellaneous </h1>
+    </div>
+
+    <div class="size-container">
+        <% compares.forEach(function(compare) { %>
+        <div class="size-left">
+            <div class="size-left-up">
+                <p class="size-txt-title">Colors</p>
+                <p class="size-txt-subtitle"><%=compare.colors%></p>
+            </div>
+            <div class="size-left-down">
+                    <p class="size-txt-title">Price</p>
+                    <p class="size-txt-subtitle">$<%=compare.startingPrice%></p>
+            </div>
+        </div>
+<% })%>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
@@ -20,10 +21,10 @@ function googleInit(passport) {
         const hashPassword = await bcrypt.hash(password, 10);
 
         // console.log(profile);
-        User.findOne({ email: profile._json.email }).then((currentUser) => {
-          if (currentUser) {
-            // console.log("user is: ", currentUser);
-            done(null, currentUser);
+        const user = await User.findOne({ email: profile._json.email })
+          if (user) {
+            // console.log("user is: ", user);
+            done(null, user);
           } else {
             new User({
               fname: profile._json.given_name,
@@ -36,10 +37,8 @@ function googleInit(passport) {
                 done(null, newUser);
               });
           }
-        });
-      }
-    )
-  );
+        }
+        ));
   passport.serializeUser((user, done) => {
     done(null, user.id);
   });

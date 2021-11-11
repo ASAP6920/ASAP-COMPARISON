@@ -1,0 +1,45 @@
+<div class="precompared_master_container">
+        <div class="history_title">
+            <h1>Previously compared products</h1>
+        </div>
+    <% if(session.history && user){ %>
+            <%  Object.values(session.history.items).forEach(function(product) { if(product.user==user._id){%>
+            <div class="precompared_main_container">
+            <div class="precompared_container">
+                <div class="precompared_left">
+                    <div class="precompared_left_img">
+                        <img src="/img/<%=product.item.image%>" alt="">
+                    </div>
+                    <div class="precompared_left_text">
+                        <h1><%=product.item.name%></h1>
+                    </div>
+                </div>
+                <div class="precompared_vs">
+                    <div class="precompared_vs_div">
+                        <hr>
+                        <div class="vs_logo">
+                            <h1>VS</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="precompared_right">
+                    <div class="precompared_right_img">
+                        <img src="/img/<%=product.item.image1%>" alt="">
+                    </div>
+                    <div class="precompared_right_text">
+                        <h1><%=product.item.name1%></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="precompared_button">
+                <form action="/history/view" method="GET">
+                        <input type="hidden" name="h_id" id="h_id" value="<%= product.item.drop %>">
+                        <input type="hidden" name="h_id1" id="h_id1" value="<%= product.item.drop1 %>">
+                    <input type="submit" class="again_button" value="Compare again">
+                </form>
+            </div>
+        </div>
+
+        <%} })%>
+        <% } %>
+         </div>

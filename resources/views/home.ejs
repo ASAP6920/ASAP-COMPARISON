@@ -7,7 +7,7 @@
             <div class="hero-2-text">
                 <h1>Are you confused between multiple mobile phones to choose from?</h1>
                 <p class="hero-2-para">Using our website you can compare other phones side by side in order to measure each specifications of a phone against the same feature of the other ones.</p>
-                <p class="hero-2-btn">Compare now <i class="fa fa-chevron-right"></i></p> 
+                <p class="hero-2-btn"><a href="/mobile/compare">Compare now <i class="fa fa-chevron-right"></i></a></p> 
             </div>
             <div class="hero-2-img"></div>
         </div>
@@ -16,13 +16,14 @@
             <div class="hero-3-text">
                 <h1>Are you confused between multiple mobile phones to choose from?</h1>
                 <p class="hero-3-para">Using our website you can compare other phones side by side in order to measure each specifications of a phone against the same feature of the other ones.</p>
-                <p class="hero-3-btn">Compare now <i class="fa fa-chevron-right"></i></p> 
+                <p class="hero-3-btn"><a href="/mobile/compare">Compare now <i class="fa fa-chevron-right"></i></a></p> 
             </div>
         </div>
     </div>
     
     <div class="trend-heading">
-        <h1>Trending Mobile Phones</h1><hr>
+        <h1>Trending Mobile Phone </h1>
+        <hr>
     </div>
 
     <div class="trending-container">
@@ -112,153 +113,128 @@
     <div class="compare-main-container">
         <div class="compare-container">
             <div class="compare-head-1">
-                <a href="http://google.com"><div class="vs">
-                    <p>COMPARE</p>
+                <div class="vs">
+                    <form method="GET" action="Pre-compared">
+                        <input type="hidden" name="compare" id="compare" value="firstCompare">
+                        <input class="" type="submit" value="Compare">
+                    </form>
                 </div>
-                </a> 
+                <%details.forEach(function(detail)  { if(detail.preCompared==="firstCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="/img/<%=detail.image%>" alt="">
                     </div>
                     <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
+                        <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
                     </div>
                 </div>
-                <div class="compare-1">
-                    <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
-                    </div>
-                    <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
-                    </div>
-                </div>
+                <%} })%>
             </div>
             
             <div class="compare-head-1">
-                <a href="http://google.com"><div class="vs">
-                    <p>COMPARE</p>
+                <div class="vs">
+                    <form method="GET" action="Pre-compared">
+                        <input type="hidden" name="compare" id="compare" value="secondCompare">
+                        <input class="" type="submit" value="Compare">
+                    </form>
                 </div>
-                </a> 
+                <%details.forEach(function(detail)  { if(detail.preCompared==="secondCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="/img/<%=detail.image%>" alt="">
                     </div>
                     <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
+                        <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
                     </div>
                 </div>
-                <div class="compare-1">
-                    <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
-                    </div>
-                    <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
-                    </div>
-                </div>
+                <%} })%>
             </div>
             
             <div class="compare-head-1">
-                <a href="http://google.com"><div class="vs">
-                    <p>COMPARE</p>
+                <div class="vs">
+                    <form method="GET" action="Pre-compared">
+                        <input type="hidden" name="compare" id="compare" value="thirdCompare">
+                        <input class="" type="submit" value="Compare">
+                    </form>
                 </div>
-                </a> 
+                <%details.forEach(function(detail)  { if(detail.preCompared==="thirdCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="/img/<%=detail.image%>" alt="">
                     </div>
                     <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
+                        <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
                     </div>
                 </div>
-                <div class="compare-1">
-                    <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
-                    </div>
-                    <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
-                    </div>
-                </div>
+                <%} })%>
             </div>
             
             <div class="compare-head-1">
-                <a href="http://google.com"><div class="vs">
-                    <p>COMPARE</p>
+                <div class="vs">
+                    <form method="GET" action="Pre-compared">
+                        <input type="hidden" name="compare" id="compare" value="fourthCompare">
+                        <input class="" type="submit" value="Compare">
+                    </form>
                 </div>
-                </a> 
+                <%details.forEach(function(detail)  { if(detail.preCompared==="fourthCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="/img/<%=detail.image%>" alt="">
                     </div>
                     <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
+                        <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
                     </div>
                 </div>
-                <div class="compare-1">
-                    <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
-                    </div>
-                    <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
-                    </div>
-                </div>
+                <%} })%>
             </div>
             
             <div class="compare-head-1">
-                <a href="http://google.com"><div class="vs">
-                    <p>COMPARE</p>
+                <div class="vs">
+                    <form method="GET" action="Pre-compared">
+                        <input type="hidden" name="compare" id="compare" value="fifthCompare">
+                        <input class="" type="submit" value="Compare">
+                    </form>
                 </div>
-                </a> 
+                <%details.forEach(function(detail)  { if(detail.preCompared==="fifthCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="/img/<%=detail.image%>" alt="">
                     </div>
                     <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
+                        <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
                     </div>
                 </div>
-                <div class="compare-1">
-                    <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
-                    </div>
-                    <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
-                    </div>
-                </div>
+                <%} })%>
             </div>
             
             <div class="compare-head-1">
-                <a href="http://google.com"><div class="vs">
-                    <p>COMPARE</p>
+                <div class="vs">
+                    <form method="GET" action="Pre-compared">
+                        <input type="hidden" name="compare" id="compare" value="sixthCompare">
+                        <input class="" type="submit" value="Compare">
+                    </form>
                 </div>
-                </a> 
+                <%details.forEach(function(detail)  { if(detail.preCompared==="sixthCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="/img/<%=detail.image%>" alt="">
                     </div>
                     <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
+                        <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
                     </div>
                 </div>
-                <div class="compare-1">
-                    <div class="compare-1-img">
-                        <img src="/img/home/trend-1.png" alt="">
-                    </div>
-                    <div class="compare-1-txt">
-                        <p>iPhone 13 Pro Max</p>
-                    </div>
-                </div>
+                <%} })%>
             </div>
             
         </div>
     </div>
-    <!-- <div class="carousel">
-        <ul id="lightslider-demo">
+    <div class="carousel">
+        <ul id="lightslider">
           <li><img src="/img/home/APPLE LOGO.svg" alt="First slide"></li>
           <li><img src="/img/home/ONEPLUS LOGO.svg" alt="Second slide"></li>
           <li><img src="/img/home/GOOGLE LOGO.svg" alt="Third slide"></li>
           <li><img src="/img/home/SAMSUNG LOGO.svg" alt="Fourth slide"></li>
           <li><img src="/img/home/HUAWEI LOGO.svg" alt="Fifth slide"></li>
           <li><img src="/img/home/XIAOMI LOGO.svg" alt="Sixth slide"></li>
-          <li><img src="/img/home/GOOGLE LOGO.svg " alt="Sixth slide"></li>
         </ul>
-    </div> -->
+    </div>

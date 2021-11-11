@@ -1,66 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap"); */
-/* 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: sans-serif;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-} */
-
-/* .header {
-  background-color: #000000;
-  border-bottom: 1px solid #242424;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 1.5rem;
-  line-height: 1rem;
-}
-
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-item {
-  margin-right: 5rem;
-  text-transform: uppercase;
-  font-family: "Helvetica Neue";
-}
-
-.nav-link-1 img,
-.nav-link-2 img,
-.nav-link-3 img {
-  height: 20px;
-}
-
-.nav-link-2 img,
-.nav-link-1 img {
-  margin-right: 2rem;
-}
-
-.nav-logo {
-  width: 80px;
-  align-items: center;
-  margin-left: 4rem;
-} */
 
 .hero-container {
   height: 265vh;
@@ -71,8 +8,6 @@ a {
   justify-content: center;
   align-items: center;
   row-gap: 5rem;
-  font-family: 'SF Pro Display', sans-serif;
-
 }
 
 .hero-1 {
@@ -88,8 +23,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'SF Pro Display', sans-serif;
-
 }
 
 .hero-1 h1 {
@@ -110,7 +43,6 @@ a {
   border-radius: 25px;
   /* border: 1px solid #707070; */
   display: flex;
-  font-family: 'SF Pro Display', sans-serif;
   flex-direction: row;
 }
 
@@ -153,6 +85,10 @@ a {
   padding-left: 10rem;
 }
 
+.hero-2-btn a{
+  color: #fff;
+}
+
 .hero-2 .fa {
   width: 22px;
   font-size: 18px;
@@ -181,8 +117,6 @@ a {
   /* border: 1px solid #707070; */
   display: flex;
   flex-direction: row;
-  font-family: 'SF Pro Display', sans-serif;
-
 }
 
 .hero-3-text {
@@ -224,6 +158,10 @@ a {
   padding-left: 10rem;
 }
 
+.hero-3-btn a{
+  color: #fff;
+}
+
 .hero-3 .fa {
   width: 22px;
   font-size: 18px;
@@ -247,7 +185,6 @@ a {
   -ms-border-radius: 25px 0px 0px 25px;
   -o-border-radius: 25px 0px 0px 25px;
 }
-
 .trend-heading {
   display: flex;
   flex-direction: column;
@@ -320,7 +257,7 @@ a {
   width: 100%;
   border-radius: 25px 25px 0px 0px;
   position: relative;
-  /* background-color: chartreuse; */
+  border-bottom : 1px solid #707070;
 }
 
 .trend-1-img img {
@@ -355,14 +292,14 @@ a {
   padding: 1rem;
 }
 
+
 .news-heading {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 5rem;
+  margin-top: 12rem;
   width: 93vw;
-  font-family: 'SF Pro Display', sans-serif;
-
 }
 
 .news-heading h1 {
@@ -374,7 +311,7 @@ a {
 }
 
 .news-heading hr {
-  width: 134rem;
+  width: 100%;
   height: 3px;
   margin-bottom: 4rem;
   margin-top: 0.3rem;
@@ -390,8 +327,6 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'SF Pro Display', sans-serif;
-
   /* background-color: cornflowerblue; */
 }
 
@@ -402,8 +337,6 @@ a {
   flex-direction: column;
   row-gap: 5rem;
   column-gap: 5rem;
-  font-family: 'SF Pro Display', sans-serif;
-
   /* background-color: deeppink; */
 }
 
@@ -475,8 +408,6 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  font-family: 'SF Pro Display', sans-serif;
-
   row-gap: 1rem;
   background-color: whitesmoke;
   border-radius: 0px 25px 25px 0px;
@@ -488,8 +419,6 @@ a {
 .news-txt h1 {
   font-size: 24px;
   font-weight: 400;
-  font-family: 'SF Pro Display', sans-serif;
-
   max-width: 70rem;
 }
 
@@ -498,8 +427,6 @@ a {
   font-weight: 325;
   max-width: 80rem;
   line-height: 2.5rem;
-  font-family: 'SF Pro Display', sans-serif;
-
 }
 
 .compare-heading {
@@ -508,8 +435,6 @@ a {
   align-items: flex-start;
   margin-left: 5rem;
   width: 93vw;
-  font-family: 'SF Pro Display', sans-serif;
-
 }
 
 .compare-heading h1 {
@@ -519,12 +444,10 @@ a {
   margin-top: 6rem;
   font-size: 38px;
   font-weight: 500;
-  font-family: 'SF Pro Display', sans-serif;
-
 }
 
 .compare-heading hr {
-  width: 134rem;
+  width: 100%;
   height: 3px;
   margin-bottom: 4rem;
   margin-top: 0.3rem;
@@ -542,8 +465,6 @@ a {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 5rem;
-  font-family: 'SF Pro Display', sans-serif;
-
   /* background-color: fuchsia; */
 }
 
@@ -558,8 +479,6 @@ a {
   column-gap: 5rem;
   row-gap: 7rem;
   flex-wrap: wrap;
-  font-family: 'SF Pro Display', sans-serif;
-
 }
 
 .compare-head-1 {
@@ -581,7 +500,6 @@ a {
 }
 
 .vs {
-  font-family: 'SF Pro Display', sans-serif;
   height: 7.5rem;
   width: 7.5rem;
   border-radius: 50%;
@@ -592,7 +510,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.vs p {
+.vs form {
   color: #fff;
   position: absolute;
   font-size: 11.5px;
@@ -600,7 +518,20 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'SF Pro Display', sans-serif;
+}
+
+.vs form input{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    height: 75px;
+    border-radius: 50%;
+    width: 76px;
+    cursor: pointer;
+}
+
+.vs form input:focus{
+  outline: none;
 }
 
 .compare-head-1 .compare-1 {
@@ -639,7 +570,20 @@ a {
   border-left: 1px solid #707070;
 }
 
-.compare-1 .compare-1-txt p {
+.compare-1 .compare-1-txt a{
+  border-radius: 0px 0px 25px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  color: #000;
+}
+
+
+.compare-1 .compare-1-txt a p {
   font-size: 20px;
   font-weight: 500;
   text-align: center;
@@ -648,8 +592,9 @@ a {
 
 .carousel {
   background-color: #f3f3f3;
-  padding: 23px 0;
+  padding: 23px 60px;
   /* margin-bottom: 2rem; */
+  opacity: 0.8;
 }
 
 .carousel ul li {
@@ -660,4 +605,39 @@ a {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+
+
+.scrollup {
+  display: flex;
+  justify-content: center;
+  color: #202020;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.568);
+  border: 1px solid #202020;
+  font-size: 34px;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border-radius: 50px;
+  position: fixed;
+  bottom: -10px;
+  right: 35px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s, bottom 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* .scrollup img{
+  width: 100%;
+} */
+
+.scrollup.show {
+  bottom: 30px;
+  opacity: 1;
+  visibility: visible;
 }

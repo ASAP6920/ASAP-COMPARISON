@@ -6,7 +6,6 @@ const passport = require("passport");
 const API = sgMail.setApiKey(process.env.MAIL_KEY);
 const crypto = require('crypto')
 
-
 function authController() {
   const _getRedirectUrl = (req) => {
     return req.user.role === "admin" ? "/" : "/";
@@ -14,14 +13,14 @@ function authController() {
 
   return {
     reset(req, res) {
-      res.render("auth/mail");
+      res.render("auth/reset");
     },
     async postReset(req, res) {
       const { email } = req.body;
       // console.log(req.body);
       const user = await User.findOne({ email: email });
       if (!user) {
-        req.flash("error", "Invalid email address");
+        req.flash("error", "user with given does not exist");
         return res.redirect("/reset");
       }
       let token = await Token.findOne({ userId: user._id });
@@ -47,13 +46,13 @@ function authController() {
                <h5>Please click the link below to finish resetting your password:</h5>
                <p>${link}</p>`,
       };
-
+      
       await sgMail
         .send(Message)
         .then((response) => console.log("Email Sent..."))
         .catch((error) => console.log(error.Message));
 
-      req.flash("error", "Email for password reset has been sent!");
+      req.flash("error", "Link has been sent to your email");
       return res.redirect("/reset");
     },
 
@@ -78,7 +77,6 @@ function authController() {
       }
 
       return res.render("auth/password");
-
     },
 
     async afterReset(req, res) {
@@ -103,12 +101,12 @@ function authController() {
       let password = req.body.password;
       const hashPassword = await bcrypt.hash(password, 10);
 
-      const newUser = {
+      const user1 = {
         password: hashPassword,
       };
 
-      await User.findByIdAndUpdate({ _id: req.params.id }, newUser)
-        .then((newUser) => {
+      await User.findByIdAndUpdate({ _id: req.params.id }, user1)
+        .then((user1) => {
           return res.redirect("/");
         })
         .catch((error) => {
@@ -118,9 +116,11 @@ function authController() {
 
       await token.delete();
     },
+
     login(req, res) {
       res.render("auth/login");
     },
+
     postLogin(req, res, next) {
       const { email, password } = req.body;
 
@@ -152,7 +152,7 @@ function authController() {
     },
     async postRegister(req, res) {
       const { fname, lname, email, password } = req.body;
-      // console.log(req.body)
+      // console.log(req.body);
 
       //VALIDATING REQUESTS
       if (!fname || !lname || !email || !password) {
@@ -165,9 +165,9 @@ function authController() {
 
       User.exists({ email: email }, (err, result) => {
         if (result) {
-          req.flash("error", "Email already exist");
-         req.flash("fname", fname);
-         req.flash("lname", lname);
+          req.flash("error", "Email already Exist");
+          req.flash("fname", fname);
+          req.flash("lname", lname);
           req.flash("email", email);
           return res.redirect("/register");
         }
@@ -193,7 +193,6 @@ function authController() {
           req.flash("error", "Something went wrong");
           return res.redirect("/register");
         });
-
     },
 
     logout(req, res) {

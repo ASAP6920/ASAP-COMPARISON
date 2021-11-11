@@ -1,26 +1,26 @@
 <div class="form-master">
-        <div class="form-container-login">
-            <div class="form-heading">
-                <div class="sub-heading-1"><h1>Sign in to your</h1></div>
-                <div class="sub-heading-2"><img src="/img/home/logo-2.svg" alt=""></div>
-                <div class="sub-heading-3"><h1>account</h1></div>
-            </div>
-            <form  action="/login" method="POST"  class="form-login">
-                <input type="email" placeholder="Email address" name="email">
-                <div class="eye-toggle">
-                 <input type="password" placeholder="Password" name="password" id="password">
-                <i class="fas fa-eye" id="togglePassword"></i>
-                </div>
-                <button type="submit">Sign In</button>
-                <p class="link"><a href="/register">Don’t have an account? Create one now!</a></p>
-                <p class="link"><a href="/reset">Reset password</a></p>
-                <% if(messages.error) { %>
-                <div class="error">
-                  
-                    <p> <%= messages.error %></p>
-                                    
-                </div>
-                
-                <% } %>            </form>
+    <div class="form-container-login">
+        <div class="form-heading">
+            <div class="sub-heading-1"><h1>Sign in to your</h1></div>
+            <div class="sub-heading-2"><img src="/img/home/logo-2.svg" alt=""></div>
+            <div class="sub-heading-3"><h1>account</h1></div>
         </div>
+        <form  action="/login" method="POST"  class="form-login">
+            <input type="email" placeholder="Email address" name="email">
+            <div class="eye-toggle">
+             <input type="password" placeholder="Password" name="password" id="password">
+            <i class="fas fa-eye" id="togglePassword"></i>
+            </div>
+            <button type="submit">Sign In</button>
+            <p class="link"><a href="/register">Don’t have an account? Create one now!</a></p>
+            <p class="link"><a href="/reset">Reset password</a></p>
+            <% if(messages.error) { %>
+            <div class="error">
+              
+                <p> <%= messages.error %></p>
+                                
+            </div>
+            
+            <% } %>            </form>
+    </div>
 </div>
