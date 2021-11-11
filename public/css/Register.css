@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.form-master {
+  width: 100vw;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1.8px solid #505050;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-container-register {
+  width: 75rem;
+  height: 90rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10rem 0;
+  border: 1.5px solid #505050;
+  border-radius: 25px;
+  padding: 10rem;
+  background-color: #000;
+  font-family: "Raleway", sans-serif;
+}
+
+.form-heading {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif !important;
+  /* background-color: cyan; */
+}
+.form-heading .sub-heading-1,
+.sub-heading-3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.sub-heading-2 {
+  padding: 0 5px;
+}
+
+.form-heading .sub-heading-2 img {
+  width: 90px;
+  object-fit: contain;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 44rem;
+  height: 65rem;
+  background-color: #000;
+  margin: 5rem 0;
+  row-gap: 3rem;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-register input[type="text"],
+.form-register input[type="email"],
+.form-register input[type="password"] {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.7px solid #505050;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  padding-left: 20px;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-register input[type="text"]::placeholder,
+.form-register input[type="email"]::placeholder,
+.form-register input[type="password"]::placeholder {
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+  /* padding-left: 20px; */
+}
+
+.form-register input[type="text"]:focus,
+.form-register input[type="email"]:focus,
+.form-register input[type="password"]:focus {
+  outline: none;
+}
+
+.form-register button {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #0072de;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-register .link a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.form-register .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #e30000;
+  border-radius: 10px;
+  margin-top: 5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-container-login {
+  width: 75rem;
+  height: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10rem 0;
+  border: 1.5px solid #505050;
+  border-radius: 25px;
+  padding: 10rem;
+  background-color: #000;
+  font-family: "Raleway", sans-serif;
+}
+
+.form-heading {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif !important;
+  /* background-color: cyan; */
+}
+.form-heading .sub-heading-1,
+.sub-heading-3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.sub-heading-2 {
+  padding: 0 5px;
+}
+
+.form-heading .sub-heading-2 img {
+  width: 90px;
+  object-fit: contain;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 44rem;
+  height: 50rem;
+  background-color: #000;
+  margin: 5rem 0;
+  row-gap: 3rem;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-login i, .form-register i, .form-password i{
+  top: 15px;
+  right: 12px;
+  cursor: pointer;
+  position: absolute;
+  color: #0072de;
+  background-color: #000;
+  font-size: 18px;
+}
+
+.eye-toggle {
+  width:100%;
+  position: relative;
+}
+
+.form-login input[type="text"],
+.form-login input[type="email"],
+.form-login input[type="password"] {
+  width: 100%;
+  height: 5rem;
+  background-color: #000;
+  border: 1.7px solid #505050;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  padding-left: 20px;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-login input[type="text"]::placeholder,
+.form-login input[type="email"]::placeholder,
+.form-login input[type="password"]::placeholder {
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+  /* padding-left: 20px; */
+}
+
+.form-login input[type="text"]:focus,
+.form-login input[type="email"]:focus,
+.form-login input[type="password"]:focus {
+  outline: none;
+}
+
+.form-login button {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #0072de;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.google-register {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  background-color: #0072de;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+  text-decoration: none;
+  text-align: center;
+}
+
+.google-register p{
+  padding-left: 75px;
+}
+
+.google-logo-register {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 25px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.google-logo-register img{
+  object-fit: contain;
+  width: 25px;
+}
+
+.google-register a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.form-login .link a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.form-login .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #e30000;
+  border-radius: 10px;
+  margin-top: 5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-container-email {
+  width: 75rem;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10rem 0;
+  border: 1.5px solid #505050;
+  border-radius: 25px;
+  padding: 10rem;
+  background-color: #000;
+  font-family: "Raleway", sans-serif;
+}
+
+.form-heading {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif !important;
+  /* background-color: cyan; */
+}
+.form-heading .sub-heading-1,
+.sub-heading-3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.sub-heading-2 {
+  padding: 0 5px;
+}
+
+.form-heading .sub-heading-2 img {
+  width: 90px;
+  object-fit: contain;
+}
+
+.form-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 44rem;
+  height: 50rem;
+  background-color: #000;
+  margin: 5rem 0;
+  row-gap: 3rem;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-email input[type="text"],
+.form-email input[type="email"],
+.form-email input[type="password"] {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.7px solid #505050;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  padding-left: 20px;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-email input[type="text"]::placeholder,
+.form-email input[type="email"]::placeholder,
+.form-email input[type="password"]::placeholder {
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+  /* padding-left: 20px; */
+}
+
+.form-email input[type="text"]:focus,
+.form-email input[type="email"]:focus,
+.form-email input[type="password"]:focus {
+  outline: none;
+}
+
+.form-email button {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #0072de;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-email .link a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.form-email .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #e30000;
+  border-radius: 10px;
+  margin-top: 5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-container-password {
+  width: 75rem;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10rem 0;
+  border: 1.5px solid #505050;
+  border-radius: 25px;
+  padding: 10rem;
+  background-color: #000;
+  font-family: "Raleway", sans-serif;
+}
+
+.form-heading {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif !important;
+  /* background-color: cyan; */
+}
+.form-heading .sub-heading-1,
+.sub-heading-3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.sub-heading-2 {
+  padding: 0 5px;
+}
+
+.form-heading .sub-heading-2 img {
+  width: 90px;
+  object-fit: contain;
+}
+
+.form-password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 44rem;
+  height: 50rem;
+  background-color: #000;
+  margin: 5rem 0;
+  row-gap: 3rem;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-password input[type="text"],
+.form-password input[type="email"],
+.form-password input[type="password"] {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.7px solid #505050;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  padding-left: 20px;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-password input[type="text"]::placeholder,
+.form-password input[type="email"]::placeholder,
+.form-password input[type="password"]::placeholder {
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+  /* padding-left: 20px; */
+}
+
+.form-password input[type="text"]:focus,
+.form-password input[type="email"]:focus,
+.form-password input[type="password"]:focus {
+  outline: none;
+}
+
+.form-password button {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #0072de;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-password .link a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.form-password .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #e30000;
+  border-radius: 10px;
+  margin-top: 5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+}

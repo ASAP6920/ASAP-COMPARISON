@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
+                
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}                                            
+
+html {
+  font-size: 62.5%;
+  /* font-family: "Roboto", sans-serif; */
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #000000;
+  border-bottom: 1px solid #505050;
+  font-family: 'SF Pro Display', sans-serif;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  line-height: 1rem;
+  font-family: 'SF Pro Display', sans-serif;
+
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 5rem;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue";
+}
+
+.nav-link-4, .nav-link-5{
+  color: #fff;
+font-size: 15px;
+}
+
+.nav-link-1 img,
+.nav-link-2 img,
+.nav-link-3 img,
+.nav-link-4 img {
+  height: 20px;
+}
+
+.nav-link-2 img,
+.nav-link-1 img,
+.nav-link-3 img,
+.nav-link-4 img {
+  margin-right: 2rem;
+}
+
+.nav-logo {
+  width: 80px;
+  align-items: center;
+  margin-left: 4rem;
+}
+
+footer {
+  width: 100vw;
+  height: 70vh;
+  background-color: #000;
+  border: 4rem solid #000;
+  font-family: 'SF Pro Display', sans-serif;
+
+}
+
+footer .footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 2.5rem;
+}
+
+.footer-1 {
+  /* border: 1px solid cyan; */
+  height: 30vh;
+  width: 26vw;
+}
+
+.footer-1 p {
+  color: #818181;
+  font-size: 15px;
+  text-align: left;
+  max-width: 30rem;
+  padding-top: 16px;
+}
+.footer-logo {
+  width: 80px;
+}
+
+.footer-2 {
+  /* border: 1px solid red; */
+  height: 30vh;
+  width: 15vw;
+}
+
+.footer-2 p {
+  color: #fff;
+  font-size: 20px;
+  text-align: left;
+}
+
+.footer-2 ul li {
+  color: #818181;
+  font-size: 17px;
+  padding-top: 23px;
+}
+.footer-3 {
+  /* border: 1px solid gold; */
+  height: 30vh;
+  width: 27vw;
+}
+
+.footer-3 p {
+  color: #fff;
+  font-size: 20px;
+  text-align: left;
+}
+
+.footer-3 ul li {
+  color: #818181;
+  font-size: 17px;
+  max-width: 35rem;
+  padding-top: 23px;
+}
+
+.footer-3 .fas {
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+.footer-4 {
+  /* border: 1px solid blue; */
+  height: 30vh;
+  width: 20vw;
+}
+
+.footer-4 p {
+  color: #fff;
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.footer-4 input[type="email"] {
+  width: 800px;
+  outline: none;
+  border: none;
+  height: 35px;
+  width: 23rem;
+  color: #fff;
+  background-color: #000000;
+  padding-left: 10px;
+  border: 1px solid #505050;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.footer-4 input[type="email"]:focus {
+  outline: none;
+}
+
+.footer-4 input[type="email"]::placeholder {
+  color: #818181;
+
+  text-align: left;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer-4 .fa-chevron-right {
+  padding: 9.5px;
+  background-color: #505050;
+  border-radius: 0px 5px 5px 0px;
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-text-stroke: 0.5px white;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -ms-border-radius: 0px 5px 5px 0px;
+  -o-border-radius: 0px 5px 5px 0px;
+}
+
+.social-icons {
+  /* border: 1px solid deeppink; */
+  height: 15vh;
+  width: 42vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+}
+
+.facebook,
+.twitter,
+.discord,
+.instagram,
+.linkedin,
+.reddit {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.facebook img,
+.twitter img,
+.discord img,
+.instagram img,
+.linkedin img,
+.reddit img {
+  width: 30px;
+  object-fit: contain;
+}
+
+footer hr {
+  height: 1px;
+  border-width: 0;
+  color: #818181;
+  background-color: #818181;
+}
+
+.footer-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #818181;
+  line-height: 3rem;
+  font-size: 20px;
+  font-weight: 300;
+  height: 18vh;
+  /* background-color: fuchsia; */
+}
+
+.footer-6-img {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer-6 .footer-6-img img {
+  width: 55px;
+}

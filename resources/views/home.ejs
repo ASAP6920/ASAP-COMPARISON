@@ -1,0 +1,264 @@
+
+    <div class="hero-container">
+        <div class="hero-1">
+            <h1>Compare mobile phones with each other, see how they stack up in terms of specifications</h1>
+        </div>
+        <div class="hero-2">
+            <div class="hero-2-text">
+                <h1>Are you confused between multiple mobile phones to choose from?</h1>
+                <p class="hero-2-para">Using our website you can compare other phones side by side in order to measure each specifications of a phone against the same feature of the other ones.</p>
+                <p class="hero-2-btn">Compare now <i class="fa fa-chevron-right"></i></p> 
+            </div>
+            <div class="hero-2-img"></div>
+        </div>
+        <div class="hero-3">
+            <div class="hero-3-img"></div>
+            <div class="hero-3-text">
+                <h1>Are you confused between multiple mobile phones to choose from?</h1>
+                <p class="hero-3-para">Using our website you can compare other phones side by side in order to measure each specifications of a phone against the same feature of the other ones.</p>
+                <p class="hero-3-btn">Compare now <i class="fa fa-chevron-right"></i></p> 
+            </div>
+        </div>
+    </div>
+    
+    <div class="trend-heading">
+        <h1>Trending Mobile Phones</h1><hr>
+    </div>
+
+    <div class="trending-container">
+        <div class="trend">
+        <% details.forEach(function(detail) { if(detail.trending==="Yes"){ %> 
+        <div class="trend-1">
+            <div class="trend-1-img">
+                <a href="/mobile/<%= detail._id %>"><img class="info" src="/img/home/info.svg" alt="" title="Check it out!" aria-hidden="true"></a> 
+                <img style="height: 100%; object-fit: contain; padding: 40px;" src="/img/<%=detail.image%>" alt="">
+            </div>
+            <div class="trend-1-txt">
+                <p><%=detail.name%></p>
+            </div>
+        </div>
+        <%} })%>
+
+        </div>
+    </div>
+
+    <div class="news-heading">
+        <h1>News</h1><hr>
+    </div>
+
+    <div class="news-main-container">
+        <div class="news-container">
+            <div class="news-1">
+                <div class="news-img first">
+                </div>
+                <div class="news-txt">
+                    <h1>Samsung Galaxy S22 sized up against iPhone 13, S21</h1>
+                    <p>The rumors so far suggest that the Galaxy S22 will be Samsung’s most compact flagship since the Galaxy S10e, carrying a 6.06-inch display and minimal bezels. The renowned Samsung tipster puts that into perspective comparing the vanilla S22 to the S21 and iPhone 13 where the unannounced flagship is considerably shorter than the S21 and a little bit narrower than both handsets.</p>
+                </div>
+            </div>
+            
+            <div class="news-1">
+                <div class="news-img second">
+                </div>
+                <div class="news-txt">
+                    <h1>Realme GT Neo2 arrives with Snapdragon 870 and improved cooling</h1>
+                    <p>Realme announced the GT Neo2 smartphone during an event in China. The specs of the new smartphone already leaked multiple times, but now we have a confirmation on the Snapdragon 870 chipset and the 5,000 mAh battery with super-fast charging.</p>
+                </div>
+            </div>
+            
+            <div class="news-1">
+                <div class="news-img third">
+                </div>
+                <div class="news-txt">
+                    <h1>The Realme GT Neo2 will use a thermal paste with diamonds to keep its Snapdragon 870 cool</h1>
+                    <p>The Realme GT Neo2 will be fully unveiled tomorrow, September 22, with a Snapdragon 870 chipset. The chipset already runs cooler than the 888, but the company has prepared an advanced cooling solution to keep it in the optimal temperature range.</p>
+                </div>
+            </div>
+            
+            <div class="news-1">
+                <div class="news-img fourth">
+                </div>
+                <div class="news-txt">
+                    <h1>First iPhone 13 lineup reviews are in: here’s what we learned</h1>
+                    <p>The early reviews seemingly all agree on the improved battery life. MKBHD, The Verge and Engadget all praised the battery life of the iPhone 13 Pro and Pro Max. Apple says the new A15 Bionic chipset is super energy efficient and the LTPO 120Hz OLED panel is providing further benefits in this regard. However, as Dieter Bohn from The Verge pointed out, the significant increase in the battery capacity is likely the main contributor to the solid battery life.</p>
+                </div>
+            </div>
+            
+            <div class="news-1">
+                <div class="news-img fifth">
+                </div>
+                <div class="news-txt">
+                    <h1>Oppo A55 4G leaks in official-looking renders, some specs get outed too</h1>
+                    <p>Oppo launched the A55 5G back in January, and now the company is seemingly working on a 4G version of that model. Except it’s not just using another chipset to account for the lower tier connectivity - the phone even looks different.</p>
+                </div>
+            </div>
+            
+            <div class="news-1">
+                <div class="news-img sixth">
+                </div>
+                <div class="news-txt">
+                    <h1>HMD Global to hold an event on October 6, Nokia G50 incoming</h1>
+                    <p>Mark your calendars as HMD Global just confirmed a new product launch event set for October 6. The accompanying press image shows a few feature phones and smartphones next to a big box which is likely for a tablet. If the rumors are true we should see the debut of the Nokia G50 5G smartphone and T20 Android tablet among others.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="compare-heading">
+        <h1>Pre-Compared</h1><hr>
+    </div>
+
+
+    <div class="compare-main-container">
+        <div class="compare-container">
+            <div class="compare-head-1">
+                <a href="http://google.com"><div class="vs">
+                    <p>COMPARE</p>
+                </div>
+                </a> 
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="compare-head-1">
+                <a href="http://google.com"><div class="vs">
+                    <p>COMPARE</p>
+                </div>
+                </a> 
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="compare-head-1">
+                <a href="http://google.com"><div class="vs">
+                    <p>COMPARE</p>
+                </div>
+                </a> 
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="compare-head-1">
+                <a href="http://google.com"><div class="vs">
+                    <p>COMPARE</p>
+                </div>
+                </a> 
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="compare-head-1">
+                <a href="http://google.com"><div class="vs">
+                    <p>COMPARE</p>
+                </div>
+                </a> 
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="compare-head-1">
+                <a href="http://google.com"><div class="vs">
+                    <p>COMPARE</p>
+                </div>
+                </a> 
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+                <div class="compare-1">
+                    <div class="compare-1-img">
+                        <img src="/img/home/trend-1.png" alt="">
+                    </div>
+                    <div class="compare-1-txt">
+                        <p>iPhone 13 Pro Max</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- <div class="carousel">
+        <ul id="lightslider-demo">
+          <li><img src="/img/home/APPLE LOGO.svg" alt="First slide"></li>
+          <li><img src="/img/home/ONEPLUS LOGO.svg" alt="Second slide"></li>
+          <li><img src="/img/home/GOOGLE LOGO.svg" alt="Third slide"></li>
+          <li><img src="/img/home/SAMSUNG LOGO.svg" alt="Fourth slide"></li>
+          <li><img src="/img/home/HUAWEI LOGO.svg" alt="Fifth slide"></li>
+          <li><img src="/img/home/XIAOMI LOGO.svg" alt="Sixth slide"></li>
+          <li><img src="/img/home/GOOGLE LOGO.svg " alt="Sixth slide"></li>
+        </ul>
+    </div> -->

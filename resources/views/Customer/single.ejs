@@ -1,0 +1,133 @@
+<div class="sticky-heading sticky">
+    <h3><%=details.name%></h3>
+    <p>Starting at $<%=details.startingPrice%></p>
+</div>
+
+<div class="sticky-main">
+<div class="sticky-left sticky">
+    <div class="sticky-left-img">
+        <img src="/img/<%=details.image%>" id="three">
+    </div>
+</div>
+<div class="sticky-right">
+    <div class="sticky-heading-name">
+        <h1><%=details.name%></h1>
+    </div>
+
+    <div class="right-price">
+        <h1>Price</h1>
+        <p>$<%=details.startingPrice%></p>
+    </div>
+    <hr>
+    <div class="right-finish">
+        <h1>Finish</h1>
+        <div class="finish-colors" id="finish-container">
+        <div class="first active" style="display: none;"></div>
+        <% (details.collections).forEach(function(detail) {%>
+        <div class="first" onclick="imgSlider3(this.id);" id="/img/<%=detail.image%>">
+        <li class="color-name" style="background-color: <%= detail.color%>" ></li>
+        <p><%=detail.name%></p>
+        </div>
+        <%})%>
+        </div>
+    </div>
+    <hr> 
+
+    <div class="right-memory">
+        <h1>Memory</h1>
+        <div class="right-memory-text">
+            <p><%=details.memory%></p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="right-display">
+        <h1>Display</h1>
+        <div class="right-display-text">
+            <p><%=details.displaySize%> Inches</p>
+            <p><%=details.display1%></p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="right-size">
+        <h1>Size and Weight</h1>
+        <div class="right-size-text">
+            <p class="right-size-subheading">Dimensions</p>
+            <p><%=details.dimension%> </p>
+        </div>
+        <div class="right-size-text">
+            <p class="right-size-subheading">Weight</p>
+            <p><%=details.weight%></p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="right-dust">
+        <h1>Splash, Water and Dust Resistant</h1>
+        <div class="right-dust-text">
+            <p><%=details.water%></p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="right-chip">
+        <h1>Chip</h1>
+        <div class="right-chip-text">
+            <p><%=details.chipset%></p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="right-camera">
+        <h1>Camera</h1>
+        <div class="right-camera-text">
+            <p><%=details.camera%></p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="right-security">
+        <h1>Security</h1>
+        <div class="right-security-text">
+            <p><%=details.face%></p>
+            <p><%=details.finger%></p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="right-cellular">
+        <h1>Cellular and Wireless</h1>
+        <div class="right-cellular-text">
+            <p><%=details.network%></p>
+            <p><%=details.sim%></p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="right-power">
+        <h1>Power and Battery</h1>
+        <div class="right-power-text">
+            <p><%=details.batteryCapacity%></p>
+            <p><%=details.charging%></p>
+            <p><%=details.battery%></p>
+        </div>
+    </div>
+    <hr>
+
+     <div class="right-connector">
+        <h1>Connector</h1>
+        <div class="right-connector-text">
+            <p><%=details.connector%></p>
+        </div>
+    </div>
+
+</div>
+</div>
+<div class="padding">
+<div class="sticky-footer">
+    <h1>Compare to other models</h1>
+    <span><i class="fas fa-chevron-right"></i></span>
+</div>
+
+</div>

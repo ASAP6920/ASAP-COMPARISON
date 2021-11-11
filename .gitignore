@@ -1,0 +1,8 @@
+node_modules
+config.env
+json
+mix-manifest.json
+webpack.mix.js
+package-lock.json
+yarn.lock
+.DS_Store
