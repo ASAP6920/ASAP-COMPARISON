@@ -16,6 +16,10 @@ const historyViewController = require("../app/http/controllers/history/historyVi
 const preComparedController = require("../app/http/controllers/preCompared/preComparedController");
 
 
+const profileController = require("../app/http/controllers/profile/profileController");
+
+
+
 const guest = require("../app/http/middleware/guest");
 const auth = require("../app/http/middleware/auth");
 // const admin = require("../app/http/middleware/admin");
@@ -49,7 +53,9 @@ function initRoutes(app) {
     app.get("/history/view", auth, historyViewController().show);
 
     app.get("/Pre-compared", preComparedController().show);
-    
+
+    app.get("/customer/:id", auth, profileController().index);
+    app.post("/customer/:id", auth, profileController().update);
 }
 
 module.exports = initRoutes;

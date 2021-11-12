@@ -196,16 +196,15 @@ function slider(data1, data2) {
   document.getElementById("imageChange" + data2).src = data1;
 }
 
-
-let finishContainer = document.getElementById("finish-container");
-let finishParts = finishContainer.getElementsByClassName("first");
-for (let i = 0; i < finishParts.length; i++) {
-  finishParts[i].addEventListener("click", function() {
-    let current = document.getElementsByClassName("active");
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", "");
+let finishContainer3 = document.getElementById("finish-container");
+let finishPart3 = finishContainer3.getElementsByClassName("first");
+for (let i = 0; i < finishPart3.length; i++) {
+  finishPart3[i].addEventListener("click", function() {
+    let current3 = document.getElementsByClassName("active3");
+    if (current3.length > 0) {
+      current3[0].className = current3[0].className.replace(" active3", "");
     }
-    this.className += " active";
+    this.className += " active3";
   });
 }
 

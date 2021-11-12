@@ -31,6 +31,7 @@ function googleInit(passport) {
               lname: profile._json.family_name,
               email: profile._json.email,
               password: hashPassword,
+              image: profile._json.picture,
             })
               .save()
               .then((newUser) => {

@@ -32,9 +32,9 @@
         <%let j=4; compares.forEach(function(compare) { %>
             
         <div class="color-left">
-            <ul class="shades">
+            <ul class="shades" id="collection<%=j%>">
                 <%compare.collections.forEach(function(coll) {%>
-                <li class="color1" style="background-color: <%=coll.color%>;" onclick="(imgSlider<%=j%>(this.id, '<%=coll.name%>'))" id="/img/<%=coll.image%>"></li>
+                <li class="color<%=j%>" style="background-color: <%=coll.color%>;" onclick="(imgSlider<%=j%>(this.id, '<%=coll.name%>'))" id="/img/<%=coll.image%>"></li>
                 <%})%>
             </ul>
             <div class="color-text">

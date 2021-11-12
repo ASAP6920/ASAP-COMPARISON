@@ -76,6 +76,26 @@ font-size: 15px;
   margin-left: 4rem;
 }
 
+.nav_profile{
+  height: 30px;
+  width: 30px;
+  /* background-color: white; */
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  /* border: 1px solid #707070; */
+}
+
+.nav_profile a img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
 footer {
   width: 100vw;
   height: 70vh;

@@ -1,0 +1,52 @@
+<div class="profile-master">
+    <% if(user) { %>
+    <div class="profile-container">
+        <form class="profile_form" method="POST" enctype="multipart/form-data">
+            <input type="hidden">
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload"></label>
+            </div>
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(<%=user.image%>);">
+                </div>
+            </div>
+        </div>
+        <div class="profile_details_master">
+            <div class="profile_icons_master">
+                <div class="profile_icon_1">
+                    <img src="/img/home/account.svg" alt="">
+                </div>
+                <div class="profile_icon_2">
+                    <img src="/img/home/mail.svg" alt="">
+                </div>
+            </div>
+            <div class="profile_info_master">
+                <div class="profile_name_master">
+                    <div class="profile_name_heading">
+                        <p>Name</p>
+                    </div>
+                    <div class="profile_name">
+                        <h1><%=user.fname%> <%=user.lname%></h1>
+                    </div>
+                </div>
+                <div class="profile_mail_master">
+                    <div class="profile_mail_heading">
+                        <p>Email ID</p>
+                    </div>
+                    <div class="profile_mail">
+                        <h1><%=user.email%></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="profile_save_button" type="submit">Save Changes</button>
+    </form>
+    <form id="logout" action="/logout" method="POST">
+        <a class="profile_logout_button" onClick="document.getElementById('logout').submit()" href="#">Logout</a>
+    </form>
+    
+    </div>
+    <% }%>
+</div>

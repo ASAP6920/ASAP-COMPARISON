@@ -1,0 +1,240 @@
+
+.profile-master{
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1.8px solid #505050
+  }
+  
+  .profile-container{
+    width: 75rem;
+    height: 75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 18rem 0;
+    border: 1.5px solid #505050;
+    border-radius: 25px;
+    position: relative;
+    /* padding: 10rem; */
+    /* background-color: navy; */
+  }
+  
+  .profile_form{
+    width: 100%;
+    height: 78%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: forestgreen; */
+  }
+  
+  .profile_details_master{
+    width: 50rem;
+    height: 23rem;
+    margin-top: 4rem;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: gold; */
+  }
+  
+  .profile_icons_master{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color:  cadetblue; */
+  
+  }
+  .profile_info_master{
+    width: 80%;
+    height: 100%;
+    /* background-color:chartreuse; */
+  }
+  
+  .profile_icon_1, .profile_icon_2{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* background-color: forestgreen; */
+  }
+  
+  .profile_icon_1 img, .profile_icon_2 img{
+    width: 2.2rem;
+    margin: 0 23px 7px 0px;
+    object-fit: contain;
+  }
+  
+  .profile_name_master, .profile_mail_master{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  
+  .profile_name_heading, .profile_mail_heading{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* background-color: orange; */
+  }
+  
+  .profile_name_heading p, .profile_mail_heading p{
+  font-size: 18px;
+  font-weight: 400;
+  color: #707070;
+  }
+  
+  .profile_name, .profile_mail{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom: 1px solid #707070;
+    /* background-color: firebrick; */
+  }
+  
+  .profile_name h1, .profile_mail h1{
+    font-size: 23px;
+    font-weight: 100;
+    padding-bottom: 8px;
+    color: #fff;
+  }
+  
+  .profile_save_button{
+    width: 55%;
+    height: 5rem;
+    background-color: #000000;
+    border: 1.8px solid #0072DE;
+    border-radius: 10px;
+    margin-top: 8rem;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 300;
+  }
+  
+  #logout{
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .profile_logout_button{
+    width: 55%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border: 1.8px solid #E30000;
+    border-radius: 10px;
+    /* margin-top: 2rem; */
+    padding-bottom: 4px;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 300;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  
+  /* .profile_name_master{
+    background-color: crimson;
+  }
+  
+  .profile_mail_master{
+    background-color:violet;
+  }
+  
+  .profile_icon_1, .profile_icon_2{
+    border: 1px solid cyan;
+  
+  }  */
+  
+  
+  .avatar-upload {
+    position: relative;
+    max-width: 205px;
+    /* margin: 50px auto; */
+    /* background-color: gold; */
+    margin-top: -100px;
+  }
+  .avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+  }
+  .avatar-upload .avatar-edit input {
+    display: none;
+  }
+  .avatar-upload .avatar-edit input + label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+  }
+  .avatar-upload .avatar-edit input + label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+  }
+  .avatar-upload .avatar-edit input + label:after {
+    content: "\f040";
+    font-family: 'FontAwesome';
+    color: #757575;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+  }
+  .avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #0072DE;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    background-color: black;
+  }
+  .avatar-upload .avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  

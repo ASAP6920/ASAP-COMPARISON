@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/css/dropdown.css">
     <link rel="stylesheet" href="/css/allModel.css">
     <link rel="stylesheet" href="/css/history.css">
+    <link rel="stylesheet" href="/css/profile.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">  
     <link rel = "stylesheet" href = "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -34,11 +35,11 @@
                     <li class="nav-item">
                     <a href="/customer/history" title="Stored history" class="nav-link-2"><img src="/img/home/history.svg" alt=""></a>
                     </li>
-                    <li class="nav-item"><form id="logout" action="/logout" method="POST">
+                    <!-- <li class="nav-item"><form id="logout" action="/logout" method="POST">
                         <a class="nav-link-3" onClick="document.getElementById('logout').submit()" href="#"><img src="/img/home/logout.svg" alt=""></a>
-                    </form></li>
-                    <li class="nav-item" >
-                        <a href="#" class="nav-link-4"><%= user.fname %></a>
+                    </form></li> -->
+                    <li class="nav-item nav_profile" >
+                        <a href="/customer/<%=user._id%>" title="View profile"><img src="<%=user.image%>" alt=""></a>
                     </li>
                     
                     <% } else { %>
@@ -134,6 +135,7 @@
 <script src="/js/app.js"></script>
 <script src="/js/lightslider.js" ></script>
 <script src="/js/Mobile-Home.js"></script>
-
+<script src="/js/colorChange.js"></script>
+<script src="/js/profile.js"></script>
 </body>
 </html>

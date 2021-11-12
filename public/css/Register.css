@@ -131,7 +131,7 @@
 
 .form-container-login {
   width: 75rem;
-  height: 70rem;
+  height: 78rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -173,8 +173,8 @@
   align-items: center;
   justify-content: flex-start;
   width: 44rem;
-  height: 50rem;
-  background-color: #000;
+  height: 56rem;
+  /* background-color: gold; */
   margin: 5rem 0;
   row-gap: 3rem;
   font-family: "Raleway", sans-serif !important;

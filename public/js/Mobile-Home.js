@@ -26,6 +26,8 @@ $(function() {
 });
 
 
+
+
 // Scroll to TOP
 var btn = $(".scrollup");
 $(window).scroll(function() {
@@ -49,3 +51,5 @@ togglePassword.addEventListener('click', function (e) {
   // toggle the eye / eye slash icon
   this.classList.toggle('fa-eye-slash');
 });
+
+
