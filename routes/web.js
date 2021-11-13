@@ -8,7 +8,7 @@ const allModelController = require("../app/http/controllers/allModelController")
 
 const compareController = require("../app/http/controllers/dropdown/compareController");
 const firstDropdown = require("../app/http/controllers/dropdown/firstDropdown");
-const SecondDropdown = require("../app/http/controllers/dropdown/SecondDropdown");
+const secondDropdown = require("../app/http/controllers/dropdown/secondDropdown");
 
 const historyController = require("../app/http/controllers/history/historyController");
 const historyViewController = require("../app/http/controllers/history/historyViewController");
@@ -41,8 +41,8 @@ function initRoutes(app) {
     app.get("/mobile/compare", compareController().index);
     app.post("/model", firstDropdown().index);
     app.post("/data", firstDropdown().index1);
-    app.post("/model1", SecondDropdown().index);
-    app.post("/data1", SecondDropdown().index1);
+    app.post("/model1", secondDropdown().index);
+    app.post("/data1", secondDropdown().index1);
 
     app.get("/mobile/All-Models", allModelController().index);
 
