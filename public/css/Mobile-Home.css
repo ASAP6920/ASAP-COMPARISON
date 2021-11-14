@@ -215,7 +215,7 @@
 }
 
 .trending-container {
-  height: 172vh;
+  /* height: 172vh; */
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -227,7 +227,7 @@
 }
 
 .trend {
-  height: 165vh;
+  /* height: 165vh; */
   width: 93vw;
   display: flex;
   flex-direction: row;

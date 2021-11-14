@@ -25,16 +25,24 @@
     <meta name="description" content="Compare whatever you want!"/>
 </head>
 <body>
+    <div class="width_page">
+        <img src="/img/home/caution.svg" alt="">
+        <h1>Our website is not available in this device</h1>
+    </div>
+    <div class="body">
     <header class="header">
         <nav class="navbar">
             <a href="/" class="nav-logo"><img src="/img/home/logo.svg" alt=""></a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" title="Search here" class="nav-link-1"><img src="/img/home/search.svg" alt=""></a>
+                    <a href="#" title="Search here" class="nav-link-1"><img src="/img/home/search.svg" title="Search any product" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/mobile/compare" title="Search here" class="nav-link-1"><img src="/img/home/compare.svg" title="Compare mobiles!" alt=""></a>
                 </li>
                 <% if(user) { %>
                     <li class="nav-item">
-                    <a href="/customer/history" title="Stored history" class="nav-link-2"><img src="/img/home/history.svg" alt=""></a>
+                    <a href="/customer/history" title="Stored history" class="nav-link-2"><img src="/img/home/history.svg" title="Check out your history" alt=""></a>
                     </li>
                     <!-- <li class="nav-item"><form id="logout" action="/logout" method="POST">
                         <a class="nav-link-3" onClick="document.getElementById('logout').submit()" href="#"><img src="/img/home/logout.svg" alt=""></a>
@@ -130,7 +138,7 @@
             <i class="fas fa-chevron-up"></i>
     </a>
 
-
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
 <script src="/js/app.js"></script>
@@ -138,5 +146,5 @@
 <script src="/js/Mobile-Home.js"></script>
 <script src="/js/colorChange.js"></script>
 <script src="/js/profile.js"></script>
-</body>
+</bod>
 </html>
