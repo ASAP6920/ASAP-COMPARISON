@@ -20,7 +20,7 @@ function authController() {
       // console.log(req.body);
       const user = await User.findOne({ email: email });
       if (!user) {
-        req.flash("error", "user with given does not exist");
+        req.flash("error", "Invalid email address");
         return res.redirect("/reset");
       }
       let token = await Token.findOne({ userId: user._id });
@@ -39,7 +39,7 @@ function authController() {
         to: [user.email],
         from: {
           name: "ASAP",
-          email: "sachin.jayswal2020@gmail.com",
+          email: process.env.MAIL_EMAIL,
         },
         subject: "Please reset your password",
         html: `<h3>Dear ${user.fname},</h3> 
@@ -52,7 +52,7 @@ function authController() {
         .then((response) => console.log("Email Sent..."))
         .catch((error) => console.log(error.Message));
 
-      req.flash("error", "Link has been sent to your email");
+        req.flash("error", "Email for password reset has been sent!");
       return res.redirect("/reset");
     },
 
@@ -165,7 +165,7 @@ function authController() {
 
       User.exists({ email: email }, (err, result) => {
         if (result) {
-          req.flash("error", "Email already Exist");
+          req.flash("error", "Email already exist");
           req.flash("fname", fname);
           req.flash("lname", lname);
           req.flash("email", email);
