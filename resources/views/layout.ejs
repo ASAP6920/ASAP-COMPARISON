@@ -18,9 +18,11 @@
     <link rel="stylesheet" href="/css/allModel.css">
     <link rel="stylesheet" href="/css/history.css">
     <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/search.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">  
     <link rel = "stylesheet" href = "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <meta name="description" content="Compare whatever you want!"/>
 </head>
@@ -34,8 +36,14 @@
         <nav class="navbar">
             <a href="/" class="nav-logo"><img src="/img/home/logo.svg" alt=""></a>
             <ul class="nav-menu">
+                <li>
+                    <form id="searchbar"  class="search-form" action="/search" method="get">
+                        <input type="text" id="searchName" class="search-input" name="q">
+                        <button hidden></button>
+                    </form>
+                </li>
                 <li class="nav-item">
-                    <a href="#" title="Search here" class="nav-link-1"><img src="/img/home/search.svg" title="Search any product" alt=""></a>
+                    <a title="Search here" class="nav-link-1"><img id="searchbar_img" src="/img/home/search.svg" title="Search any product" alt=""></a>
                 </li>
                 <li class="nav-item">
                     <a href="/mobile/compare" title="Search here" class="nav-link-1"><img src="/img/home/compare.svg" title="Compare mobiles!" alt=""></a>
@@ -140,11 +148,14 @@
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/lightslider.js" ></script>
 <script src="/js/Mobile-Home.js"></script>
 <script src="/js/colorChange.js"></script>
 <script src="/js/profile.js"></script>
-</bod>
+<script src="/js/search.js"></script>
+</body>
 </html>

@@ -91,7 +91,7 @@ index(req, res){
                 });
                 colorName = "<span id='oneColor'>" + result.colorName + "</span>";
                 startingPrice = "<span> Starting at $"+result.startingPrice + "</span>";
-                learnMore = "<a href='/mobile/" + result._id + "'>Learn more<i class='fa fa-chevron-right'></i></a>";
+                learnMore = "<a target='_blank' href='/mobile/" + result._id + "'>Learn more<i class='fa fa-chevron-right'></i></a>";
                 displaySize = "<span>" + result.displaySize + "″</span>";
                 displaySizeInch = "<span>" + result.displaySize + " Inches</span>";
                 display1 = "<span>" + result.display1 + "</span>";

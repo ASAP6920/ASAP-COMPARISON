@@ -87,7 +87,7 @@ function secondDropdown() {
             startingPrice =
               "<span> Starting at $" + result.startingPrice + "</span>";
             learnMore =
-                "<a href='/mobile/" +
+                "<a target='_blank' href='/mobile/" +
                 result._id +
                 "'>Learn more<i class='fa fa-chevron-right'></i></a>";
             displaySize = "<span>" + result.displaySize + "″</span>";

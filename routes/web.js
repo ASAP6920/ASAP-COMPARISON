@@ -18,6 +18,7 @@ const preComparedController = require("../app/http/controllers/preCompared/preCo
 
 const profileController = require("../app/http/controllers/profile/profileController");
 
+const searchController = require("../app/http/controllers/search/searchController");
 
 
 const guest = require("../app/http/middleware/guest");
@@ -56,6 +57,10 @@ function initRoutes(app) {
 
     app.get("/customer/:id", auth, profileController().index);
     app.post("/customer/:id", auth, profileController().update);
+
+    app.get("/search", searchController().search);
+     app.get("/searching", searchController().preSearch);
+     app.get("/searchError", searchController().searchError);
 }
 
 module.exports = initRoutes;
