@@ -37,7 +37,13 @@
                         <input type="hidden" name="h_id1" id="h_id1" value="<%= product.item.drop1 %>">
                     <input type="submit" class="again_button" value="Compare again">
                 </form>
+                <form action="/history/Delete" method="POST">
+                        <input type="hidden" name="hDelete_id" id="hDelete_id" value="<%= product.item.drop %>">
+                        <input type="hidden" name="hDelete_id1" id="hDelete_id1" value="<%= product.item.drop1 %>">
+                    <input type="submit" class="again_button_2" value="Remove">
+                </form>
             </div>
+            
         </div>
 
         <%} })%>

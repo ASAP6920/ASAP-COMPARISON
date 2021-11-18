@@ -16,6 +16,9 @@ function homeController() {
         models: models,
       });
     },
+    about(req, res) {
+      return res.render("about");
+    },
   };
 }
 module.exports = homeController;

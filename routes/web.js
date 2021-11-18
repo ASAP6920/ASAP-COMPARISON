@@ -51,6 +51,7 @@ function initRoutes(app) {
 
     app.get("/customer/history", auth, historyController().index);
     app.post("/history", auth, historyController().store);
+    app.post("/history/delete", auth, historyController().remove);
     app.get("/history/view", auth, historyViewController().show);
 
     app.get("/Pre-compared", preComparedController().show);
@@ -61,6 +62,11 @@ function initRoutes(app) {
     app.get("/search", searchController().search);
      app.get("/searching", searchController().preSearch);
      app.get("/searchError", searchController().searchError);
+
+     app.get("/about", homeController().about);
+
+
+
 }
 
 module.exports = initRoutes;

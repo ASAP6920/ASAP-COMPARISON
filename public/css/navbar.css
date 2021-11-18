@@ -122,9 +122,9 @@ footer .footer-container {
 
 .footer-1 p {
   color: #818181;
-  font-size: 15px;
+  font-size: 17px;
   text-align: left;
-  max-width: 30rem;
+  max-width: 29rem;
   padding-top: 16px;
 }
 .footer-logo {
@@ -148,6 +148,10 @@ footer .footer-container {
   font-size: 17px;
   padding-top: 23px;
 }
+
+.footer-2 ul li a{
+  color: #818181;
+}
 .footer-3 {
   /* border: 1px solid gold; */
   height: 30vh;
@@ -167,9 +171,25 @@ footer .footer-container {
   padding-top: 23px;
 }
 
+.footer-3 ul li a{
+  text-decoration: none;
+  color: #818181;
+}
+
+
 .footer-3 .fas {
-  font-size: 16px;
+  font-size: 18px;
   padding-right: 10px;
+}
+
+.footer-3 .fa-map-marker-alt{
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.footer-3 .fa-envelope{
+  padding-right: 10px;
+  font-size: 19px;
 }
 
 .footer-4 {
@@ -257,7 +277,7 @@ footer .footer-container {
 .instagram img,
 .linkedin img,
 .reddit img {
-  width: 30px;
+  width: 28px;
   object-fit: contain;
 }
 

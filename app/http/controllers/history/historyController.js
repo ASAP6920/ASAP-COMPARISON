@@ -34,6 +34,24 @@ function historyController() {
         await res.json({ success });
       }
     },
+     remove(req, res) {
+      let history = req.session.history;
+      const{hDelete_id, hDelete_id1} = req.body;
+      // console.log(req.body , req.user._id)
+      //  console.log(req.session.history);
+      //  console.log(hDelete_id + hDelete_id1 + req.user._id);
+
+      if (history.totalProduct > 0) {
+        history.totalProduct = history.totalProduct - 1;
+        if (history.items[hDelete_id + hDelete_id1 + req.user._id].qty === 1) {
+          delete history.items[hDelete_id + hDelete_id1 + req.user._id];
+        } 
+        if (history.totalProduct === 0) {
+          delete req.session.history;
+        }
+      }
+      return res.redirect("/mobile/compare");
+    },
   };
 }
 module.exports = historyController;

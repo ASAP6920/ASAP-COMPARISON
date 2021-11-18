@@ -27,12 +27,12 @@
 
 .precompared_main_container {
   width: 100%;
-  height: 62rem;
+  height: 73rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 5rem;
-  /* border: 1px solid orange; */
+  /* background-color:  orange; */
 }
 
 .precompared_container {
@@ -41,7 +41,8 @@
   justify-content: center;
   padding: 0 5rem;
   width: 100%;
-  height: 80%;
+  height: 71%;
+  margin-bottom: 1rem;
   /* border: 1px solid seagreen; */
 }
 
@@ -145,11 +146,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 20%;
+  height: 29%;
   width: 100%;
   /* background-color: Gold; */
   border-bottom: 1px solid #707070;
 }
+
 
 .again_button{
   padding: 2rem 3rem;
@@ -159,4 +161,19 @@
   background-color: #fff;
   border: 2px solid #000;
   margin-top: 2rem;
+  cursor: pointer;
+  /* margin-bottom: 2rem; */
+}
+
+.again_button_2{
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 22px;
+  color: #fff;
+  background-color: #E30000;
+  /* border: 2px solid #E30000; */
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  /* margin-bottom: 2rem; */
 }
