@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/css/search.css">
     <link rel="stylesheet" href="/css/404.css">
     <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/adminHome.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">  
     <link rel = "stylesheet" href = "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -36,7 +37,16 @@
     <div class="body">
     <header class="header">
         <nav class="navbar">
-            <a href="/" class="nav-logo"><img src="/img/home/logo.svg" alt=""></a>
+            <% if(user) { %>
+                <% if(user.role==='admin') { %>
+                    <a href="/admin/home" class="nav-logo"><img src="/img/home/logo-2.svg" alt=""></a>
+            <%} else {%>
+                <a href="/" class="nav-logo"><img src="/img/home/logo.svg" alt=""></a>
+            <%}%>
+            <%} else {%>
+                <a href="/" class="nav-logo"><img src="/img/home/logo.svg" alt=""></a>
+            <%}%>
+            
             <ul class="nav-menu">
                 <li>
                     <form id="searchbar"  class="search-form" action="/search" method="get">
@@ -84,9 +94,22 @@
             <div class="footer-2">
                 <p>Useful Links</p>
                 <ul>
+                    <% if(user) { %>
+                        <% if(user.role==='admin') { %>
                     <li><a href="/" target="_blank">Home</a></li>
                     <li><a href="/about" target="_blank">About us</a></li>
                     <li><a href="/mobile/compare" target="_blank">Compare</a></li>
+                    <li><a href="/admin/home" target="_blank">Admin</a></li>
+                    <%} else {%>
+                    <li><a href="/" target="_blank">Home</a></li>
+                    <li><a href="/about" target="_blank">About us</a></li>
+                    <li><a href="/mobile/compare" target="_blank">Compare</a></li>
+                    <%}%>
+                    <%} else {%>
+                    <li><a href="/" target="_blank">Home</a></li>
+                    <li><a href="/about" target="_blank">About us</a></li>
+                    <li><a href="/mobile/compare" target="_blank">Compare</a></li>
+                    <%}%>
                 </ul>
             </div>
             <div class="footer-3">

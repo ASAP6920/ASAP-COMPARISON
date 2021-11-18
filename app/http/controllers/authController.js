@@ -8,7 +8,7 @@ const crypto = require('crypto')
 
 function authController() {
   const _getRedirectUrl = (req) => {
-    return req.user.role === "admin" ? "/" : "/";
+    return req.user.role === "admin" ? "/admin/home" : "/";
   };
 
   return {

@@ -1,0 +1,35 @@
+<div class="border_color">
+    <div class="admin_card_master_container">
+        <div class="admin_card_main_title">
+            <h1>All models</h1>
+        </div>
+        
+        <div class="admin_card_master">
+            <div  class="admin_card_main_container">
+                <%details.forEach(function(detail) {%>
+                <div class="admin_card_item">
+                    <div class="admin_card_title">
+                        <h1><%=detail.name%></h1>
+                    </div>
+                    
+                    <div class="admin_card_img">
+                        
+                        <img class="admin_card_img_size" src="/img/<%=detail.image%>"  alt="">
+                    
+                    </div>
+                
+                    <div class="admin_card_price">
+                        <div class="admin_card_button_1">
+                                <a href="/admin/delete/<%=detail._id%>" class="admincard_edit_button">Delete</a>
+                        </div>
+                        <div class="admin_card_button_2">
+                                <a href="https://www.apple.com" target="_blank" class="admincard_edit_button">Add color</a> 
+                        </div>
+                    </div>
+                </div>
+                <%})%>
+
+                </div>
+            </div>
+        </div>
+    </div>

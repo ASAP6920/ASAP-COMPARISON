@@ -1,0 +1,204 @@
+
+.border_color{
+    background-color: #000;
+    border-bottom: 1px solid #707070;
+}
+
+.admin_card_master_container {
+  /* background-color: aqua; */
+  margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin_card_main_title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  margin-bottom: 4rem;
+  /* background-color: wheat; */
+  border-bottom: 1px solid #707070
+}
+
+.admin_card_main_title h1 {
+  font-size: 35px;
+  font-weight: 500;
+  color: #fff;
+  padding: 34px 0 0px 18px;
+}
+
+
+
+.admin_card_master {
+  /* height: 100vh; */
+  width: 100%;
+  margin-bottom: 7rem;
+  /* border-bottom: 1px solid #505050; */
+  background-color: #000000;
+}
+
+
+.admin_card_main_container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 5rem;
+  row-gap: 5rem;
+  padding: 3rem 3rem;
+  margin-bottom: 2rem;
+  /* background-color: aquamarine; */
+}
+
+.admin_card_item{
+  width: 40rem;
+  height: 50rem;
+  border-radius:20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  -webkit-border-radius:20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 300ms;
+  border: 1px solid #707070;
+}
+
+.admin_card_item:hover{
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+}
+
+.admin_card_title{
+  width: 100%;
+  height: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: orange; */
+  padding: 18px 0px 0px 25px;
+  border-radius: 20px 20px 0px 0px;
+  -webkit-border-radius: 20px 20px 0px 0px;
+  -moz-border-radius: 20px 20px 0px 0px;
+  -ms-border-radius: 20px 20px 0px 0px;
+  -o-border-radius: 20px 20px 0px 0px;
+}
+
+.admin_card_title h1{
+  font-size: 25px;
+  font-weight: 500;
+  color: #1d1d1f;
+}
+
+.admin_card_img {
+  width: 100%;
+  height: 69%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #707070;
+}
+
+
+.admin_card_img_size{
+  height: 78%;
+  object-fit: contain;
+  /* background-color: red; */
+}
+
+.admin_card_price{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px ;
+  /* background-color: fuchsia; */
+  border-radius: 0px 0px 20px 20px;
+  -webkit-border-radius: 0px 0px 20px 20px;
+  -moz-border-radius: 0px 0px 20px 20px;
+  -ms-border-radius: 0px 0px 20px 20px;
+  -o-border-radius: 0px 0px 20px 20px;
+}
+
+.admin_card_tag p{
+  font-size: 17px;
+  font-weight: 400;
+  color: #1d1d1f;
+}
+
+.admin_card_button_1{
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: 1px solid #707070;
+  transition: 0.3s ease-in-out;
+  /* background-color: #E30000; */
+  /* color: #1d1d1f; */
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 100;
+  text-decoration: none;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.admin_card_button_2{
+  padding: 1rem 2rem;
+  cursor: pointer;
+  /* background-color: #0077ED; */
+  border: 1px solid #707070;
+  transition: 0.3s ease-in-out;
+  /* color: #1d1d1f; */
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 100;
+  text-decoration: none;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.admincard_edit_button{
+    color: #1d1d1f;
+}
+
+.admin_card_button_1:hover .admincard_edit_button{
+  color: #fff;
+}
+.admin_card_button_2:hover .admincard_edit_button{
+  color: #fff;
+}
+
+.admin_card_button_1:hover{
+    background-color: #E30000;
+    color: #fff;
+    border:none;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.admin_card_button_2:hover{
+    background-color: #0077ED;
+    color: #fff;
+    border: none;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}

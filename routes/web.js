@@ -20,10 +20,12 @@ const profileController = require("../app/http/controllers/profile/profileContro
 
 const searchController = require("../app/http/controllers/search/searchController");
 
+const adminHomeController = require("../app/http/controllers/admin/adminHomeController");
+
 
 const guest = require("../app/http/middleware/guest");
 const auth = require("../app/http/middleware/auth");
-// const admin = require("../app/http/middleware/admin");
+const admin = require("../app/http/middleware/admin");
 
 
 function initRoutes(app) {
@@ -65,7 +67,9 @@ function initRoutes(app) {
 
      app.get("/about", homeController().about);
 
+     app.get("/admin/home", admin, adminHomeController().index);
 
+     app.get('/admin/delete/:id', admin, adminHomeController().delete)
 
 }
 
