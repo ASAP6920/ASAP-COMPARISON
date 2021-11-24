@@ -139,6 +139,7 @@
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
+  cursor: pointer;
   /* background-color:springgreen; */
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 50%;

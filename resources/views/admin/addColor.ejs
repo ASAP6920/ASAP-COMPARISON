@@ -1,0 +1,21 @@
+<div class="form-master">
+    <div class="form-container-color">
+        <div class="form-heading">
+            <h1><%=detail.name%></h1>
+        </div>
+        <form method="POST" class="form-color" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Color name">
+            <input type="text" name="color" placeholder="Color hex code">
+            <input type="file" name="image" accept=".png, .jpg, .jpeg">
+            <button type="submit">Add color</button>
+            <% if(messages.error) { %>
+                <div class="error">
+                  
+                    <p> <%= messages.error %></p>
+                                    
+                </div>
+                
+                <% } %>  
+        </form>
+    </div>
+</div>

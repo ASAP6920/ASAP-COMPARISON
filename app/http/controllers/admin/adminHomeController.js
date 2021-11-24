@@ -7,7 +7,7 @@ function adminHomeController() {
   return {
     async index(req, res) {
       
-      const details = await Detail.find();
+      const details = await Detail.find().sort({ 'name': -1 });
       // console.log(details);
       return res.render("admin/adminHome", {
         details: details,

@@ -22,6 +22,8 @@ const searchController = require("../app/http/controllers/search/searchControlle
 
 const adminHomeController = require("../app/http/controllers/admin/adminHomeController");
 
+const adminEditController = require("../app/http/controllers/admin/adminEditController");
+
 
 const guest = require("../app/http/middleware/guest");
 const auth = require("../app/http/middleware/auth");
@@ -70,6 +72,9 @@ function initRoutes(app) {
      app.get("/admin/home", admin, adminHomeController().index);
 
      app.get('/admin/delete/:id', admin, adminHomeController().delete)
+
+     app.get('/admin/addColor/:id', admin, adminEditController().show)
+     app.post('/admin/addColor/:id', admin, adminEditController().update)
 
 }
 

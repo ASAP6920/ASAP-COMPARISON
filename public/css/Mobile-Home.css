@@ -68,19 +68,20 @@
 }
 
 .hero-2-text .hero-2-para {
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 200;
   text-align: left;
-  max-width: 50rem;
+  max-width: 52rem;
   padding-left: 10rem;
   padding-top: 2rem;
+  line-height: 2.2rem;
 }
 
 .hero-2-btn {
   padding-top: 3rem;
   display: flex;
   font-family: "Helvetica Neue";
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 400;
   padding-left: 10rem;
 }
@@ -93,7 +94,7 @@
   width: 22px;
   font-size: 18px;
   -webkit-text-stroke: 1px black;
-  padding-top: 5px;
+  padding-top: 6px;
   padding-left: 5px;
   color: #fff;
 }
@@ -141,10 +142,10 @@
 }
 
 .hero-3-text .hero-3-para {
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 200;
   text-align: left;
-  max-width: 50rem;
+  max-width: 52rem;
   padding-left: 10rem;
   padding-top: 2rem;
 }
@@ -153,7 +154,7 @@
   padding-top: 3rem;
   display: flex;
   font-family: "Helvetica Neue";
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 400;
   padding-left: 10rem;
 }
@@ -166,7 +167,7 @@
   width: 22px;
   font-size: 18px;
   -webkit-text-stroke: 1px black;
-  padding-top: 5px;
+  padding-top: 6px;
   padding-left: 5px;
   color: #fff;
 }

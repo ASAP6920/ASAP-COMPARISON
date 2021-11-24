@@ -6,9 +6,9 @@ const Detail = require("../../models/detail");
 function homeController() {
   return {
     async index(req, res) {
-      const brands = await brand.find();
-      const models = await model.find();
-      const details = await Detail.find();
+      const brands = await brand.find().sort({ 'name': -1 });
+      const models = await model.find().sort({ 'name': -1 });
+      const details = await Detail.find().sort({ 'name': -1 });
       // console.log(details);
       return res.render("home", {
         brands: brands,

@@ -167,6 +167,7 @@ const detailSchema = new mongoose.Schema({
   },
   collections: [
     {
+      _id: false,
       color: {
         type: String,
         required: true,

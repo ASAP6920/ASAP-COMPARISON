@@ -12,7 +12,7 @@ function searchController() {
       // console.log(search);
       let detailFilter = Detail.find({
         name: { $regex: search, $options: "i" },
-      }).limit(10);
+      }).limit(10).sort({ 'name': 1 });
       detailFilter.exec(function(err, data) {
         let result = [];
         if (!err) {

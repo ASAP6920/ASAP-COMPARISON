@@ -6,7 +6,7 @@
         
         <div class="admin_card_master">
             <div  class="admin_card_main_container">
-                <%details.forEach(function(detail) {%>
+                <%details.forEach(function(detail) { if(detail.name!=="iPhone 13 Pro Max" && detail.name!=="Samsung Galaxy Z Fold3") {%>
                 <div class="admin_card_item">
                     <div class="admin_card_title">
                         <h1><%=detail.name%></h1>
@@ -23,11 +23,11 @@
                                 <a href="/admin/delete/<%=detail._id%>" class="admincard_edit_button">Delete</a>
                         </div>
                         <div class="admin_card_button_2">
-                                <a href="https://www.apple.com" target="_blank" class="admincard_edit_button">Add color</a> 
+                                <a href="/admin/addColor/<%=detail._id%>" target="_blank" class="admincard_edit_button">Add color</a> 
                         </div>
                     </div>
                 </div>
-                <%})%>
+                <% } })%>
 
                 </div>
             </div>
