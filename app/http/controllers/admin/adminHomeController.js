@@ -1,4 +1,4 @@
-const model = require("../../../models/model");
+const Model = require("../../../models/model");
 const brand = require("../../../models/brand");
 const Detail = require("../../../models/detail");
 
@@ -14,13 +14,10 @@ function adminHomeController() {
       });
     },
     async delete(req, res){
-      const {id: id} = req.params
-      const detail = await Detail.findOneAndDelete({_id: id}).then(() =>{
-          return res.redirect('/admin/home')
-      }).catch(err => {
-          req.flash('error', 'Something went wrong')
-          return res.redirect('/admin/home')
-      })
+      const {modelId: modelId} = req.params
+      await Detail.deleteOne({ modelId: modelId });
+      await Model.deleteOne({ modelId: modelId });
+      return res.redirect('/admin/home')
   },
   };
 }

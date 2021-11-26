@@ -1,0 +1,47 @@
+<div class="table-master-container">
+    <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Pre-compared</th>
+            <th>Trending</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%details.forEach(function(detail) {%>
+          <tr>
+            <td>
+                <p><%=detail._id%></p>
+            </td>
+            <td>
+                <p><%=detail.name%></p>
+            </td>
+            <td>
+                <form action="/admin/edit/compared" method="POST">
+                  <input type="text" name="modelsId" value="<%=detail._id%>" hidden>
+                <select name="preCompared" id="preCompared" onchange="this.form.submit()">
+                  <option value="firstCompare" <%=detail.preCompared === 'firstCompare' ? 'selected' : ''%>>firstCompare</option>
+                  <option value="secondCompare" <%=detail.preCompared === 'secondCompare' ? 'selected' : ''%>>secondCompare</option>
+                  <option value="thirdCompare" <%=detail.preCompared === 'thirdCompare' ? 'selected' : ''%>>thirdCompare</option>
+                  <option value="fourthCompare" <%=detail.preCompared === 'fourthCompare' ? 'selected' : ''%>>fourthCompare</option>
+                  <option value="fifthCompare" <%=detail.preCompared === 'fifthCompare' ? 'selected' : ''%>>fifthCompare</option>
+                  <option value="sixthCompare" <%=detail.preCompared === 'sixthCompare' ? 'selected' : ''%>>sixthCompare</option>
+                  <option value="No" <%=detail.preCompared === 'No' ? 'selected' : ''%>>No</option>
+                </select>  
+              </form>
+            </td>
+            <td>
+            <form action="/admin/edit/trending" method="POST">
+                <input type="text" name="modelsId" value="<%=detail._id%>" hidden>
+                <select name="trending" id="trending" onchange="this.form.submit()">
+                  <option value="Yes" <%=detail.trending === 'Yes' ? 'selected' : ''%>>Yes</option>
+                  <option value="No" <%=detail.trending === 'No' ? 'selected' : ''%>>No</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <%})%>
+        </tbody>
+      </table>
+</div>

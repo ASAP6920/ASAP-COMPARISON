@@ -55,6 +55,39 @@ function adminEditController() {
             });
       });
     },
+    async index(req, res) {
+      const details = await Detail.find().sort({ name: -1 });
+      // console.log(details);
+      return res.render("admin/adminEdit", {
+        details: details,
+      });
+    },
+    async trending(req, res) {
+      // console.log(req.body)
+      Detail.updateOne(
+        { _id: req.body.modelsId },
+        { trending: req.body.trending },
+        (err, data) => {
+          if (err) {
+            return res.redirect("/admin/edit");
+          }
+          return res.redirect("/admin/edit");
+        }
+      );
+    },
+    async compared(req, res) {
+      Detail.updateOne(
+        { _id: req.body.modelsId },
+        { preCompared: req.body.preCompared },
+        (err, data) => {
+          if (err) {
+            return res.redirect("/admin/edit");
+          }
+          return res.redirect("/admin/edit");
+        }
+      );
+    },
+
   };
 }
 module.exports = adminEditController;

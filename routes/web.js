@@ -71,11 +71,14 @@ function initRoutes(app) {
 
      app.get("/admin/home", admin, adminHomeController().index);
 
-     app.get('/admin/delete/:id', admin, adminHomeController().delete)
+     app.get('/admin/delete/:modelId', admin, adminHomeController().delete)
 
      app.get('/admin/addColor/:id', admin, adminEditController().show)
      app.post('/admin/addColor/:id', admin, adminEditController().update)
 
+     app.get("/admin/edit", admin, adminEditController().index);
+     app.post("/admin/edit/trending", admin, adminEditController().trending);
+     app.post("/admin/edit/compared", admin, adminEditController().compared);
 }
 
 module.exports = initRoutes;

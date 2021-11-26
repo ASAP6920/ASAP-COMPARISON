@@ -50,7 +50,7 @@ function historyController() {
           delete req.session.history;
         }
       }
-      return res.redirect("/mobile/compare");
+      return res.render("customers/history");
     },
   };
 }

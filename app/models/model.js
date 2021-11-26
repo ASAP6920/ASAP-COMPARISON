@@ -5,6 +5,10 @@ const modelSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  modelId: {
+    type: String,
+    required: true,
+  },
   name: {
     type: String,
     required: true,

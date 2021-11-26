@@ -182,7 +182,7 @@ function authController() {
         lname,
         email,
         password: hashPassword,
-        image: "/img/profile/defaultUser.svg"
+        image: "/img/profile/customer.jpg"
       });
 
       user
