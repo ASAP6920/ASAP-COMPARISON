@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>ASAP</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/home/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/home/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/home/apple-touch-icon-72x72.png">    
+<link rel="apple-touch-icon" sizes="144x144" href="/img/home/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/home/favicon.ico">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/home/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/home/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/home/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/home/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/home/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/home/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/home/favicon-16x16.png">
+        <link rel="shortcut icon" type="image/png" href="/img/home/favicon.ico" />
     <link rel="stylesheet" href="/css/lightslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       
@@ -125,9 +138,9 @@
                     <% if(user) { %>
                         <% if(user.role==='admin') { %>
                     <li><a href="/" target="_blank">Home</a></li>
-                    <li><a href="/about" target="_blank">About us</a></li>
                     <li><a href="/mobile/compare" target="_blank">Compare</a></li>
                     <li><a href="/admin/home" target="_blank">Admin</a></li>
+                    <li><a href="/admin/newsletter">Newsletter</a></li>
                     <%} else {%>
                     <li><a href="/" target="_blank">Home</a></li>
                     <li><a href="/about" target="_blank">About us</a></li>
@@ -156,31 +169,45 @@
                 </ul>
             </div>
             <div class="footer-4">
-                <p>Subscribe</p>
+                <p id="success-subscribe">Subscribe for newsletters</p>
                 <div class="subscribe-input">
-                    <input type="email" placeholder="Your email">
-                    <i class="fas fa-chevron-right"></i>
+                    <form id="newsForm">
+                    <input type="email" id="sub-email" placeholder="Your email" name="email" onkeyup="checkForm()">
+                    <button type="submit" id="sub-submit" disabled="disabled"><i class="fas fa-chevron-right" ></i></button>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="social-icons">
             <div class="facebook">
-                <img src="/img/home/FACEBOOK.svg" alt="">
+                <a href="https://www.facebook.com/ASAP-110565714790429" target="_blank">
+                    <img src="/img/home/FACEBOOK.svg" alt="">
+                </a>
             </div>
             <div class="twitter">
-                <img src="/img/home/TWITTER.svg" alt="">
+                <a href="https://twitter.com/ASAP6911" target="_blank">
+                    <img src="/img/home/TWITTER.svg" alt="">
+                </a>
             </div>
             <div class="discord">
-                <img src="/img/home/DISCORD.svg" alt="">
+                <a href="https://discord.gg/8Jg64w7n6c" target="_blank">
+                    <img src="/img/home/DISCORD.svg" alt="">
+                </a>
             </div>
             <div class="instagram">
-                <img src="/img/home/INSTAGRAM.svg" alt="">
+                <a href="https://www.instagram.com/asap6920/" target="_blank">
+                    <img src="/img/home/INSTAGRAM.svg" alt="">
+                </a>
             </div>
             <div class="linkedin">
-                <img src="/img/home/LINKEDIN.svg" alt="">
+                <a href="https://www.linkedin.com/in/asap-project-52136a227/" target="_blank">
+                    <img src="/img/home/LINKEDIN.svg" alt="">
+                </a>
             </div>
             <div class="reddit">
+               <a href="https://www.reddit.com/user/ASAP6920" target="_blank">
                 <img src="/img/home/REDDIT.svg" alt="">
+               </a>
             </div>
         </div>
         <hr>
@@ -210,5 +237,6 @@
 <script src="/js/colorChange.js"></script>
 <script src="/js/profile.js"></script>
 <script src="/js/search.js"></script>
+<script src="/js/subscribe.js"></script>
 </body>
 </html>

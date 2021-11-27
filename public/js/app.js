@@ -195,6 +195,12 @@ function slider(data1, data2) {
   // console.log("sachin" + data2);
   document.getElementById("imageChange" + data2).src = data1;
 }
+function onclickhandler(data) {
+  // console.log(data.value);
+  const colorChange = document.getElementById("colorCode");
+  colorChange.style.backgroundColor = data.value;
+}
+
 
 let finishContainer3 = document.getElementById("finish-container");
 let finishPart3 = finishContainer3.getElementsByClassName("first");

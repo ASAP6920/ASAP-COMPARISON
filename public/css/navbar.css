@@ -216,6 +216,8 @@ footer .footer-container {
   padding-left: 10px;
   border: 1px solid #505050;
   border-radius: 5px 0px 0px 5px;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .footer-4 input[type="email"]:focus {
@@ -224,25 +226,30 @@ footer .footer-container {
 
 .footer-4 input[type="email"]::placeholder {
   color: #818181;
-
   text-align: left;
   font-size: 15px;
   font-weight: 400;
 }
 
-.footer-4 .fa-chevron-right {
-  padding: 9.5px;
-  background-color: #505050;
-  border-radius: 0px 5px 5px 0px;
+.footer-4 button{
   position: absolute;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  -webkit-text-stroke: 0.5px white;
-  -webkit-border-radius: 0px 5px 5px 0px;
-  -moz-border-radius: 0px 5px 5px 0px;
-  -ms-border-radius: 0px 5px 5px 0px;
-  -o-border-radius: 0px 5px 5px 0px;
+  border: none;
+border-radius: 0px 5px 5px 0px;
+
+}
+
+.footer-4 .fa-chevron-right {
+padding: 9.5px;
+background-color: #505050;
+border-radius: 0px 5px 5px 0px;
+color: #fff;
+cursor: pointer;
+font-size: 16px;
+-webkit-text-stroke: 0.5px white;
+-webkit-border-radius: 0px 5px 5px 0px;
+-moz-border-radius: 0px 5px 5px 0px;
+-ms-border-radius: 0px 5px 5px 0px;
+-o-border-radius: 0px 5px 5px 0px;
 }
 
 .social-icons {
