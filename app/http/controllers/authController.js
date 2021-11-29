@@ -33,18 +33,27 @@ function authController() {
       }
 
       const link = `${process.env.BASE_URL}/reset-password/${token.token}/${user._id}`;
-      console.log(link);
+      const aboutLink = `${process.env.BASE_URL}/about`;
+      // console.log(link);
 
       const Message = {
-        to: [user.email],
         from: {
           name: "ASAP",
           email: process.env.MAIL_EMAIL,
         },
-        subject: "Please reset your password",
-        html: `<h3>Dear ${user.fname},</h3> 
-               <h5>Please click the link below to finish resetting your password:</h5>
-               <p>${link}</p>`,
+        replyTo: process.env.MAIL_EMAIL,
+        templateId: process.env.FORGET_MAIL_TEMPLATE_ID,
+        personalizations: [
+          {
+            to: user.email,
+            dynamicTemplateData:{
+              greetings:`Hi ${user.fname}`,
+              emailid: user.email, 
+              link: link,
+              about: aboutLink
+            }
+          },
+        ],
       };
       
       await sgMail

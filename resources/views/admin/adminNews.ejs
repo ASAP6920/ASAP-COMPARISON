@@ -1,0 +1,21 @@
+
+    <div class="news-heading-2">
+        <h1>Edit News</h1><hr>
+    </div>
+
+    <div class="news-main-container-2">
+        <div class="news-container-2">
+            <% news.forEach(function(newses) { %>
+            <div class="news-1">
+                <div class="news-img first">
+                    <img src="/img/news/<%=newses.image%>" alt="">
+                </div>
+                <div class="news-txt">
+                    <h1><%=newses.heading%></h1>
+                    <p><%=newses.paragraph%></p> 
+                            <a href="/admin/newsEdit/<%=newses._id%>" class="news-edit-icon"><p>Edit</p></a>
+                </div>
+            </div>
+            <%})%>
+        </div>
+    </div>

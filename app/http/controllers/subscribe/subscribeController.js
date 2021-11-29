@@ -1,6 +1,7 @@
 const Subscriber = require("../../../models/subscriber");
 const sgMail = require("@sendgrid/mail");
 const API = sgMail.setApiKey(process.env.MAIL_KEY);
+const bcrypt = require("bcrypt");
 
 //FACTORY FUNCTION USED TO CREATE OBJECT
 function subscribeController() {
@@ -24,34 +25,54 @@ function subscribeController() {
           return res.json({ success });
         });
     },
-    async newsletter(req, res) {
-      Subscriber.find({}, function (err, results) {
-        if (err) {
-        } else {
-          results.forEach(async function (result) {
-            // console.log(result.email);
-            const Message = {
-              from: {
-                name: "ASAP",
-                email: process.env.MAIL_EMAIL,
-              },
-              replyTo: process.env.MAIL_EMAIL,
-              templateId: process.env.MAIL_TEMPLATE_ID,
-              personalizations: [
-                {
-                  to: result.email,
-                },
-              ],
-            };
+    async index(req, res){
+      return res.render("admin/newsPass");
+    },
 
-            await sgMail
-              .send(Message)
-              .then((response) => console.log("Email Sent..."))
-              .catch((error) => console.log(error.Message));
-          });
-        }
-        return res.redirect("/admin/home");
-      });
+    async newsletter(req, res) {
+
+      const{pass} = req.body
+
+      if(!pass){
+        req.flash("error", "Please enter a password!");
+        return res.redirect("/admin/newsletter");
+      }
+
+      const match = await bcrypt.compare(pass, req.user.password);
+
+      if(!match){
+          req.flash("error", "Invalid password");
+          return res.redirect("/admin/newsletter");
+      }else{
+        Subscriber.find({}, function (err, results) {
+          if (err) {
+          } else {
+            results.forEach(async function (result) {
+              // console.log(result.email);
+              const Message = {
+                from: {
+                  name: "ASAP",
+                  email: process.env.MAIL_EMAIL,
+                },
+                replyTo: process.env.MAIL_EMAIL,
+                templateId: process.env.MAIL_TEMPLATE_ID,
+                personalizations: [
+                  {
+                    to: result.email,
+                  },
+                ],
+              };
+
+              await sgMail
+                .send(Message)
+                .then((response) => console.log("Email sent..."))
+                .catch((error) => console.log(error.Message));
+            });
+          }
+          req.flash("error", "Newsletter sent successfully");
+          return res.redirect("/admin/newsletter");
+        });
+      }
     },
   };
 }

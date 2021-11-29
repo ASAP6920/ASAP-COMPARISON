@@ -50,59 +50,17 @@
 
     <div class="news-main-container">
         <div class="news-container">
+            <% news.forEach(function(newses) { %>
             <div class="news-1">
                 <div class="news-img first">
+                    <img src="/img/news/<%=newses.image%>" alt="">
                 </div>
                 <div class="news-txt">
-                    <h1>Samsung Galaxy S22 sized up against iPhone 13, S21</h1>
-                    <p>The rumors so far suggest that the Galaxy S22 will be Samsung’s most compact flagship since the Galaxy S10e, carrying a 6.06-inch display and minimal bezels. The renowned Samsung tipster puts that into perspective comparing the vanilla S22 to the S21 and iPhone 13 where the unannounced flagship is considerably shorter than the S21 and a little bit narrower than both handsets.</p>
+                    <h1><%=newses.heading%></h1>
+                    <p><%=newses.paragraph%></p>
                 </div>
             </div>
-            
-            <div class="news-1">
-                <div class="news-img second">
-                </div>
-                <div class="news-txt">
-                    <h1>Realme GT Neo2 arrives with Snapdragon 870 and improved cooling</h1>
-                    <p>Realme announced the GT Neo2 smartphone during an event in China. The specs of the new smartphone already leaked multiple times, but now we have a confirmation on the Snapdragon 870 chipset and the 5,000 mAh battery with super-fast charging.</p>
-                </div>
-            </div>
-            
-            <div class="news-1">
-                <div class="news-img third">
-                </div>
-                <div class="news-txt">
-                    <h1>The Realme GT Neo2 will use a thermal paste with diamonds to keep its Snapdragon 870 cool</h1>
-                    <p>The Realme GT Neo2 will be fully unveiled tomorrow, September 22, with a Snapdragon 870 chipset. The chipset already runs cooler than the 888, but the company has prepared an advanced cooling solution to keep it in the optimal temperature range.</p>
-                </div>
-            </div>
-            
-            <div class="news-1">
-                <div class="news-img fourth">
-                </div>
-                <div class="news-txt">
-                    <h1>First iPhone 13 lineup reviews are in: here’s what we learned</h1>
-                    <p>The early reviews seemingly all agree on the improved battery life. MKBHD, The Verge and Engadget all praised the battery life of the iPhone 13 Pro and Pro Max. Apple says the new A15 Bionic chipset is super energy efficient and the LTPO 120Hz OLED panel is providing further benefits in this regard. However, as Dieter Bohn from The Verge pointed out, the significant increase in the battery capacity is likely the main contributor to the solid battery life.</p>
-                </div>
-            </div>
-            
-            <div class="news-1">
-                <div class="news-img fifth">
-                </div>
-                <div class="news-txt">
-                    <h1>Oppo A55 4G leaks in official-looking renders, some specs get outed too</h1>
-                    <p>Oppo launched the A55 5G back in January, and now the company is seemingly working on a 4G version of that model. Except it’s not just using another chipset to account for the lower tier connectivity - the phone even looks different.</p>
-                </div>
-            </div>
-            
-            <div class="news-1">
-                <div class="news-img sixth">
-                </div>
-                <div class="news-txt">
-                    <h1>HMD Global to hold an event on October 6, Nokia G50 incoming</h1>
-                    <p>Mark your calendars as HMD Global just confirmed a new product launch event set for October 6. The accompanying press image shows a few feature phones and smartphones next to a big box which is likely for a tablet. If the rumors are true we should see the debut of the Nokia G50 5G smartphone and T20 Android tablet among others.</p>
-                </div>
-            </div>
+            <%})%>
         </div>
     </div>
 

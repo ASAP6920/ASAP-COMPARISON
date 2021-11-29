@@ -25,6 +25,10 @@ const adminHomeController = require("../app/http/controllers/admin/adminHomeCont
 const adminEditController = require("../app/http/controllers/admin/adminEditController");
 
 const subscribeController = require("../app/http/controllers/subscribe/subscribeController");
+
+const adminNewsController = require("../app/http/controllers/admin/adminNewsController");
+
+
 const guest = require("../app/http/middleware/guest");
 const auth = require("../app/http/middleware/auth");
 const admin = require("../app/http/middleware/admin");
@@ -81,7 +85,13 @@ function initRoutes(app) {
      app.post("/admin/edit/compared", admin, adminEditController().compared);
 
      app.post("/subscribe", subscribeController().subscribe);
-     app.get("/admin/newsletter", admin, subscribeController().newsletter);
+     app.get("/admin/newsletter", admin, subscribeController().index);
+     app.post("/admin/newsletter", admin, subscribeController().newsletter);
+
+     app.get("/admin/newsPage", admin, adminNewsController().index);
+     app.get("/admin/newsEdit/:id", admin, adminNewsController().show);
+     app.post("/admin/newsEdit/:id", admin, adminNewsController().update);
+     
 }
 
 module.exports = initRoutes;

@@ -67,13 +67,19 @@
     <% if(user.role==='admin') { %>
        
     <li class="nav-item">
-        <a href="/admin/home"  class="nav-link-1 "><img style="height: 25px" src="/img/home/home.svg" title="Home" alt=""></a>
+        <a href="/"  class="nav-link-1 "><img style="height: 25px" src="/img/home/home.svg" title="Home" alt=""></a>
     </li>
     <li class="nav-item">
         <a href="/admin/edit"  class="nav-link-1"><img style="height: 18px" src="/img/home/edit-solid.svg" title="Update" alt=""></a>
     </li>
     <li class="nav-item">
+        <a href="/admin/newsPage"  class="nav-link-1"><img style="height: 23px" src="/img/home/news-icon.svg" title="Update news!" alt=""></a>
+    </li> 
+    <li class="nav-item">
         <a href="/admin/edit"  class="nav-link-1"><img style="height: 25px" src="/img/home/add.svg" title="Add mobiles!" alt=""></a>
+    </li> 
+    <li class="nav-item">
+        <a href="/admin/newsletter"  class="nav-link-1"><img style="height: 23px" src="/img/home/newsletter.svg" title="Send newsletter!" alt=""></a>
     </li> 
     <li class="nav-item nav_profile" >
         <a href="/customer/<%=user._id%>" title="View profile"><img src="<%=user.image%>" alt=""></a>
@@ -138,9 +144,9 @@
                     <% if(user) { %>
                         <% if(user.role==='admin') { %>
                     <li><a href="/" target="_blank">Home</a></li>
+                    <li><a href="/about">About us</a></li>
                     <li><a href="/mobile/compare" target="_blank">Compare</a></li>
                     <li><a href="/admin/home" target="_blank">Admin</a></li>
-                    <li><a href="/admin/newsletter">Newsletter</a></li>
                     <%} else {%>
                     <li><a href="/" target="_blank">Home</a></li>
                     <li><a href="/about" target="_blank">About us</a></li>

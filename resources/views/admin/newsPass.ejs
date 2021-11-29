@@ -1,0 +1,24 @@
+
+<div class="form-master">
+    <div class="form-container-password">
+        <div class="form-heading">
+            <div class="sub-heading-1"><h1>Password for</h1></div>
+            <div class="sub-heading-2"><img src="/img/home/logo-2.svg" alt=""></div>
+            <div class="sub-heading-3"><h1>newsletter</h1></div>
+        </div>
+        <form method="POST"  class="form-password">
+            <div class="eye-toggle">
+           
+<input type="password" placeholder="Password" name="pass" id="password">
+                   <i class="fas fa-eye" id="togglePassword"></i>
+                   </div>
+            <button type="submit">Authorize</button>
+            <% if(messages.error) { %>
+            <div class="error">
+                <p> <%= messages.error %></p> 
+            </div>
+            
+            <% } %>            
+        </form>
+    </div>
+</div>

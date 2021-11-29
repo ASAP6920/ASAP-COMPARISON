@@ -686,3 +686,261 @@
   font-size: 18px;
   font-weight: 500;
 }
+
+
+.form-container-news {
+  width: 75rem;
+  height: 90rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10rem 0;
+  border: 1.5px solid #505050;
+  border-radius: 25px;
+  padding: 8rem;
+  background-color: #000000;
+}
+
+.form-heading {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  margin-bottom: 20px;
+  /* background-color: cyan; */
+}
+
+.form-heading h1 {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 500;
+  font-family: 'Raleway';
+  font-weight: 500;
+}
+
+.form-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 44rem;
+  height: 65rem;
+  background-color: #000;
+  margin: 5rem 0;
+  row-gap: 3rem;
+}
+
+.form-news input[type="text"] {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.7px solid #505050;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.form-news textarea {
+  background-color: #000000;
+  background-color: #000000;
+  border: 1.7px solid #505050;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px;
+}
+
+
+textarea::-webkit-input-placeholder {
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.form-news input[type="file"] {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border-radius: 60px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 13px 0 0 100px;
+  /*padding-left: 20px;*/
+  margin-top: 15px;
+}
+
+.form-news input[type="text"]::placeholder {
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+  /* padding-left: 20px; */
+}
+
+.form-news input[type="text"]:focus,
+.form-news input[type="file"]:focus,
+.form-news textarea:focus {
+  outline: none;
+}
+
+.form-news button {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #0072de;
+  border-radius: 10px;
+  margin-top: 3.5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-news .link {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.form-news .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #e30000;
+  border-radius: 10px;
+  margin-top: 5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+
+
+
+.form-container-email {
+  width: 75rem;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10rem 0;
+  border: 1.5px solid #505050;
+  border-radius: 25px;
+  padding: 10rem;
+  background-color: #000;
+  font-family: "Raleway", sans-serif;
+}
+
+.form-heading-email {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif !important;
+  /* background-color: cyan; */
+}
+.form-heading-email .email-sub-heading-1 h1,
+.email-sub-heading-3 h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.email-sub-heading-2 {
+  padding: 0 5px;
+}
+
+.form-heading-email .email-sub-heading-2 img {
+  width: 100px;
+  object-fit: contain;
+  padding: 3px 3px 0px 3px;
+}
+
+.form-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 44rem;
+  height: 50rem;
+  background-color: #000;
+  margin: 5rem 0;
+  row-gap: 3rem;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-email input[type="text"],
+.form-email input[type="email"],
+.form-email input[type="password"] {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.7px solid #505050;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  padding-left: 20px;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-email input[type="text"]::placeholder,
+.form-email input[type="email"]::placeholder,
+.form-email input[type="password"]::placeholder {
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+  /* padding-left: 20px; */
+}
+
+.form-email input[type="text"]:focus,
+.form-email input[type="email"]:focus,
+.form-email input[type="password"]:focus {
+  outline: none;
+}
+
+.form-email button {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #0072de;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.form-email .link a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.form-email .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.8px solid #e30000;
+  border-radius: 10px;
+  margin-top: 5rem;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif !important;
+}
