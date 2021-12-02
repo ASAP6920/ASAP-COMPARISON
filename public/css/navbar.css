@@ -156,6 +156,12 @@ footer .footer-container {
   /* border: 1px solid gold; */
   height: 30vh;
   width: 27vw;
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 2.2rem;
+
 }
 
 .footer-3 p {
@@ -168,7 +174,7 @@ footer .footer-container {
   color: #818181;
   font-size: 17px;
   max-width: 35rem;
-  padding-top: 23px;
+  /* padding-top: 23px; */
 }
 
 .footer-3 ul li a{

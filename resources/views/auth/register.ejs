@@ -13,15 +13,30 @@
                 <input type="password" placeholder="Password" name="password" id="password">
                <i class="fas fa-eye" id="togglePassword"></i>
                </div>
-            <button type="submit">Create account </button>
+               <div class="captcha_master">
+                   <div class="captcha-main-div">
+                    <div class="captcha-div">
+                        <div class="captcha-text">
+                            <p id="captcha">
+                            </p>
+                        </div>
+                       </div>
+                       <button class="captcha-refresh" type="button" id="refresh"><img src="/img/home/refresh.svg" alt=""></button>
+                   </div>
+        
+                   <input type="text" name="captcha" class="captcha-input" value="" id="textBox" value="" placeholder="Type the text">
+                   <input type="text" name="captcha1" id="captcha1" value="" hidden>
+
+               </div>
+            <button type="submit" class="main-button">Create account </button>
             <a href="/auth/google">
-            <div class="google-register">
+             <div class="google-register">
                 <div class="google-logo-register">
                     <img src="/img/home/GOOGLE LOGO.svg " alt="Sixth slide">
                 </div>
                 <p><a href="/auth/google">Continue with Google</a></p>
-            </div>
-        </a>
+             </div>
+            </a>
             <p class="link"><a href="/login">Already have an account?</a></p>
             <% if(messages.error) { %>
             <div class="error">
@@ -29,6 +44,6 @@
                                 
             </div>
             
-<% } %>            </form>
+<% } %> </form>
     </div>
 </div>

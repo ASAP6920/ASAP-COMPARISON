@@ -1,0 +1,32 @@
+<div class="table-master-container">
+    <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%users.forEach(function(user) { if(user.email !== "admin@gmail.com"){%>
+          <tr>
+            <td>
+                <p><%=user._id%></p>
+            </td>
+            <td>
+                <p><%=user.fname%> <%=user.lname%></p>
+            </td>
+            <td>
+            <form method="POST" action="/admin/roleUpdates">
+                <input type="text" name="usersId" value="<%=user._id%>" hidden>
+                <select name="role" id="role" onchange="this.form.submit()">
+                  <option value="customer" <%=user.role === 'customer' ? 'selected' : ''%>>Customer</option>
+                  <option value="admin" <%=user.role === 'admin' ? 'selected' : ''%>>Admin</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <%} })%>
+        </tbody>
+      </table>
+</div>

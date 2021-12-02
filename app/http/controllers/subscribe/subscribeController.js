@@ -7,17 +7,17 @@ const bcrypt = require("bcrypt");
 function subscribeController() {
   return {
     async subscribe(req, res) {
-      const { email } = req.body;
-
+      const { subscribeEmail } = req.body;
+      // console.log(req.body);
       //CREATING USER IN DB
       const subscriber = new Subscriber({
-        email,
+        email:subscribeEmail,
       });
 
       await subscriber
         .save()
         .then(() => {
-          let success = "<span>Thanks for subscribing!🤌🏻</span>";
+          let success = "<span>Thanks for subscribing! 🤌🏻</span>";
           return res.json({ success });
         })
         .catch((err) => {
@@ -48,6 +48,7 @@ function subscribeController() {
           if (err) {
           } else {
             results.forEach(async function (result) {
+              const unsubscribeLink = `${process.env.BASE_URL}/unsubscribe/${result._id}`;
               // console.log(result.email);
               const Message = {
                 from: {
@@ -59,6 +60,9 @@ function subscribeController() {
                 personalizations: [
                   {
                     to: result.email,
+                    dynamicTemplateData:{
+                      unsubscribe: unsubscribeLink
+                    }
                   },
                 ],
               };

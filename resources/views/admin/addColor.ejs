@@ -3,7 +3,7 @@
         <div class="form-heading">
             <h1><%=detail.name%></h1>
         </div>
-        <form method="POST" class="form-color" enctype="multipart/form-data">
+        <form method="POST" action="/admin/addColors/<%=detail._id%>" class="form-color" enctype="multipart/form-data">
             <input type="text" name="name" placeholder="Color name">
             <div class="color-block-main">
                 <input type="text" name="color" placeholder="Color hex code" oninput="onclickhandler(this)">

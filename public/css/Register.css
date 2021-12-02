@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+
+                
 .form-master {
   width: 100vw;
   background-color: #000;
@@ -13,13 +15,13 @@
 
 .form-container-register {
   width: 75rem;
-  height: 97rem;
+  height: 105rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin: 10rem 0;
-  border: 1.5px solid #505050;
+  border: 1.5px solid #707070;
   border-radius: 25px;
   padding: 10rem;
   background-color: #000;
@@ -56,7 +58,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 44rem;
-  height: 72rem;
+  /* height: 90%; */
   background-color: #000;
   margin: 5rem 0;
   row-gap: 3rem;
@@ -93,13 +95,103 @@
   outline: none;
 }
 
-.form-register button {
+.form-register .captcha_master{
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  column-gap: 3rem;
+  /* background-color: gold; */
+}
+
+.captcha-main-div{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  /* border-top: 1px solid #707070; */
+  border-radius: 10px;
+  background-color: fuchsia;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.captcha-div{
+  width: 75%;
+  height: 100%;
+  display: flex;
+  background-color: #000000;
+  border: 1px solid #707070;
+  border-radius: 10px 0px 0px 10px;
+  border-radius:10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  -ms-border-radius: 10px 0px 0px 10px;
+  -o-border-radius: 10px 0px 0px 10px;
+}
+
+.captcha-text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/home/captcha.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px 0px 0px 10px;
+  /* background-color: chartreuse; */
+}
+
+.captcha-text p{
+  color: #fff;   
+  font-size: 24px; 
+  font-family: 'Spacebit', sans-serif !important;  
+  letter-spacing: 0.5rem;                      
+}
+
+.captcha-refresh{
+  width: 25%;
+  height: 5rem;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  border: 1.8px solid #707070;
+  border-radius: 0px 10px 10px 0px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif !important;
+  -webkit-border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -ms-border-radius: 0px 10px 10px 0px;
+  -o-border-radius: 0px 10px 10px 0px;
+}
+
+.captcha-refresh img{
+  width: 23px;
+  object-fit: contain;
+}
+
+
+.form-register .captcha_master .captcha-input{
+  width: 55%;
+  height: 5rem;
+  /* background-color: orange; */
+}
+
+.form-register .main-button {
   width: 100%;
   height: 5rem;
   background-color: #000000;
   border: 1.8px solid #0072de;
   border-radius: 10px;
-  margin-top: 1.5rem;
+  margin-top: 4rem;
   color: #ffffff;
   font-size: 18px;
   font-weight: 500;
@@ -741,6 +833,17 @@
   padding-left: 20px;
 }
 
+.form-news input[type="email"] {
+  width: 100%;
+  height: 5rem;
+  background-color: #000000;
+  border: 1.7px solid #505050;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
 .form-news textarea {
   background-color: #000000;
   background-color: #000000;
@@ -781,6 +884,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .form-news input[type="text"]:focus,
+.form-news input[type="email"]:focus,
 .form-news input[type="file"]:focus,
 .form-news textarea:focus {
   outline: none;
@@ -943,4 +1047,78 @@ textarea::-webkit-input-placeholder {
   font-size: 18px;
   font-weight: 500;
   font-family: "Raleway", sans-serif !important;
+}
+
+
+.unsub-master{
+  background-color: #f3f3f4;
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unsub-form{
+  height: 70%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 1.5rem;
+  background-color: #fff;
+}
+
+.unsub-form h1{
+  font-size: 35px;
+  font-weight: 500;
+  padding-top: 17rem;
+}
+
+.unsub-form .unsub-fail-para{
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 26px;
+}
+
+.unsub-form .unsub-title{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.unsub-form .unsub-para-1{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+.unsub-form .unsub-para-2{
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 26px;
+}
+
+.unsub-form .unsub-button{
+  padding: 1.3rem 1.5rem;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: #1e1e24;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.unsub-form .unsub-button:hover{
+  background-color: #e30000;
 }

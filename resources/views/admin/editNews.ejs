@@ -3,7 +3,7 @@
         <div class="form-heading">
             <h1><%=news._id%></h1>
         </div>
-        <form method="POST" class="form-news" enctype="multipart/form-data">
+        <form method="POST" action="/admin/newsEdits/<%=news._id%>" class="form-news" enctype="multipart/form-data">
             <input type="text" name="head" placeholder="News headline">
             <textarea name="para" id="" cols="47" rows="10" placeholder="Enter news paragraph"></textarea>
             <input type="file" name="image" accept=".png, .jpg, .jpeg">
@@ -15,6 +15,7 @@
                                     
                 </div>
                 
-                <% } %>  
+                <% } %> 
+        </form> 
     </div>
 </div>

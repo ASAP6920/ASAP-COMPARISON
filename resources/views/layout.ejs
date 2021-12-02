@@ -41,6 +41,8 @@
     <link rel = "stylesheet" href = "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="http://fonts.cdnfonts.com/css/spacebit" rel="stylesheet">
+                
     <meta name="description" content="Compare whatever you want!"/>
 </head>
 <body>
@@ -80,6 +82,9 @@
     </li> 
     <li class="nav-item">
         <a href="/admin/newsletter"  class="nav-link-1"><img style="height: 23px" src="/img/home/newsletter.svg" title="Send newsletter!" alt=""></a>
+    </li> 
+    <li class="nav-item">
+        <a href="/admin/contactTable"  class="nav-link-1"><img style="height: 23px" src="/img/home/contactUs.svg" title="Contact report 🔪" alt=""></a>
     </li> 
     <li class="nav-item nav_profile" >
         <a href="/customer/<%=user._id%>" title="View profile"><img src="<%=user.image%>" alt=""></a>
@@ -150,11 +155,13 @@
                     <%} else {%>
                     <li><a href="/" target="_blank">Home</a></li>
                     <li><a href="/about" target="_blank">About us</a></li>
+                    <li><a href="/contactUs" target="_blank">Contact</a></li>
                     <li><a href="/mobile/compare" target="_blank">Compare</a></li>
                     <%}%>
                     <%} else {%>
                     <li><a href="/" target="_blank">Home</a></li>
                     <li><a href="/about" target="_blank">About us</a></li>
+                    <li><a href="/contactUs" target="_blank">Contact</a></li>
                     <li><a href="/mobile/compare" target="_blank">Compare</a></li>
                     <%}%>
                 </ul>
@@ -169,7 +176,7 @@
                     <li><i class="fas fa-phone"></i></li>
                     <li><a href="tel:+917045580868">+91 70455 80868</a></li>
                 </ul>
-                <ul style="display: flex; padding-top: 10px;">
+                <ul style="display: flex;">
                     <li><i class="fas fa-envelope"></i></li>
                     <li><a href="mailto:asap6920@gmail.com">asap6920@gmail.com</a></li>
                 </ul>
@@ -178,7 +185,7 @@
                 <p id="success-subscribe">Subscribe for newsletters</p>
                 <div class="subscribe-input">
                     <form id="newsForm">
-                    <input type="email" id="sub-email" placeholder="Your email" name="email" onkeyup="checkForm()">
+                    <input type="email" id="sub-email" placeholder="Your email" name="subscribeEmail" onkeyup="checkForm()">
                     <button type="submit" id="sub-submit" disabled="disabled"><i class="fas fa-chevron-right" ></i></button>
                     </form>
                 </div>
@@ -244,5 +251,6 @@
 <script src="/js/profile.js"></script>
 <script src="/js/search.js"></script>
 <script src="/js/subscribe.js"></script>
+<script src="/js/captcha.js"></script>
 </body>
 </html>

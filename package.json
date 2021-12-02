@@ -26,6 +26,7 @@
     "express-flash": "^0.0.2",
     "express-session": "^1.17.2",
     "laravel-mix": "^5.0.4",
+    "moment": "^2.29.1",
     "mongoose": "^5.12.10",
     "multer": "^1.4.3",
     "passport": "^0.4.1",

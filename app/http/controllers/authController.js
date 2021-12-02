@@ -33,7 +33,7 @@ function authController() {
       }
 
       const link = `${process.env.BASE_URL}/reset-password/${token.token}/${user._id}`;
-      const aboutLink = `${process.env.BASE_URL}/about`;
+      const contactLink = `${process.env.BASE_URL}/contactUs`;
       // console.log(link);
 
       const Message = {
@@ -50,7 +50,7 @@ function authController() {
               greetings:`Hi ${user.fname}`,
               emailid: user.email, 
               link: link,
-              about: aboutLink
+              contact: contactLink
             }
           },
         ],
@@ -160,12 +160,20 @@ function authController() {
       res.render("auth/register");
     },
     async postRegister(req, res) {
-      const { fname, lname, email, password } = req.body;
+      const { fname, lname, email, password, captcha, captcha1 } = req.body;
       // console.log(req.body);
 
       //VALIDATING REQUESTS
-      if (!fname || !lname || !email || !password) {
+      if (!fname || !lname || !email || !password || !captcha) {
         req.flash("error", "All fields are required");
+        req.flash("fname", fname);
+        req.flash("lname", lname);
+        req.flash("email", email);
+        return res.redirect("/register");
+      }
+
+      if(captcha !== captcha1){
+        req.flash("error", "Invalid captcha");
         req.flash("fname", fname);
         req.flash("lname", lname);
         req.flash("email", email);

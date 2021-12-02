@@ -28,6 +28,12 @@ const subscribeController = require("../app/http/controllers/subscribe/subscribe
 
 const adminNewsController = require("../app/http/controllers/admin/adminNewsController");
 
+const roleUpdateController = require("../app/http/controllers/admin/roleUpdateController");
+
+const contactController = require("../app/http/controllers/contact/contactController");
+
+const unsubscribeController = require("../app/http/controllers/subscribe/unsubscribeController");
+
 
 const guest = require("../app/http/middleware/guest");
 const auth = require("../app/http/middleware/auth");
@@ -65,7 +71,7 @@ function initRoutes(app) {
     app.get("/Pre-compared", preComparedController().show);
 
     app.get("/customer/:id", auth, profileController().index);
-    app.post("/customer/:id", auth, profileController().update);
+    app.post("/customers/:id", auth, profileController().update);
 
     app.get("/search", searchController().search);
      app.get("/searching", searchController().preSearch);
@@ -78,7 +84,7 @@ function initRoutes(app) {
      app.get('/admin/delete/:modelId', admin, adminHomeController().delete)
 
      app.get('/admin/addColor/:id', admin, adminEditController().show)
-     app.post('/admin/addColor/:id', admin, adminEditController().update)
+     app.post('/admin/addColors/:id', admin, adminEditController().update)
 
      app.get("/admin/edit", admin, adminEditController().index);
      app.post("/admin/edit/trending", admin, adminEditController().trending);
@@ -86,12 +92,24 @@ function initRoutes(app) {
 
      app.post("/subscribe", subscribeController().subscribe);
      app.get("/admin/newsletter", admin, subscribeController().index);
-     app.post("/admin/newsletter", admin, subscribeController().newsletter);
+     app.post("/admin/newsletters", admin, subscribeController().newsletter);
 
      app.get("/admin/newsPage", admin, adminNewsController().index);
      app.get("/admin/newsEdit/:id", admin, adminNewsController().show);
-     app.post("/admin/newsEdit/:id", admin, adminNewsController().update);
+     app.post("/admin/newsEdits/:id", admin, adminNewsController().update);
+
+     app.get("/admin/roleUpdate", admin, roleUpdateController().show);
+     app.post("/admin/roleUpdates", admin, roleUpdateController().update);
+
+     app.get("/contactUs", contactController().index);
+     app.post("/contactUs", contactController().add);
      
+     app.get("/admin/contactTable", admin, contactController().show);
+
+     app.get("/unsubscribe/:id", unsubscribeController().index);
+     app.post("/unsubscribe/:id", unsubscribeController().delete);
+
+     app.get("/unsubSuccess", unsubscribeController().success);
 }
 
 module.exports = initRoutes;

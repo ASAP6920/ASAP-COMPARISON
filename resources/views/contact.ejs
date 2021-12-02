@@ -1,0 +1,21 @@
+<div class="form-master">
+    <div class="form-container-news">
+        <div class="form-heading">
+            <h1>Contact Us</h1>
+        </div>
+        <form method="POST" class="form-news">
+            <input type="text" name="name" placeholder="Full Name">
+            <input type="email" name="email1" placeholder="Enter email">
+            <textarea name="query" cols="47" rows="10" placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+            <% if(messages.error) { %>
+                <div class="error">
+                  
+                    <p> <%= messages.error %></p>
+                                    
+                </div>
+                
+                <% } %>  
+        </form>
+    </div>
+</div>
