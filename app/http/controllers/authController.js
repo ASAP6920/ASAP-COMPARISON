@@ -13,7 +13,7 @@ function authController() {
 
   return {
     reset(req, res) {
-      res.render("auth/reset");
+      res.render("auth/reset", {title: "Reset password"});
     },
     async postReset(req, res) {
       const { email } = req.body;
@@ -85,7 +85,7 @@ function authController() {
         return res.redirect("/reset");
       }
 
-      return res.render("auth/password");
+      return res.render("auth/password", {title: "Reset password"});
     },
 
     async afterReset(req, res) {
@@ -127,7 +127,7 @@ function authController() {
     },
 
     login(req, res) {
-      res.render("auth/login");
+      res.render("auth/login", {title: "Login"});
     },
 
     postLogin(req, res, next) {
@@ -157,7 +157,7 @@ function authController() {
       })(req, res, next);
     },
     register(req, res) {
-      res.render("auth/register");
+      res.render("auth/register", {title: "Register"});
     },
     async postRegister(req, res) {
       const { fname, lname, email, password, captcha, captcha1 } = req.body;

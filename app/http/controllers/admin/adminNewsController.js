@@ -21,12 +21,13 @@ function adminNewsController() {
       // console.log(details);
       return res.render("admin/adminNews", {
         news: news,
+        title: "Admin news",
       });
     },
     async show(req, res) {
         const { id: id } = req.params;
         const news = await News.findById({ _id: id });
-        return res.render("admin/editNews", { news: news });
+        return res.render("admin/editNews", { news: news, title: "Edit news"});
       },
       update(req, res) {
         upload(req, res, async (err) => {

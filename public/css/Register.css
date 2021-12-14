@@ -1,3 +1,4 @@
+@import url('http://fonts.cdnfonts.com/css/spacebit?styles=9456');
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 
@@ -166,7 +167,6 @@
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  font-family: "Raleway", sans-serif !important;
   -webkit-border-radius: 0px 10px 10px 0px;
   -moz-border-radius: 0px 10px 10px 0px;
   -ms-border-radius: 0px 10px 10px 0px;
@@ -1122,3 +1122,211 @@ textarea::-webkit-input-placeholder {
 .unsub-form .unsub-button:hover{
   background-color: #e30000;
 }
+
+
+
+
+.add-prod-master {
+  width: 100vw;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10rem 0;
+  color: #fff;
+  border-bottom: 1.8px solid #505050;
+}
+
+.add-prod-container {
+  width: 83rem;
+  /* height: 70rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* margin: 10rem 0; */
+  border: 1.5px solid #505050;
+  border-radius: 25px;
+  padding: 5rem;
+  background-color: #000;
+}
+
+.add-prod-heading {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  margin-top: 3rem;
+  background-color: #000;
+}
+.add-prod-heading {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.add-prod-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 55rem;
+  /* height: 50rem; */
+  background-color: #000;
+  margin: 5.5rem 0;
+  row-gap: 5rem;
+}
+
+.add-prod-dropdown {
+  width: 100%;
+  height: 6rem;
+  font-size: 20px;
+  font-weight: 100;
+  border-radius: 10px;
+  padding: 0rem 2rem;
+  border: 1px solid #505050;
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #000;
+  background-image: url("/img/home/down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 14px;
+  padding-right: 2rem;
+  background-size: 30px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.add-prod-dropdown:required:invalid {
+  color: #505050;
+}
+
+.add-prod-dropdown:focus {
+  outline: none;
+}
+
+.add-prod-dropdown::after {
+  display: none !important;
+}
+
+.add-prod-input {
+  width: 100%;
+  height: 6rem;
+  background-color: #000000;
+  border: 1.7px solid #505050;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 100;
+  padding-left: 20px;
+}
+
+.add-prod-input::placeholder {
+  color: #505050;
+  font-size: 20px;
+  font-weight: 100;
+  /* padding-left: 20px; */
+}
+
+.add-prod-input:focus {
+  outline: none;
+}
+
+.add-prod-file {
+  padding: 20px;
+}
+.add-prod-file {
+  /* width: 100%; */
+  height: 5rem;
+  background-color: #000000;
+  border-radius: 60px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 13px 0 0 100px;
+  /*padding-left: 20px;*/
+  margin-top: 15px;
+}
+
+.add-prod-file:focus {
+  outline: none;
+}
+
+.add-prod-btn{
+  width: 100%;
+  height: 6rem;
+  cursor: pointer;
+  background-color: #000000;
+  border: 1.8px solid #0072DE;
+  border-radius: 10px;
+  margin-top: 4rem;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+
+.add-prod-btn:hover{
+  background-color: #0072DE;
+}
+
+.add-prod-error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  background-color: #000000;
+  border: 1.8px solid #e30000;
+  border-radius: 10px;
+  margin-top: 3rem;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+
+.add-prod-error:hover{
+  background-color: #e30000;
+}
+
+
+.add-prod-color-block{
+  /* background-color: crimson; */
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.add-prod-color-box{
+  width: 31px;
+  height: 31px;
+  border-radius: 25%;
+  position: absolute;
+  margin-right: 10px;
+  border: 0.1px solid #707070;
+  background-color: black;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  -ms-border-radius: 25%;
+  -o-border-radius: 25%;
+}
+

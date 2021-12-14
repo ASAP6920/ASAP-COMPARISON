@@ -11,6 +11,7 @@ function adminHomeController() {
       // console.log(details);
       return res.render("admin/adminHome", {
         details: details,
+        title: "Admin Home",
       });
     },
     async delete(req, res){

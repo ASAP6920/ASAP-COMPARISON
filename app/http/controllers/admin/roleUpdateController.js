@@ -9,6 +9,7 @@ function roleUpdateController() {
       // console.log(details);
       return res.render("admin/roleUpdate", {
         users: users,
+        title: "Update role",
       });
     },
     async update(req, res) {

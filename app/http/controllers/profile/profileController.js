@@ -20,7 +20,7 @@ function profileController() {
 
   return {
     async index(req, res) {
-      return res.render("customers/profile");
+      return res.render("customers/profile",{title: "View profile"});
     },
 
     async update(req, res) {

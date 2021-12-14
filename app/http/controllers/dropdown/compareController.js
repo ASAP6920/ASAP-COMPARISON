@@ -12,6 +12,7 @@ function compareController() {
         brands: brands,
         details: details,
         models: models,
+        title: "Compare mobile",
       });
     },
   };

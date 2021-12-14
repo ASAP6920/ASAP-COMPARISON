@@ -21,7 +21,8 @@ function adminEditController() {
     async show(req, res) {
       const { id: id } = req.params;
       const detail = await Detail.findById({ _id: id });
-      return res.render("admin/addColor", { detail: detail });
+      return res.render("admin/addColor", { detail: detail, title: "Add color", });
+      
     },
     update(req, res) {
       upload(req, res, async (err) => {
@@ -60,6 +61,7 @@ function adminEditController() {
       // console.log(details);
       return res.render("admin/adminEdit", {
         details: details,
+        title: "Edit models",
       });
     },
     async trending(req, res) {

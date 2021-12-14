@@ -34,6 +34,8 @@ const contactController = require("../app/http/controllers/contact/contactContro
 
 const unsubscribeController = require("../app/http/controllers/subscribe/unsubscribeController");
 
+const adminAddController = require("../app/http/controllers/admin/adminAddController");
+
 
 const guest = require("../app/http/middleware/guest");
 const auth = require("../app/http/middleware/auth");
@@ -110,6 +112,9 @@ function initRoutes(app) {
      app.post("/unsubscribe/:id", unsubscribeController().delete);
 
      app.get("/unsubSuccess", unsubscribeController().success);
+     
+     app.get("/admin/addModel", admin, adminAddController().index);
+     app.post("/admin/addModel", admin, adminAddController().add);
 }
 
 module.exports = initRoutes;

@@ -17,10 +17,11 @@ function homeController() {
         details: details,
         models: models,
         news: news,
+        title: "ASAP",
       });
     },
     about(req, res) {
-      return res.render("about");
+      return res.render("about", {title: "About us"});
     },
   };
 }

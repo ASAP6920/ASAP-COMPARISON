@@ -20,6 +20,7 @@ function preComparedController() {
                                  // console.log(data);
                                  return res.render("customers/preCompared", {
                                    compares: data,
+                                   title: "Pre-compared mobiles",
                                  });
                                }
                              }

@@ -12,6 +12,7 @@ function historyViewController() {
       return res.render("customers/historyView", {
         details: details,
         details1: details1,
+        title: "ASAP",
       });
     },
   };

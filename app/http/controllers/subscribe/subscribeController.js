@@ -26,7 +26,7 @@ function subscribeController() {
         });
     },
     async index(req, res){
-      return res.render("admin/newsPass");
+      return res.render("admin/newsPass", {title: "Send newsletter"});
     },
 
     async newsletter(req, res) {

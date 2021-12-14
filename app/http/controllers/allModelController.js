@@ -14,6 +14,7 @@ function allModelController() {
         brands: brands,
         details: details,
         models: models,
+        title: "All models"
       });
     },
   };

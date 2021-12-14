@@ -4,7 +4,7 @@ const Detail = require("../../../models/detail");
 function searchController() {
   return {
     searchError(req, res) {
-      return res.render("customers/searchError");
+      return res.render("customers/searchError", {title:"Search!"});
     },
 
     async preSearch(req, res) {
@@ -42,7 +42,7 @@ function searchController() {
             return res.redirect("/searchError");
           } else {
             // console.log(data.length);
-            return res.render("customers/search", { details: data });
+            return res.render("customers/search", { details: data, title: "Search!", });
           }
         }
       );

@@ -11,11 +11,11 @@ const detailSchema = new mongoose.Schema({
   },
   trending: {
     type: String,
-    required: true,
+    default: "No",
   },
   preCompared: {
     type: String,
-    required: true,
+    default: "No",
   },
   brandName: {
     type: String,

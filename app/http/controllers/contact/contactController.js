@@ -5,7 +5,7 @@ const moment = require("moment");
 function contactController() {
   return {
     async index(req, res) {
-      return res.render("contact")
+      return res.render("contact", {title: "Contact us"})
     },
     async add(req, res) {
         const { name, email1, query } = req.body;
@@ -39,7 +39,8 @@ function contactController() {
         // console.log(contacts);
         return res.render("admin/contactTable", {
           contacts: contacts,
-          moment: moment
+          moment: moment,
+          title: "Users query",
         });
       },
   };

@@ -1,0 +1,206 @@
+
+<div class="add-prod-master">
+    <div class="add-prod-container">
+        <div class="add-prod-heading">
+            <h1>Add a model.</h1>
+        </div>
+        <form action="/admin/addModel" class="add-prod-form" method="POST"  enctype="multipart/form-data">
+            <select class="add-prod-dropdown" name="brandName" id="" required>
+             <option  value="" selected disabled>Select a brand</option>
+             <%brands.forEach(function(brand) {%>
+             <option value="<%=brand.name%>"><%=brand.name%></option>
+             <%})%>
+            </select>
+
+            <input class="add-prod-input" type="text" placeholder="Model name" name="name" value="<%= messages.name %>" required>
+
+            <input type="file" class="add-prod-file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg" required>
+
+            <div class="add-prod-color-block">
+                <input class="add-prod-input" type="text" name="color" placeholder="Color hex code (#a7c1d9)" value="<%= messages.color %>" oninput="onclickhandler(this)" required>
+                <div class="add-prod-color-box" id="colorCode"></div>
+            </div>
+
+            <input class="add-prod-input" type="text" placeholder="Color name (Sierra Blue)" name="colorName" value="<%= messages.colorName %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Price (1099)" name="startingPrice" value="<%= messages.startingPrice %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Display size (6.7)" name="displaySize" value="<%= messages.displaySize %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Display specifications (Super Retina XDR Display)" name="display1" value="<%= messages.display1 %>" required>
+            
+            <select class="add-prod-dropdown" name="networkImg" id="" required>
+                <option  value="" selected disabled>Select network image</option>
+                <option value="4G.svg">4G capable</option>
+                <option value="5G.svg">5G capable</option>
+                <option value="NA.svg">Not available</option>
+            </select>
+
+            <select class="add-prod-dropdown" name="network" id="" required>
+                <option  value="" selected disabled>Select network text</option>
+                <option value="4G capable">4G capable</option>
+                <option value="5G capable">5G capable</option>
+                <option value="-">Not available</option>
+            </select>
+
+            <select class="add-prod-dropdown" name="chipsetImg" id="" required>
+                <option  value="" selected disabled>Select chipset image</option>
+                <option value="A15.svg">A15 Bionic chip</option>
+                <option value="A14.svg">A14 Bionic chip</option>
+                <option value="A13.svg">A13 Bionic chip</option>
+                <option value="A12.svg">A12 Bionic chip</option>
+                <option value="A11.svg">A11 Bionic chip</option>
+                 <option value="480.svg">Snapdragon 480</option>
+                 <option value="662.svg">Snapdragon 662</option>
+                 <option value="730G.svg">Snapdragon 730G</option>
+                 <option value="732G.svg">Snapdragon 732G</option>
+                 <option value="750G.svg">Snapdragon 750G</option>
+                 <option value="765G.svg">Snapdragon 765G</option>
+                 <option value="778G.svg">Snapdragon 778G</option>
+                 <option value="855.svg">Snapdragon 855</option>
+                 <option value="865.svg">Snapdragon 865</option>
+                 <option value="865G.svg">Snapdragon 865G</option>
+                 <option value="870.svg">Snapdragon 870</option>
+                 <option value="888.svg">Snapdragon 888</option>
+                 <option value="700.svg">Mediatek 700</option>
+                 <option value="720.svg">Mediatek 720</option>
+                 <option value="800U.svg">Mediatek 800U</option>
+                 <option value="900.svg">Mediatek 900</option>
+                 <option value="1000.svg">Mediatek 1000</option>
+                 <option value="1200.svg">Mediatek 1200</option>
+                 <option value="9000.svg">Mediatek 9000</option>
+                 <option value="P35.svg">Mediatek Helio P35</option>
+                 <option value="P95.svg">Mediatek Helio P95</option>
+                 <option value="850.svg">Exynos 850</option>
+                 <option value="990.svg">Exynos 990</option>
+                 <option value="2100.svg">Exynos 2100</option>
+                 <option value="9825.svg">Exynos 9825</option>
+                 <option value="710A.svg">Kirin 710A</option>
+                 <option value="820E.svg">Kirin 820E</option>
+                 <option value="990E.svg">Kirin 990E</option>
+                <option value="NA.svg">Not available</option>
+            </select>
+
+            <select class="add-prod-dropdown" name="chipset" id="" required>
+                <option  value="" selected disabled>Select chipset</option>
+                <option value="A15 Bionic chip">A15 Bionic chip</option>
+                <option value="A14 Bionic chip">A14 Bionic chip</option>
+                <option value="A13 Bionic chip">A13 Bionic chip</option>
+                <option value="A12 Bionic chip">A12 Bionic chip</option>
+                <option value="A11 Bionic chip">A11 Bionic chip</option>
+                <option value="Snapdragon 480">Snapdragon 480</option>
+                 <option value="Snapdragon 662">Snapdragon 662</option>
+                 <option value="Snapdragon 730G">Snapdragon 730G</option>
+                 <option value="Snapdragon 732G">Snapdragon 732G</option>
+                 <option value="Snapdragon 750G">Snapdragon 750G</option>
+                 <option value="Snapdragon 765G">Snapdragon 765G</option>
+                 <option value="Snapdragon 778G">Snapdragon 778G</option>
+                 <option value="Snapdragon 855">Snapdragon 855</option>
+                 <option value="Snapdragon 865">Snapdragon 865</option>
+                 <option value="Snapdragon 865G">Snapdragon 865G</option>
+                 <option value="Snapdragon 870">Snapdragon 870</option>
+                 <option value="Snapdragon 888">Snapdragon 888</option>
+                 <option value="Mediatek 700">Mediatek 700</option>
+                 <option value="Mediatek 720">Mediatek 720</option>
+                 <option value="Mediatek 800U">Mediatek 800U</option>
+                 <option value="Mediatek 900">Mediatek 900</option>
+                 <option value="Mediatek 1000">Mediatek 1000</option>
+                 <option value="Mediatek 1200">Mediatek 1200</option>
+                 <option value="Mediatek 9000">Mediatek 9000</option>
+                 <option value="Mediatek Helio P35">Mediatek Helio P35</option>
+                 <option value="Mediatek Helio P95">Mediatek Helio P95</option>
+                 <option value="Exynos 850">Exynos 850</option>
+                 <option value="Exynos 990">Exynos 990</option>
+                 <option value="Exynos 2100">Exynos 2100</option>
+                 <option value="Exynos 9825">Exynos 9825</option>
+                 <option value="Kirin 710A">Kirin 710A</option>
+                 <option value="Kirin 820E">Kirin 820E</option>
+                 <option value="Kirin 990E">Kirin 990E</option>
+                <option value="-">Not available</option>
+            </select> 
+
+
+            <input class="add-prod-input" type="text" name="batteryImg" value="battery.svg" hidden>
+
+            <input class="add-prod-input" type="text" placeholder="Video playback (12)" name="battery" value="<%= messages.battery %>" required>
+
+            <select class="add-prod-dropdown" name="faceImg" id="" required>
+                <option  value="" selected disabled>Select face id image</option>
+                <option value="faceId.svg">Face Id</option>
+                <option value="noFaceId.svg">No Face Id</option>
+            </select>
+
+            <select class="add-prod-dropdown" name="face" id="" required>
+                <option  value="" selected disabled>Select face id name</option>
+               <option value="Face ID">Face Id</option>
+                <option value="-">No Face Id</option>
+            </select>
+
+            <select class="add-prod-dropdown" name="fingerImg" id="" required>
+                <option  value="" selected disabled>Select fingerprint image</option>
+               <option value="touchId.svg">Touch Id</option>
+                <option value="noTouchId.svg">No Touch Id</option>
+            </select>
+
+            <select class="add-prod-dropdown" name="finger" id="" required>
+                <option  value="" selected disabled>Select fingerprint name</option>
+                <option value="Touch ID">Touch Id</option>
+                <option value="-">No Touch Id</option>
+            </select>
+
+            <select class="add-prod-dropdown" name="waterImg" id="" required>
+                <option  value="" selected disabled>Select water image</option>
+                <option value="water.svg">Water resistance</option>
+                <option value="noWater.svg">No Water resistance</option>
+            </select>
+
+            <input class="add-prod-input" type="text" placeholder="Water resistant to a depth of 6 meters for up to 30 minutes" name="water" value="<%= messages.water %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Memory (128GB 12GB RAM 256GB 12GB RAM)" name="memory" value="<%= messages.memory %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Display glass (Scratch-resistant ceramic glass)" name="display2" value="<%= messages.display2 %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Display resolution (2778x1284-pixel resolution at 458 ppi)" name="display3" value="<%= messages.display3 %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Dimension (160.8 x 78.1 x 7.7 mm)" name="dimension" value="<%= messages.dimension %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Weight (240)" name="weight" value="<%= messages.weight %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Operating system (iOS 15.1)" name="os" value="<%= messages.os %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="CPU (Hexa Core)" name="cpu" value="<%= messages.cpu %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="GPU (Apple GPU)" name="gpu" value="<%= messages.gpu %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Camera (12)" name="camera" value="<%= messages.camera %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Wi-Fi (Wi-Fi 802.11)" name="wifi" value="<%= messages.wifi %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Bluetooth (Bluetooth 5.0)" name="bluetooth" value="<%= messages.bluetooth %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="NFC (NFC)" name="nfc" value="<%= messages.nfc %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Battery capacity (4352)" name="batteryCapacity" value="<%= messages.batteryCapacity %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Charging type (Fast charging 27W)" name="charging" value="<%= messages.charging %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="SIM card (Dual SIM)" name="sim" value="<%= messages.sim %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Connector (Lightning, USB 2.0)" name="connector" value="<%= messages.connector %>" required>
+
+            <input class="add-prod-input" type="text" placeholder="Colors (Graphite, Gold, Silver, Sierra Blue)" name="colors" value="<%= messages.colors %>" required>
+            
+            <button type="submit" class="add-prod-btn">Add model</button>
+
+             <% if(messages.error) { %>
+                <div class="add-prod-error">
+                    
+                    <p> <%= messages.error %></p>
+                                    
+                </div>
+                
+            <% } %>  
+
+        </form>
+    </div>
+</div>

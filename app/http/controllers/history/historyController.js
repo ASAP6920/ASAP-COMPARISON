@@ -5,7 +5,7 @@ const Detail = require("../../../models/detail");
 function historyController() {
   return {
     async index(req, res) {
-      return res.render("customers/history");
+      return res.render("customers/history", {title: "History"});
     },
     async store(req, res) {
       if (!req.session.history) {
@@ -50,7 +50,7 @@ function historyController() {
           delete req.session.history;
         }
       }
-      return res.render("customers/history");
+      return res.render("customers/history",{title: "History"});
     },
   };
 }

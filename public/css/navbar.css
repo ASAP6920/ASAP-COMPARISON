@@ -21,6 +21,17 @@ a {
   text-decoration: none;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
 .header {
   background-color: #000000;
   border-bottom: 1px solid #505050;

@@ -6,10 +6,10 @@ function unsubscribeController() {
     async index(req, res) {
       const subscribeUser = await Subscriber.findById({ _id: req.params.id });
     //   console.log(user);
-      return res.render("unsubscribe",{subscribeUser});
+      return res.render("unsubscribe",{subscribeUser, title: "Unsubscribe newsletter"});
     },
     success(req, res){
-        return res.render('unsubSuccess')
+        return res.render('unsubSuccess',{title: "Success!"})
     },
     async delete(req, res) {
         const {id} = req.params

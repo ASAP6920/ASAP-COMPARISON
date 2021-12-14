@@ -91,7 +91,7 @@ function secondDropdown() {
                 result._id +
                 "'>Learn more<i class='fa fa-chevron-right'></i></a>";
             displaySize = "<span>" + result.displaySize + "″</span>";
-            displaySizeInch = "<span>" + result.displaySize + " Inches</span>";
+            displaySizeInch = "<span>" + result.displaySize + " inches</span>";
             display1 = "<span>" + result.display1 + "</span>";
             networkImg = "<img src='/img/home/" + result.networkImg + "'>";
             network = "<span>" + result.network + "</span>";

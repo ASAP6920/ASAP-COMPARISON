@@ -7,7 +7,7 @@ function singleController() {
   return {
     async index(req, res) {
       const details = await Detail.findById(req.params.id);
-      return res.render("customers/single", {details});
+      return res.render("customers/single", {details, title: "ASAP",});
     },
   };
 }
