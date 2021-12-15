@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/spacebit?styles=9456');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 
@@ -149,9 +149,10 @@
 
 .captcha-text p{
   color: #fff;   
-  font-size: 24px; 
-  font-family: 'Spacebit', sans-serif !important;  
-  letter-spacing: 0.5rem;                      
+  font-size: 15px; 
+  font-family: 'Press Start 2P', sans-serif !important;  
+  letter-spacing: 0.5rem;   
+  padding-left: 5px;                   
 }
 
 .captcha-refresh{
