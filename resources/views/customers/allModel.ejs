@@ -1,193 +1,279 @@
 <div class="all_master_container">
-        <div class="all_title">
-            <h1>All models. <span class="grey">Take your pick.</span></h1>
-        </div>
-        
-        <div class="brand_master">
-            <div class="brand_title">Apple</div>
-            <div class="brand_main_container">
-                <%let a=1; details.forEach(function(detail) { if(detail.brandName==="Apple") {%>
-                <div class="brand_item">
-                    <div class="mobile_title">
-                        <h1><%=detail.name%></h1>
-                    </div>
-                    <div class="mobile_img">
-                        <a href="/mobile/<%=detail._id%>">
-                        <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=a%>">
-                        </a>
-                    </div>
-                    <ul class="mobile_shades">
-                        <%detail.collections.forEach(function(coll) {%>
-                        <li class="mobile_color_1" style="background-color: <%=coll.color%>" onclick="(slider(this.id,'<%=a%>'))" id="/img/<%=coll.image%>"></li>
-                        <%})%>
-                    </ul>
-                    <div class="mobile_price">
-                        <div class="price_tag">
-                            <p>Starting from $<%=detail.startingPrice%></p>
-                            </div>
-                        <div class="buy_button">
-                                <a href="https://www.apple.com" target="_blank" class="buy">Buy</a>
-                        </div>
-                    </div>
-                </div>
-                <%a++} })%>
-            </div>
-        </div>
-
-        <div class="brand_master">
-            <div class="brand_title">Samsung</div>
-            <div class="brand_main_container">
-                <%let b=a; details.forEach(function(detail) { if(detail.brandName==="Samsung") {%>
-                <div class="brand_item">
-                    <div class="mobile_title">
-                        <h1><%=detail.name%></h1>
-                    </div>
-                    <div class="mobile_img">
-                        <a href="/mobile/<%=detail._id%>">
-                        <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=b%>">
-                        </a>
-                    </div>
-                    <ul class="mobile_shades">
-                        <%detail.collections.forEach(function(coll) {%>
-                        <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=b%>'))" id="/img/<%=coll.image%>"></li>
-                        <%})%>
-                    </ul>
-                    <div class="mobile_price">
-                        <div class="price_tag">
-                            <p>Starting from $<%=detail.startingPrice%></p>
-                            </div>
-                        <div class="buy_button">
-                            <a href="https://www.samsung.com/us/" target="_blank" class="buy">Buy</a>
-                        </div>
-                    </div>
-                </div>
-                <%b++} })%>
-            </div>
-        </div>
-
-        <div class="brand_master">
-            <div class="brand_title">OnePlus</div>
-            <div class="brand_main_container">
-                <%let c=b; details.forEach(function(detail) { if(detail.brandName==="OnePlus") {%>
-                <div class="brand_item">
-                    <div class="mobile_title">
-                        <h1><%=detail.name%></h1>
-                    </div>
-                    <div class="mobile_img">
-                        <a href="/mobile/<%=detail._id%>">
-                        <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=c%>">
-                        </a>
-                    </div>
-                    <ul class="mobile_shades">
-                        <%detail.collections.forEach(function(coll) {%>
-                        <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=c%>'))" id="/img/<%=coll.image%>"></li>
-                        <%})%>
-                    </ul>
-                    <div class="mobile_price">
-                        <div class="price_tag">
-                            <p>Starting from $<%=detail.startingPrice%></p>
-                            </div>
-                        <div class="buy_button">
-                            <a href="https://www.oneplus.com/" target="_blank" class="buy">Buy</a>
-                        </div>
-                    </div>
-                </div>
-                <%c++} })%>
-            </div>
-        </div>
-
-        <div class="brand_master">
-            <div class="brand_title">Google</div>
-            <div class="brand_main_container">
-                <%let d=c; details.forEach(function(detail) { if(detail.brandName==="Google") {%>
-                <div class="brand_item">
-                    <div class="mobile_title">
-                        <h1><%=detail.name%></h1>
-                    </div>
-                    <div class="mobile_img">
-                        <a href="/mobile/<%=detail._id%>">
-                        <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=d%>">
-                        </a>
-                    </div>
-                    <ul class="mobile_shades">
-                        <%detail.collections.forEach(function(coll) {%>
-                        <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=d%>'))" id="/img/<%=coll.image%>"></li>
-                        <%})%>
-                    </ul>
-                    <div class="mobile_price">
-                        <div class="price_tag">
-                            <p>Starting from $<%=detail.startingPrice%></p>
-                            </div>
-                        <div class="buy_button">
-                            <a href="https://store.google.com/us/?hl=en-US" target="_blank" class="buy">Buy</a>
-                        </div>
-                    </div>
-                </div>
-                <%d++} })%>
-            </div>
-        </div>
-
-        <div class="brand_master">
-            <div class="brand_title">Xiaomi</div>
-            <div class="brand_main_container">
-                <%let e=d; details.forEach(function(detail) { if(detail.brandName==="Xiaomi") {%>
-                <div class="brand_item">
-                    <div class="mobile_title">
-                        <h1><%=detail.name%></h1>
-                    </div>
-                    <div class="mobile_img">
-                        <a href="/mobile/<%=detail._id%>">
-                        <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=e%>">
-                        </a>
-                    </div>
-                    <ul class="mobile_shades">
-                        <%detail.collections.forEach(function(coll) {%>
-                        <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=e%>'))" id="/img/<%=coll.image%>"></li>
-                        <%})%>
-                    </ul>
-                    <div class="mobile_price">
-                        <div class="price_tag">
-                            <p>Starting from $<%=detail.startingPrice%></p>
-                            </div>
-                        <div class="buy_button">
-                            <a href="https://www.mi.com/global/" target="_blank" class="buy">Buy</a>
-                        </div>
-                    </div>
-                </div>
-                <%e++} })%>
-            </div>
-        </div>
-
-        <div class="brand_master">
-            <div class="brand_title">Oppo</div>
-            <div class="brand_main_container">
-                <%let f=e; details.forEach(function(detail) { if(detail.brandName==="Oppo") {%>
-                <div class="brand_item">
-                    <div class="mobile_title">
-                        <h1><%=detail.name%></h1>
-                    </div>
-                    <div class="mobile_img">
-                        <a href="/mobile/<%=detail._id%>">
-                        <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=f%>">
-                        </a>
-                    </div>
-                    <ul class="mobile_shades">
-                        <%detail.collections.forEach(function(coll) {%>
-                        <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=f%>'))" id="/img/<%=coll.image%>"></li>
-                        <%})%>
-                    </ul>
-                    <div class="mobile_price">
-                        <div class="price_tag">
-                            <p>Starting from $<%=detail.startingPrice%></p>
-                            </div>
-                        <div class="buy_button">
-                            <a href="https://www.oppo.com/en/" target="_blank" class="buy">Buy</a>
-                        </div>
-                    </div>
-                </div>
-                <%f++} })%>
-            </div>
-        </div>
-
-
+    <div class="all_title">
+        <h1>All models. <span class="grey">Take your pick.</span></h1>
     </div>
+
+    <%let productId = "";%>
+    <% if(session.favourite && user){ %>
+        <%  Object.values(session.favourite.items).forEach(function(product) { if(product.user==user._id){%>
+            <%productId += product.item.id+','%>
+    <%} })%>
+    <% } %>
+    <%let arrOfID = productId.split(',')%>
+     
+    
+    <div class="brand_master">
+        <div class="brand_title">Apple</div>
+        <div class="brand_main_container">
+            <%let a=1; details.forEach(function(detail) { if(detail.brandName==="Apple") {%>
+            <div class="brand_item">
+                <div class="mobile_title">
+                    <h1><%=detail.name%></h1>
+                            <% if(user) { %>
+                            <% if(user.role==='customer') { %>
+                            <div class="favourite_hide">
+                            <%arrOfID.forEach(element => { if(element == detail._id) {%>
+                                <p id="favourite<%=a%>" class="favourite1" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=a%>'))"></p>
+                            <%}%>
+                            <%})%>
+                                <p id="favourite<%=a%>" class="favourite" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=a%>'))"></p>
+                                </div>
+                            <%} %>
+                            <%} %>
+                        
+                </div>
+                <div class="mobile_img">
+                    <a href="/mobile/<%=detail._id%>">
+                    <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=a%>">
+                    </a>
+                </div>
+                <ul class="mobile_shades">
+                    <%detail.collections.forEach(function(coll) {%>
+                    <li class="mobile_color_1" style="background-color: <%=coll.color%>" onclick="(slider(this.id,'<%=a%>'))" id="/img/<%=coll.image%>"></li>
+                    <%})%>
+                </ul>
+                <div class="mobile_price">
+                    <div class="price_tag">
+                        <p>Starting from $<%=detail.startingPrice%></p>
+                        </div>
+                        
+                    <div class="buy_button">
+                            <a href="https://www.apple.com" target="_blank" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <%a++} })%>
+        </div>
+    </div>
+
+    <div class="brand_master">
+        <div class="brand_title">Samsung</div>
+        <div class="brand_main_container">
+            <%let b=a; details.forEach(function(detail) { if(detail.brandName==="Samsung") {%>
+            <div class="brand_item">
+                <div class="mobile_title">
+                    <h1><%=detail.name%></h1>
+                    
+                            <% if(user) { %>
+                            <% if(user.role==='customer') { %>
+                                <div class="favourite_hide">
+                            <%arrOfID.forEach(element => { if(element == detail._id) {%>
+                                <p id="favourite<%=b%>" class="favourite1" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=b%>'))"></p>
+                            <%}%>
+                            <%})%>
+                                <p id="favourite<%=b%>" class="favourite" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=b%>'))"></p>
+                                </div>
+                                <%} %>
+                            <%} %>
+                        
+                </div>
+                <div class="mobile_img">
+                    <a href="/mobile/<%=detail._id%>">
+                    <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=b%>">
+                    </a>
+                </div>
+                <ul class="mobile_shades">
+                    <%detail.collections.forEach(function(coll) {%>
+                    <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=b%>'))" id="/img/<%=coll.image%>"></li>
+                    <%})%>
+                </ul>
+                <div class="mobile_price">
+                    <div class="price_tag">
+                        <p>Starting from $<%=detail.startingPrice%></p>
+                        </div>
+                        
+                    <div class="buy_button">
+                        <a href="https://www.samsung.com/us/" target="_blank" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <%b++} })%>
+        </div>
+    </div>
+
+    <div class="brand_master">
+        <div class="brand_title">OnePlus</div>
+        <div class="brand_main_container">
+            <%let c=b; details.forEach(function(detail) { if(detail.brandName==="OnePlus") {%>
+            <div class="brand_item">
+                <div class="mobile_title">
+                    <h1><%=detail.name%></h1>
+                            <% if(user) { %>
+                            <% if(user.role==='customer') { %>
+                                <div class="favourite_hide">
+                            <%arrOfID.forEach(element => { if(element == detail._id) {%>
+                                <p id="favourite<%=c%>" class="favourite1" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=c%>'))"></p>
+                            <%}%>
+                            <%})%>
+                                <p id="favourite<%=c%>" class="favourite" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=c%>'))"></p>
+                                </div>
+                                <%} %>
+                            <%} %>
+                        
+                </div>
+                <div class="mobile_img">
+                    <a href="/mobile/<%=detail._id%>">
+                    <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=c%>">
+                    </a>
+                </div>
+                <ul class="mobile_shades">
+                    <%detail.collections.forEach(function(coll) {%>
+                    <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=c%>'))" id="/img/<%=coll.image%>"></li>
+                    <%})%>
+                </ul>
+                <div class="mobile_price">
+                    <div class="price_tag">
+                        <p>Starting from $<%=detail.startingPrice%></p>
+                        </div>
+                        
+                    <div class="buy_button">
+                        <a href="https://www.oneplus.com/" target="_blank" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <%c++} })%>
+        </div>
+    </div>
+
+    <div class="brand_master">
+        <div class="brand_title">Google</div>
+        <div class="brand_main_container">
+            <%let d=c; details.forEach(function(detail) { if(detail.brandName==="Google") {%>
+            <div class="brand_item">
+                <div class="mobile_title">
+                    <h1><%=detail.name%></h1>
+                            <% if(user) { %>
+                            <% if(user.role==='customer') { %>
+                                <div class="favourite_hide">
+                            <%arrOfID.forEach(element => { if(element == detail._id) {%>
+                                <p id="favourite<%=d%>" class="favourite1" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=d%>'))"></p>
+                            <%}%>
+                            <%})%>
+                                <p id="favourite<%=d%>" class="favourite" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=d%>'))"></p>
+                                </div>
+                                <%} %>
+                            <%} %>
+                </div>
+                <div class="mobile_img">
+                    <a href="/mobile/<%=detail._id%>">
+                    <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=d%>">
+                    </a>
+                </div>
+                <ul class="mobile_shades">
+                    <%detail.collections.forEach(function(coll) {%>
+                    <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=d%>'))" id="/img/<%=coll.image%>"></li>
+                    <%})%>
+                </ul>
+                <div class="mobile_price">
+                    <div class="price_tag">
+                        <p>Starting from $<%=detail.startingPrice%></p>
+                        </div>
+                       
+                    <div class="buy_button">
+                        <a href="https://store.google.com/us/?hl=en-US" target="_blank" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <%d++} })%>
+        </div>
+    </div>
+
+    <div class="brand_master">
+        <div class="brand_title">Xiaomi</div>
+        <div class="brand_main_container">
+            <%let e=d; details.forEach(function(detail) { if(detail.brandName==="Xiaomi") {%>
+            <div class="brand_item">
+                <div class="mobile_title">
+                    <h1><%=detail.name%></h1>
+                            <% if(user) { %>
+                            <% if(user.role==='customer') { %>
+                                <div class="favourite_hide">
+                            <%arrOfID.forEach(element => { if(element == detail._id) {%>
+                                <p id="favourite<%=e%>" class="favourite1" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=e%>'))"></p>
+                            <%}%>
+                            <%})%>
+                                <p id="favourite<%=e%>" class="favourite" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=e%>'))"></p>
+                                </div>
+                                <%} %>
+                            <%} %>
+                </div>
+                <div class="mobile_img">
+                    <a href="/mobile/<%=detail._id%>">
+                    <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=e%>">
+                    </a>
+                </div>
+                <ul class="mobile_shades">
+                    <%detail.collections.forEach(function(coll) {%>
+                    <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=e%>'))" id="/img/<%=coll.image%>"></li>
+                    <%})%>
+                </ul>
+                <div class="mobile_price">
+                    <div class="price_tag">
+                        <p>Starting from $<%=detail.startingPrice%></p>
+                        </div>
+                        
+                    <div class="buy_button">
+                        <a href="https://www.mi.com/global/" target="_blank" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <%e++} })%>
+        </div>
+    </div>
+
+    <div class="brand_master">
+        <div class="brand_title">Oppo</div>
+        <div class="brand_main_container">
+            <%let f=e; details.forEach(function(detail) { if(detail.brandName==="Oppo") {%>
+            <div class="brand_item">
+                <div class="mobile_title">
+                    <h1><%=detail.name%></h1>
+                    
+                            <% if(user) { %>
+                            <% if(user.role==='customer') { %>
+                                <div class="favourite_hide">
+                            <%arrOfID.forEach(element => { if(element == detail._id) {%>
+                                <p id="favourite<%=f%>" class="favourite1" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=f%>'))"></p>
+                            <%}%>
+                            <%})%>
+                                <p id="favourite<%=f%>" class="favourite" onclick="(favourite('<%=detail._id%>', '<%=detail.name%>', '<%=detail.image%>','<%=detail.startingPrice%>','<%=f%>'))"></p>
+                                </div>
+                                <%} %>
+                            <%} %>
+                </div>
+                <div class="mobile_img">
+                    <a href="/mobile/<%=detail._id%>">
+                    <img class="mobile_img_size" src="/img/<%=detail.image%>" alt="" id="imageChange<%=f%>">
+                    </a>
+                </div>
+                <ul class="mobile_shades">
+                    <%detail.collections.forEach(function(coll) {%>
+                    <li class="mobile_color_1" style="background-color: <%=coll.color%>;" onclick="(slider(this.id,'<%=f%>'))" id="/img/<%=coll.image%>"></li>
+                    <%})%>
+                </ul>
+                <div class="mobile_price">
+                    <div class="price_tag">
+                        <p>Starting from $<%=detail.startingPrice%></p>
+                        </div>
+                        
+                    <div class="buy_button">
+                        <a href="https://www.oppo.com/en/" target="_blank" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <%f++} })%>
+        </div>
+    </div>
+
+
+</div>

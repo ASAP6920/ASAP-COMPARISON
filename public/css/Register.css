@@ -884,6 +884,13 @@ textarea::-webkit-input-placeholder {
   /* padding-left: 20px; */
 }
 
+.form-news input[type="email"]::placeholder {
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+  /* padding-left: 20px; */
+}
+
 .form-news input[type="text"]:focus,
 .form-news input[type="email"]:focus,
 .form-news input[type="file"]:focus,

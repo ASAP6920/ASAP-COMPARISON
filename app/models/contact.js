@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const momentTimezone = require("moment-timezone");
+const dateIndia = momentTimezone.tz(Date.now(), "Asia/Kolkata").format();
 
 const contactSchema = new mongoose.Schema(
   {
@@ -15,7 +17,10 @@ const contactSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true }
+  { timestamps: {
+    type: Date,
+    default: () => momentTimezone.tz(Date.now(), "Asia/Kolkata").format()
+  } }
 );
 
 const Contact = mongoose.model('Contact', contactSchema)

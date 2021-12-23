@@ -86,9 +86,13 @@
     <li class="nav-item">
         <a href="/admin/contactTable"  class="nav-link-1"><img style="height: 23px" src="/img/home/contactUs.svg" title="Contact report 🔪" alt=""></a>
     </li> 
+    <li class="nav-item">
+        <a href="/admin/roleUpdate"  class="nav-link-1"><img style="height: 25px" src="/img/home/users-roles.svg" title="Edit role" alt=""></a>
+    </li> 
     <li class="nav-item nav_profile" >
         <a href="/customer/<%=user._id%>" title="View profile"><img src="<%=user.image%>" alt=""></a>
     </li>
+
 <%} else {%>
      <li>
         <form id="searchbar"  class="search-form" action="/search" method="get">
@@ -104,6 +108,9 @@
     </li>
     <li class="nav-item">
         <a href="/customer/history"class="nav-link-2"><img src="/img/home/history.svg" title="Check out your history" alt=""></a>
+        </li>
+    <li class="nav-item">
+        <a href="/favorites"class="nav-link-2"><img style="height: 25px" src="/img/home/favourite.svg" title="Favourites" alt=""></a>
         </li>
         <li class="nav-item nav_profile" >
             <a href="/customer/<%=user._id%>" title="View profile"><img src="<%=user.image%>" alt=""></a>
@@ -126,6 +133,9 @@
     <li class="nav-item">
         <a href="/login"class="nav-link-2"><img src="/img/home/history.svg" title="Login to view" alt=""></a>
      </li>
+     <li class="nav-item">
+        <a href="/login"class="nav-link-2"><img style="height: 25px" src="/img/home/favourite.svg" title="Favourites" alt=""></a>
+        </li>
      <li class="nav-item">
                 <a href="/login" title="Login here" class="nav-link-3"><img src="/img/home/account.svg" alt=""></a>
       </li>
@@ -252,5 +262,6 @@
 <script src="/js/search.js"></script>
 <script src="/js/subscribe.js"></script>
 <script src="/js/captcha.js"></script>
+<script src="/js/fav.js"></script>
 </body>
 </html>

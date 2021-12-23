@@ -36,10 +36,14 @@ const unsubscribeController = require("../app/http/controllers/subscribe/unsubsc
 
 const adminAddController = require("../app/http/controllers/admin/adminAddController");
 
+const favController = require("../app/http/controllers/favourite/favController");
+
 
 const guest = require("../app/http/middleware/guest");
 const auth = require("../app/http/middleware/auth");
 const admin = require("../app/http/middleware/admin");
+
+
 
 
 function initRoutes(app) {
@@ -115,6 +119,10 @@ function initRoutes(app) {
      
      app.get("/admin/addModel", admin, adminAddController().index);
      app.post("/admin/addModel", admin, adminAddController().add);
+
+     app.get("/favorites", auth, favController().index);
+     app.post("/favoriteAddRoute", auth, favController().add);
+     app.post("/favoriteRemoveRoute", auth, favController().remove);
 }
 
 module.exports = initRoutes;

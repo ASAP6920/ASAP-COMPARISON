@@ -1,0 +1,38 @@
+<div class="precompared_master_container">
+    <div class="history_title">
+        <h1>Favourite products</h1>
+    </div>
+
+        <div class="brand_main_container">
+        <% if(session.favourite && user){ %>
+        <% let a=1; Object.values(session.favourite.items).forEach(function(product) { if(product.user==user._id){%>
+            <div class="brand_item">
+                <div class="mobile_title">
+                    <h1><%= product.item.name%></h1>
+                    <div class="favourite_hide">
+                        <p id="favourite<%=a%>" class="favourite1" onclick="(favourite('<%=product.item.id%>','<%=product.item.name%>','<%=product.item.image%>', '<%=product.item.price%>', '<%=a%>'))"></p>
+                        </div>
+                </div>
+                <div class="mobile_img">
+                    <a href="/mobile/<%=product.item.id%>">
+                    <img class="mobile_img_size" src="/img/<%=product.item.image%>" alt="">
+                    </a>
+                </div>
+                 <ul class="mobile_shades">
+                     <div class="fav-line">
+                        <span></span>
+                     </div>
+                </ul>
+                <div class="mobile_price">
+                    <div class="price_tag">
+                        <p>Starting from $<%=product.item.price%></p>
+                        </div>
+                    <div class="buy_button">
+                            <a href="/mobile/<%=product.item.id%>" target="_blank" class="buy">View</a>
+                    </div>
+                </div>
+            </div>
+            <%a++} })%>
+    <% } %>
+        </div>
+    </div>
