@@ -25,7 +25,9 @@
                 <div class="first actives" style="display: none;"></div>
                 <% (details.collections).forEach(function(detail) {%>
                 <div class="first" onclick="imgSlider3(this.id);" id="/img/<%=detail.image%>">
-                <li class="color-name" style="background-color: <%= detail.color%>"></li>
+                <ul>
+                    <li class="color-name" style="background-color: <%= detail.color%>"></li>
+                </ul>
                 <p><%=detail.name%></p>
                 </div>
                 <%})%>

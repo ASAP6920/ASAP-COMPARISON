@@ -45,12 +45,15 @@ function historyController() {
         history.totalProduct = history.totalProduct - 1;
         if (history.items[hDelete_id + hDelete_id1 + req.user._id].qty === 1) {
           delete history.items[hDelete_id + hDelete_id1 + req.user._id];
+          return res.redirect("/customer/history");
         } 
         if (history.totalProduct === 0) {
           delete req.session.history;
+          return res.redirect("/customer/history");
         }
+        return res.redirect("/customer/history");
       }
-      return res.render("customers/history",{title: "History"});
+      return res.redirect("/customer/history");
     },
   };
 }

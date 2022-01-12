@@ -5,7 +5,7 @@
         </div>
         <form method="POST" action="/admin/newsEdits/<%=news._id%>" class="form-news" enctype="multipart/form-data">
             <input type="text" name="head" placeholder="News headline">
-            <textarea name="para" id="" cols="47" rows="10" placeholder="Enter news paragraph"></textarea>
+            <textarea name="para" id="" cols="47" rows="10"  maxlength="300" placeholder="Enter news paragraph"></textarea>
             <input type="file" name="image" accept=".png, .jpg, .jpeg">
             <button type="submit">Update news</button>
             <% if(messages.error) { %>

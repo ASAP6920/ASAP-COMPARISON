@@ -39,7 +39,7 @@ function searchController() {
         (err, data) => {
           if (err) {
             // console.log(err);
-            return res.redirect("/searchError");
+            return res.render("customers/search", {error: "Try another search term 😬", title: "Search!"});
           } else {
             // console.log(data.length);
             return res.render("customers/search", { details: data, title: "Search!", });
