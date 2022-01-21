@@ -116,7 +116,32 @@ function authController() {
 
       await User.findByIdAndUpdate({ _id: req.params.id }, user1)
         .then((user1) => {
-          return res.redirect("/");
+      const contactLink = `${process.env.BASE_URL}/contactUs`;
+      const Message = {
+        from: {
+          name: "ASAP",
+          email: process.env.MAIL_EMAIL,
+        },
+        replyTo: process.env.CONTACT_EMAIL,
+        templateId: process.env.PASSWORD_UPDATE_ALERT_TEMPLATE_ID,
+        personalizations: [
+          {
+            to: user.email,
+            dynamicTemplateData:{
+              greetings:`Hey ${user.fname}`,
+              contact: contactLink
+            }
+          },
+        ],
+      };
+      
+        sgMail
+        .send(Message)
+        .then((response) => console.log("Email Sent..."))
+        .catch((error) => console.log(error.Message));
+
+
+          return res.redirect("/login");
         })
         .catch((error) => {
           req.flash("error", "Error updating database");

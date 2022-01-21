@@ -112,7 +112,7 @@
   display: flex;
   /* border-top: 1px solid #707070; */
   border-radius: 10px;
-  background-color: fuchsia;
+  /* background-color: fuchsia; */
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -351,7 +351,28 @@
 }
 
 .google-register p{
-  padding-left: 75px;
+  margin-left: 1px;
+    width: 438px;
+    height: 48px;
+    /* background: green; */
+    position: absolute;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.google-register p a{
+    width: 438px;
+    height: 48px;
+    /* background: green; */
+    position: absolute;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
 
 .google-logo-register {

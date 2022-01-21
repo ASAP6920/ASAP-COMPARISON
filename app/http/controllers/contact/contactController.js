@@ -1,5 +1,7 @@
 const Contact = require("../../../models/contact");
 const moment = require("moment");
+const sgMail = require("@sendgrid/mail");
+const API = sgMail.setApiKey(process.env.MAIL_KEY);
 
 //FACTORY FUNCTION USED TO CREATE OBJECT
 function contactController() {
@@ -16,6 +18,8 @@ function contactController() {
         req.flash("error", "All fields are required");
         return res.redirect("/contactUs");
       }
+ 
+
       //CREATING USER IN DB
       const contact = new Contact({
         name: name,
@@ -27,6 +31,50 @@ function contactController() {
 
       contact.save().then(() => {
         req.flash("error", "We'll contact you ASAP.");
+             
+      const user_Message = {
+        from: {
+          name: "ASAP",
+          email: process.env.MAIL_EMAIL,
+        },
+        replyTo: process.env.CONTACT_EMAIL,
+        templateId: process.env.CONTACT_RESPONSE_TEMPLATE_ID,
+        personalizations: [
+          {
+            to: email1,
+            dynamicTemplateData:{
+              greetings:`Hi ${name}`,
+            }
+          },
+        ],
+      };
+      
+      sgMail.send(user_Message)
+        .then((response) => console.log("Email Sent..."))
+        .catch((error) => console.log(error.Message));
+
+      const admin_Message = {
+        from: {
+          name: "ASAP",
+          email: process.env.MAIL_EMAIL,
+        },
+        templateId: process.env.ADMIN_RECEIVED_TEMPLATE_ID,
+        personalizations: [
+          {
+            to: process.env.CONTACT_EMAIL,
+            dynamicTemplateData:{
+              greetings:`Hey`,
+              email: email1, 
+              name: name,
+              query: query
+            }
+          },
+        ],
+      };
+      
+sgMail.send(admin_Message)
+        .then((response) => console.log("Email Sent..."))
+        .catch((error) => console.log(error.Message));
         return res.redirect("/contactUs");
         })
         .catch((err) => {
