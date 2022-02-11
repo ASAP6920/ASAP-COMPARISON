@@ -1,6 +1,7 @@
 const User = require("../../../models/user");
 const multer = require("multer");
 const path = require("path");
+const cloudinary = require("../../../config/cloudinary");
 
 //FACTORY FUNCTION USED TO CREATE OBJECT
 function profileController() {
@@ -24,14 +25,16 @@ function profileController() {
     },
 
     async update(req, res) {
-      //console.log(req.body);
+      // console.log(req.body);
             upload(req, res, async (err) => {
-              // console.log(req.file.filename, req.params.id);
+              // console.log(req.file);
       if(!req.file){
       return res.redirect(`/customer/${req.params.id}`)
       }
+      const result = await cloudinary.uploader.upload(req.file.path, {folder: 'profile'});
+      // console.log(result);
                 const user = {
-                  image: "/img/profile/"+req.file.filename,
+                  image: result.secure_url,
                 };
       
                 //CREATING Menu IN DB

@@ -30,12 +30,12 @@
     <div class="compare-img-container">
          <%details.forEach(function(detail) { %>
         <div class="compare-img-left">
-            <img src="/img/<%=detail.image%>" alt="" id="hisOne">
+            <img src="<%=detail.image%>" alt="" id="hisOne">
         </div>
         <%})%>
         <%details1.forEach(function(detail1) { %>
         <div class="compare-img-left">
-            <img src="/img/<%=detail1.image%>" alt="" id="hisTwo">
+            <img src="<%=detail1.image%>" alt="" id="hisTwo">
         </div>
         <%})%>
     </div>
@@ -46,7 +46,7 @@
         <div class="color-left">
             <ul class="shades" id="collection4">
                 <%detail.collections.forEach(function(coll) {%>
-                <li class="color4" style="background-color: <%=coll.color%>;" onclick="(imgSlider6(this.id, '<%=coll.name%>'))" id="/img/<%=coll.image%>"></li>
+                <li class="color4" style="background-color: <%=coll.color%>;" onclick="(imgSlider6(this.id, '<%=coll.name%>'))" id="<%=coll.image%>"></li>
                 <%})%>
             </ul>
             <div class="color-text">
@@ -60,7 +60,7 @@
         <div class="color-left">
             <ul class="shades" id="collection5">
                 <%detail1.collections.forEach(function(coll) {%>
-                <li class="color5" style="background-color: <%=coll.color%>;" onclick="(imgSlider7(this.id, '<%=coll.name%>'))" id="/img/<%=coll.image%>"></li>
+                <li class="color5" style="background-color: <%=coll.color%>;" onclick="(imgSlider7(this.id, '<%=coll.name%>'))" id="<%=coll.image%>"></li>
                 <%})%>
             </ul>
             <div class="color-text">

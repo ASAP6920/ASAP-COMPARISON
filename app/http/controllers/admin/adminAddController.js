@@ -3,6 +3,7 @@ const Model = require("../../../models/model");
 const Detail = require("../../../models/detail");
 const multer = require("multer");
 const path = require("path");
+const cloudinary = require("../../../config/cloudinary");
 
 //FACTORY FUNCTION USED TO CREATE OBJECT
 function adminAddController() {
@@ -96,20 +97,24 @@ function adminAddController() {
           }
 
           const details = await Detail.find();
-          let prevId;
-          details.forEach((detail) => {
-            prevId = detail.id;
-          });
+          let prevId = 100;
+          // details.forEach((detail) => {
+          //   prevId = detail.id;
+          // });
           let newId = prevId + 1;
 
           const brand = await Brand.findOne({ name: brandName });
+          
+          // console.log(req.file);
+          const result = await cloudinary.uploader.upload(req.file.path, {folder: 'img'});
+          // console.log(result);
 
           const detail = new Detail({
             id: newId,
             modelId: newId,
             brandName,
             name,
-            image: req.file.filename,
+            image: result.secure_url,
             color,
             colorName,
             startingPrice,
@@ -148,7 +153,7 @@ function adminAddController() {
 
           const collection = {
             color: color,
-            image: req.file.filename,
+            image: result.secure_url,
             name: colorName,
           };
 

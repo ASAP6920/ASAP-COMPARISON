@@ -75,7 +75,7 @@ index(req, res){
                 let drop_id;
                 let message="<span></span>";
                 await results.forEach(function(result) {
-                img = "<img id='one' src='/img/" +
+                img = "<img id='one' src='" +
                         result.image +
                         "'>";
                        
@@ -85,7 +85,7 @@ index(req, res){
                     coll.color +
                     ";' onclick=\"(imgSlider(this.id, '" +
                     coll.name +
-                    "'))\" id='/img/" +
+                    "'))\" id='" +
                     coll.image +
                     "'> </li>";
                 });

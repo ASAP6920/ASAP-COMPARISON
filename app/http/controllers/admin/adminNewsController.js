@@ -1,6 +1,7 @@
 const News = require("../../../models/news");
 const multer = require("multer");
 const path = require("path");
+const cloudinary = require("../../../config/cloudinary");
 
 //FACTORY FUNCTION USED TO CREATE OBJECT
 function adminNewsController() {
@@ -31,7 +32,7 @@ function adminNewsController() {
       },
       update(req, res) {
         upload(req, res, async (err) => {
-          // console.log(req.file);
+          console.log(req.file);
   
           const { head, para } = req.body;
           //VALIDATING REQUESTS
@@ -39,10 +40,12 @@ function adminNewsController() {
               req.flash("error", "All fields are required");
               return res.redirect(`/admin/newsEdit/${req.params.id}`);
             }
+            const result = await cloudinary.uploader.upload(req.file.path, {folder: 'news'});
+            console.log(result);
     
               const news = {
                 heading: head,
-                image: req.file.filename,
+                image: result.secure_url,
                 paragraph: para,
               };
               //CREATING Menu IN DB

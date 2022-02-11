@@ -23,11 +23,11 @@
                 </div>
                 
                 <div class="search_img">
-                    <img class="search_img_size" id="searchImageChange<%=a%>" src="/img/<%=detail.image%>" alt="">
+                    <img class="search_img_size" id="searchImageChange<%=a%>" src="<%=detail.image%>" alt="">
                 </div>
                 <ul class="search_shades">
                     <%detail.collections.forEach(function(coll) {%>
-                    <li class="search_color_1" style="background-color: <%=coll.color%>" onclick="(searchSlider(this.id,'<%=a%>'))" id="/img/<%=coll.image%>"></li>
+                    <li class="search_color_1" style="background-color: <%=coll.color%>" onclick="(searchSlider(this.id,'<%=a%>'))" id="<%=coll.image%>"></li>
                     <%})%>
                 </ul>
                 <div class="search_price">

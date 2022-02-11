@@ -1,6 +1,7 @@
 const Detail = require("../../../models/detail");
 const multer = require("multer");
 const path = require("path");
+const cloudinary = require("../../../config/cloudinary");
 
 //FACTORY FUNCTION USED TO CREATE OBJECT
 function adminEditController() {
@@ -35,9 +36,11 @@ function adminEditController() {
             return res.redirect(`/admin/addColor/${req.params.id}`);
           }
   
+          const result = await cloudinary.uploader.upload(req.file.path, {folder: 'img'});
+          // console.log(result);
             const detail = {
               color: color,
-              image: req.file.filename,
+              image: result.secure_url,
               name: name,
             };
             //CREATING Menu IN DB

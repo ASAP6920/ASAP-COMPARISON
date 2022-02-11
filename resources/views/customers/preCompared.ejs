@@ -23,7 +23,7 @@
     <div class="compare-img-container">
          <%let i=4; compares.forEach(function(compare) { %>
         <div class="compare-img-left">
-            <img src="/img/<%=compare.image%>" alt="" id="preOne<%=i%>">
+            <img src="<%=compare.image%>" alt="" id="preOne<%=i%>">
         </div>
         <%i++})%>
     </div>
@@ -34,7 +34,7 @@
         <div class="color-left">
             <ul class="shades" id="collection<%=j%>">
                 <%compare.collections.forEach(function(coll) {%>
-                <li class="color<%=j%>" style="background-color: <%=coll.color%>;" onclick="(imgSlider<%=j%>(this.id, '<%=coll.name%>'))" id="/img/<%=coll.image%>"></li>
+                <li class="color<%=j%>" style="background-color: <%=coll.color%>;" onclick="(imgSlider<%=j%>(this.id, '<%=coll.name%>'))" id="<%=coll.image%>"></li>
                 <%})%>
             </ul>
             <div class="color-text">

@@ -72,12 +72,12 @@ function secondDropdown() {
           let drop_id;
           let message="<span></span>";
           await results.forEach(function(result) {
-            img = "<img id='two' src='/img/" + result.image + "'>";
+            img = "<img id='two' src='" + result.image + "'>";
             result.collections.forEach(function(coll) {
               collection +=
                 "<li class='color2'  style='background-color: " +
                 coll.color +
-                ";' id='/img/" +
+                ";' id='" +
                 coll.image +
                 "' onclick=\"(imgSlider1(this.id, '" +
                 coll.name +

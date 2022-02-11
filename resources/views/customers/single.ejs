@@ -6,7 +6,7 @@
 <div class="sticky-main">
         <div class="sticky-left sticky">
             <div class="sticky-left-img">
-                <img src="/img/<%=details.image%>" id="three">
+                <img src="<%=details.image%>" id="three">
             </div>
         </div>
         <div class="sticky-right">
@@ -24,7 +24,7 @@
                 <div class="finish-colors" id="finish-container">
                 <div class="first actives" style="display: none;"></div>
                 <% (details.collections).forEach(function(detail) {%>
-                <div class="first" onclick="imgSlider3(this.id);" id="/img/<%=detail.image%>">
+                <div class="first" onclick="imgSlider3(this.id);" id="<%=detail.image%>">
                 <ul>
                     <li class="color-name" style="background-color: <%= detail.color%>"></li>
                 </ul>
