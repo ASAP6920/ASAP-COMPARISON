@@ -96,11 +96,12 @@ function adminAddController() {
             return res.redirect("/admin/addModel");
           }
 
-          const details = await Detail.find();
-          let prevId = 100;
-          // details.forEach((detail) => {
-          //   prevId = detail.id;
-          // });
+          const details = await Detail.find().sort({"id": 1 }).collation({locale: "en_US", numericOrdering: true});
+
+          let prevId;
+          details.forEach((detail) => {
+            prevId = detail.id; 
+          });
           let newId = prevId + 1;
 
           const brand = await Brand.findOne({ name: brandName });

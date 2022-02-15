@@ -11,7 +11,7 @@ function homeController() {
       const models = await model.find().sort({ 'name': -1 });
       const details = await Detail.find().sort({ 'name': -1 });
       const news = await News.find().sort({ '_id': -1 });
-      // console.log(details);
+      
       return res.render("home", {
         brands: brands,
         details: details,
