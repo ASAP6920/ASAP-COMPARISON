@@ -98,11 +98,11 @@ function adminAddController() {
 
           const details = await Detail.find().sort({"id": 1 }).collation({locale: "en_US", numericOrdering: true});
 
-          let prevId;
+          let prevId = [];
           details.forEach((detail) => {
-            prevId = detail.id; 
+            prevId.push(detail.id);
           });
-          let newId = prevId + 1;
+          let newId = Math.max(...prevId) + 1;
 
           const brand = await Brand.findOne({ name: brandName });
           
