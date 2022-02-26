@@ -16,8 +16,32 @@ function subscribeController() {
 
       await subscriber
         .save()
-        .then(() => {
+        .then((subscriber) => {
           let success = "<span>Thanks for subscribing! 🤌🏻</span>";
+          // console.log(subscriber);
+
+          const unsubscribeLink = `${process.env.BASE_URL}/unsubscribe/${subscriber._id}`;
+          const Message = {
+            from: {
+              name: "ASAP",
+              email: process.env.MAIL_EMAIL,
+            },
+            replyTo: process.env.MAIL_EMAIL,
+            templateId: process.env.MAIL_TEMPLATE_ID,
+            personalizations: [
+              {
+                to: subscriber.email,
+                dynamicTemplateData:{
+                  unsubscribe: unsubscribeLink
+                }
+              },
+            ],
+          };
+
+           sgMail
+            .send(Message)
+            .then((response) => console.log("Email sent..."))
+            .catch((error) => console.log(error.Message));
           return res.json({ success });
         })
         .catch((err) => {
