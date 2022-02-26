@@ -6,6 +6,7 @@
             <th>Email</th>
             <th>Message</th>
             <th>Time</th>
+            <th>Contact</th>
           </tr>
         </thead>
         <tbody>
@@ -22,6 +23,9 @@
             </td>
             <td>
                 <p><%=moment(contact.createdAt).format('MMMM Do YYYY, h:mm A')%></p>
+            </td>
+            <td>
+                <p style="border: 1px solid #0077ED; padding: 4px 5px; border-radius: 6px;"><a style="color:#fff; text-decoration: none; font-size: 19px; font-weight: 200; " href="mailto:<%=contact.email%>">Reply</a></p>
             </td>
           </tr>
           <%})%>
