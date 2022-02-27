@@ -1,3 +1,13 @@
+
+<%let productId = "";%>
+<% if(session.favourite && user){ %>
+    <%  Object.values(session.favourite.items).forEach(function(product) { if(product.user==user._id){%>
+        <%productId += product.item.id+','%>
+<%} })%>
+<% } %>
+<%let arrOfID = productId.split(',')%>
+
+
 <div class="sticky-heading sticky">
             <h3><%=details.name%></h3>
             <p>Starting at $<%=details.startingPrice%></p>
@@ -5,6 +15,17 @@
 
 <div class="sticky-main">
         <div class="sticky-left sticky">
+            <% if(user) { %>
+                <% if(user.role==='customer') { %>
+                <div class="favourite_hide_single">
+                <%arrOfID.forEach(element => { if(element == details._id) {%>
+                    <p id="favourite<%=details._id%>" class="favourite1" onclick="(favourite('<%=details._id%>', '<%=details.name%>', '<%=details.image%>','<%=details.startingPrice%>','<%=details._id%>')) "></p>
+                <%}%>
+                <%})%>
+                    <p id="favourite<%=details._id%>" class="favourite" onclick="(favourite('<%=details._id%>', '<%=details.name%>', '<%=details.image%>','<%=details.startingPrice%>','<%=details._id%>'))"></p>
+                    </div>
+                <%} %>
+                <%} %>
             <div class="sticky-left-img">
                 <img src="<%=details.image%>" id="three">
             </div>

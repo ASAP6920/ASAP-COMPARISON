@@ -181,6 +181,18 @@
   cursor: pointer;
   margin-top: 5px;
 }
+.favourite_hide_single{
+  border-radius: 50%;
+  border: 1px solid #707070;
+  height: 45px;
+  width: 45px;
+  padding: 11px 0px 0px 6.5px;
+  cursor: pointer;
+  position: absolute;
+  top: 70px;
+  left: 60px;
+  /* margin-top: 5px; */
+}
 
 .favourite {
 	position: relative;
@@ -232,6 +244,10 @@
 }
 
 .favourite_hide p:nth-child(2) {
+  display: none;
+}
+
+.favourite_hide_single p:nth-child(2) {
   display: none;
 }
 
