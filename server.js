@@ -62,6 +62,10 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get('/sitemap.xml', function(req, res) {
+  res.sendFile('sitemap.xml',{ root: __dirname });
+  });
+
 //Layout Template
 app.use(expressLayout);
 app.set("views", path.join(__dirname, "/resources/views"));
