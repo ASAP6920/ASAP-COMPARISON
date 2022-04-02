@@ -17,7 +17,7 @@ function homeController() {
         details: details,
         models: models,
         news: news,
-        title: "ASAP",
+        title: "ASAP - Compare phones, smartphones - asapcomparison.live",
       });
     },
     about(req, res) {

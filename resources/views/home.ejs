@@ -33,7 +33,7 @@
         <div class="trend-1">
             <div class="trend-1-img">
                 <a href="/mobile/<%= detail._id %>"><img class="info" src="/img/home/info.svg" alt="" title="Check it out!" aria-hidden="true"></a> 
-                <img style="height: 100%; object-fit: contain; padding: 40px;" src="<%=detail.image%>" alt="">
+                <img style="height: 100%; object-fit: contain; padding: 40px;" src="<%=detail.image%>" alt="<%=detail.name%>">
             </div>
             <div class="trend-1-txt">
                 <p><%=detail.name%></p>
@@ -81,7 +81,7 @@
                 <%details.forEach(function(detail)  { if(detail.preCompared==="firstCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="<%= detail.name %>">
                     </div>
                     <div class="compare-1-txt">
                         <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
@@ -100,7 +100,7 @@
                 <%details.forEach(function(detail)  { if(detail.preCompared==="secondCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="<%= detail.name %>">
                     </div>
                     <div class="compare-1-txt">
                         <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
@@ -119,7 +119,7 @@
                 <%details.forEach(function(detail)  { if(detail.preCompared==="thirdCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="<%= detail.name %>">
                     </div>
                     <div class="compare-1-txt">
                         <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
@@ -138,7 +138,7 @@
                 <%details.forEach(function(detail)  { if(detail.preCompared==="fourthCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="<%= detail.name %>">
                     </div>
                     <div class="compare-1-txt">
                         <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
@@ -157,7 +157,7 @@
                 <%details.forEach(function(detail)  { if(detail.preCompared==="fifthCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="<%= detail.name %>">
                     </div>
                     <div class="compare-1-txt">
                         <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>
@@ -176,7 +176,7 @@
                 <%details.forEach(function(detail)  { if(detail.preCompared==="sixthCompare") { %>
                 <div class="compare-1">
                     <div class="compare-1-img">
-                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="">
+                        <img style="height: 100%; object-fit: contain; padding: 30px;" src="<%=detail.image%>" alt="<%= detail.name %>">
                     </div>
                     <div class="compare-1-txt">
                         <a href="/mobile/<%= detail._id %>"><p><%= detail.name %></p></a>

@@ -75,9 +75,12 @@ index(req, res){
                 let drop_id;
                 let message="<span></span>";
                 await results.forEach(function(result) {
-                img = "<img id='one' src='" +
-                        result.image +
-                        "'>";
+                img =
+                  "<img id='one' alt='" +
+                  result.name +
+                  "' src='" +
+                  result.image +
+                  "'>";
                        
                 result.collections.forEach(function(coll) {
                   collection +=

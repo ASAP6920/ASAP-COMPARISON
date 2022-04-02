@@ -23,7 +23,7 @@
     <div class="compare-img-container">
          <%let i=4; compares.forEach(function(compare) { %>
         <div class="compare-img-left">
-            <img src="<%=compare.image%>" alt="" id="preOne<%=i%>">
+            <img src="<%=compare.image%>" alt="<%=compare.name%>" id="preOne<%=i%>">
         </div>
         <%i++})%>
     </div>
