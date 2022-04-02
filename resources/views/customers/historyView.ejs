@@ -30,12 +30,12 @@
     <div class="compare-img-container">
          <%details.forEach(function(detail) { %>
         <div class="compare-img-left">
-            <img src="<%=detail.image%>" alt="" id="hisOne">
+            <img src="<%=detail.image%>" alt="<%=detail.name%>" id="hisOne">
         </div>
         <%})%>
         <%details1.forEach(function(detail1) { %>
         <div class="compare-img-left">
-            <img src="<%=detail1.image%>" alt="" id="hisTwo">
+            <img src="<%=detail1.image%>" alt="<%=detail1.name%>" id="hisTwo">
         </div>
         <%})%>
     </div>

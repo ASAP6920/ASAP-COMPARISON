@@ -53,7 +53,7 @@ app.use(express.static("public"));
 app.use((req, res, next) => {
   res.locals.session = req.session;
   res.locals.user = req.user;
-  res.locals.title = "ASAP";
+  res.locals.title = "ASAP - Compare phones, smartphones - asapcomparison.live";
   next();
 });
 
